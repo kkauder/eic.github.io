@@ -1,3 +1,21 @@
+##### GitHub Pages/Jekyll-specific patterns:
+# Jekyll
+.jekyll-metadata
+.jekyll-cache
+_site
+Gemfile.lock
+
+# Ruby bundle
+.bundle/
+vendor/
+
+# MacOS
+.DS_Store
+
+##### Standard boilerplate below
+# Common editor backups
+*~
+
 # Prerequisites
 *.d
 
