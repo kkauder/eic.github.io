@@ -4,6 +4,8 @@
 .jekyll-cache
 _site
 Gemfile.lock
+.sass-cache
+vendor
 
 # Ruby bundle
 .bundle/
