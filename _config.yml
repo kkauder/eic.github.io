@@ -36,6 +36,9 @@ collections:
   computing:
     output: true
     permalink: /computing/:title.html
+  teams:
+    output: true
+    permalink: /teams/:title.html
   about:
     output: true
     permalink: /about/:title.html
