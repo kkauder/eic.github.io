@@ -29,7 +29,7 @@ entries (and therefore the folders) included in the bar are defined in a concise
 <a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">code</a>.
 
 The dropdown menus are populated automatically based on the content of respective folders ("collections").
-This site's design is assumes the following conventions:
+This site's design uses the following conventions:
 * each folder contains a collection of Markdown-formatted ("MD") files
 * in general each file will be mapped to an entry in the dropdown menu
 * each MD file is expected to be equipped with the "front matter" section
