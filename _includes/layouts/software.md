@@ -1,2 +1,2 @@
-{% include title.md %}
+{% include layouts/title.md %}
 

@@ -5,13 +5,20 @@ layout: default
 level: 0
 weight: 0
 ---
-{% include title.md %}
+{% include navigation/find_link.md where=site.about what='howto' %}
+{% assign howto_url=page_url %}
 
+{% include layouts/title.md %}
 
-### The Goal
-This website is been deveoped with the goal to support the software domain of the EIC community.
+#### The Goal
+This website is been developed with the goal to support the software domain of the EIC community.
+Its mission, technology and design principles are different for the EIC User Group website and
+the Wikis used by the Working Groups to develop and share information that could change quite
+often. By contrast, this portal aims to provide reliable links to the code and repositories,
+curated and stable documentation and other resources necessary to advance the goals of the EIC
+in the software domain.
 
-### The Platform
+#### The Platform
 The following considerations are important for long-term viability of the site:
 * ease of maintenance
 * security
@@ -29,8 +36,11 @@ To this end, the popular <a href="http://jekyllrb.com/">*Jekyll*</a> website gen
 an additional toolkit (<a href="https://getbootstrap.com/" target="_blank">*Bootstrap*</a>) for optimal user experience.
 Both Jekyll and Bootstrap are free and open source.
 
+#### Design and Implementation
+To learn about the design and conventions used on this site please see the <a href="{{ howto_url }}">"How-to"</a> page.
+The code is <a href="https://github.com/eic/eic.github.io">available on GitHub</a>.
 
-### Credits
+#### Credits
 Information collected here is managed by the <a href="http://www.eicug.org/web/content/eic-software" target="_blank" >EIC software Group</a>.
 Design of this site was inspired by the <a href="http://hepsoftwarefoundation.org/">HEP Software Foundation</a> Web site.
 We are grateful to the authors and maintainers of the following technologies: <a href="https://pages.github.com/">GitHub Pages</a>,

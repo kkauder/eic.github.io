@@ -6,7 +6,7 @@ level: 0
 weight: 20
 div: yes
 ---
-{% include title.md %}
+{% include layouts/title.md %}
 
 This site is work in progress. 
 

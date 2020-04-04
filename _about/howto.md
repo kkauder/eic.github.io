@@ -5,9 +5,9 @@ layout: default
 level: 0
 weight: 10
 ---
-{% include title.md %}
+{% include layouts/title.md %}
 
-### Overview
+#### Overview
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
 
@@ -39,14 +39,14 @@ an external URL if there is a "link" attribute in the "front matter" section of 
 * to include a divider right above an entry in a dropdown menu the following entry should be added
 to the front matter: "*div: yes*"
 
-### Managing Data
+#### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
 The data component of the site can reside in the "front matter" section of the Markdown-formatted
 files or in separate YAML (or JSON, CSV etc) data sources. The front matter approach works well
 for small sites. For scalability, it is recommended to rely mostly on dedicated data files (i.e.
 files in the "_data" folder).
 
-### Development
+#### Development
 
 To productively participate in the development of this site one needs to learn the
 <a href="http://jekyllrb.com/">Jekyll</a> framework and perform its installation on
