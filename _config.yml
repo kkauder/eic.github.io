@@ -33,6 +33,9 @@ collections:
   software:
     output: true
     permalink: /software/:title.html
+  computing:
+    output: true
+    permalink: /computing/:title.html
   about:
     output: true
     permalink: /about/:title.html
