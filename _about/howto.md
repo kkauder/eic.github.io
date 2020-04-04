@@ -52,14 +52,16 @@ Jekyll is fairly flexible when it comes to storing and manipulating structured d
 The data component of the site can reside in the "front matter" section of the Markdown-formatted
 files or in separate YAML (or JSON, CSV etc) data sources. The front matter approach works well
 for small sites. For scalability, it is recommended to rely mostly on dedicated data files (i.e.
-files in the "_data" folder).
+files in the "<a href="https://github.com/eic/eic.github.io/tree/master/_data" target="_blank">_data</a>" folder)
+and keep the content of the front matter sections of individual MD files to a minimum.
 
 The <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a> template language
 features a variety of filters that can be applied to the data stored in YAML and other data sources
 as well as in the front matter blocks of pages, and decent (not perfect) support for collections,
 iterators and flow control constructs.
 
-Information assets on this site (e.g. imaged, PDF files etc) are stored in the aptly named "assets"
+Information assets on this site (e.g. imaged, PDF files etc) are stored in the aptly named
+"<a href="https://github.com/eic/eic.github.io/tree/master/assets/" target="_blank">assets</a>"
 folder and its subsiduaries. This convention should be kept going forward.
 
 #### Formatting

@@ -1,24 +1,30 @@
+- name: bressan
+  full: Andrea Bressan
+  email: Andrea.Bressan@ts.infn.it
+  roles: [convener]
+  teams: 
+  
 - name: diefenthaler
   full: Markus Diefenthaler
   email: mdiefent@jlab.org
-  role: 
+  roles: [convener]
+  teams: 
 
 - name: wenaus
   full: Torre Wenaus
   email: wenaus@gmail.com
-  role: 
+  roles: [convener]
+  teams: 
 
 - name: pinkenburg
   full: Chris Pinkenburg
   email: pinkenburg@bnl.gov
-  role: 
+  roles: 
+  teams: fun4all
 
 - name: potekhin
   full: Maxim Potekhin
   email: potekhin@bnl.gov
-  role: 
+  roles: [collaborative-tools-convener]
+  teams: 
 
-- name: bressan
-  full: Andrea Bressan
-  email: Andrea.Bressan@ts.infn.it
-  role: 
