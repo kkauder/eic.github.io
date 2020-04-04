@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>{% include layouts/header.html %}</head>
+  <body class="d-flex flex-column h-100">
+    <header>{% include layouts/navbar.html %} </header>
+<!-- vertical spacing to allow room for the top navbar -->    
+&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>
+
+<div class="main-container mx-auto" style="width: 900px;" >
+{{ content }}
+</div>    
+{% include layouts/scripts.html %}
+    
+  </body>
+</html>

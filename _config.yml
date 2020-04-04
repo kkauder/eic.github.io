@@ -1,0 +1,38 @@
+name: The EIC website
+title: The EIC website
+description: The EIC website
+url: http://eicug.org
+
+excerpt_separator: <!--more-->
+timezone: America/New_York
+highlighter: rouge
+
+markdown: kramdown
+future: true
+exclude: [vendor]
+
+# !!! Important if we are not serving from the top folder !!! - baseurl: /web
+#
+# If the path is changed, please make sure you use the "relative_path" directive
+# everywhere you include URLs in the page
+
+#
+plugins:
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+#
+collections:
+  people:
+    output: true
+    permalink: /people/:title.html
+  eic:
+    output: true
+    permalink: /eic/:title.html
+  software:
+    output: true
+    permalink: /software/:title.html
+  about:
+    output: true
+    permalink: /about/:title.html
