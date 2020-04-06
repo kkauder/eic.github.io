@@ -10,7 +10,7 @@
   full:		BeAST Magnetic Field
   owner:	kiselev
   teams:	beast
-  category:	field_map
-  type:		data
+  category:	beast
+  type:		field_map
   repo:		https://github.com/eic/BeastMagneticField
   
