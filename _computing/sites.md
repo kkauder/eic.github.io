@@ -7,4 +7,4 @@ level: 0
 weight: 10
 ---
 
-{% include layouts/software.md %}
+{% include layouts/title.md %}
