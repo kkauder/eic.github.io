@@ -1,7 +1,6 @@
 ---
 title: Fun4All
-description: The Fun4All Framework
-abbrev: fun4all_main
+name: fun4all_tutorial_1
 category: fun4all
 layout: default
 level: 0
