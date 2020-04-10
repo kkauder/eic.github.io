@@ -1,3 +1,11 @@
+---
+title: PEPSI
+name: pepsi
+category: pepsi
+layout: default
+level: 0
+weight: 20
+---
 # PEPSI
 PEPSI (Polarised Electron Proton Scattering Interactions) is a Monte Carlo generator for polarised deep inelastic scattering (pDIS). It is based on the LEPTO 6.5 Monte Carlo for unpolarised DIS.
 See L. Mankiewicz, A. Schäfer and M. Veltri, Comp. Phys. Comm. 71, 305-318 (1992),
