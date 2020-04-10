@@ -34,6 +34,13 @@ to be declared in the main configuration file
 The top-level entries (and therefore the folders) included in the navigation bar are defined in a concise way in its
 <a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">code</a>.
 
+#### Front Matter
+"Front Matter" is a piece of YAML code (typically short) on the very top of a Markdown-formatted
+document which can contain any sort of data, for example define variables used to render the page
+in one convenient place. Importantly, it also serves to inform the platform "Jekyll" that this
+page needs to be rendered into HTML and can be used to define its behavior in menus and other
+contructs referencing it.
+
 #### Dropdown Menus
 The dropdown menus in the navigation bar are populated automatically based on the content of respective folders
 (called "collections" in the Jekyll framework). This site's design uses the following conventions:
@@ -52,7 +59,7 @@ weight: 10
 ```
 * each MD file can be either
    * the source for the page referenced in the respective dropdown menu entry
-* rendered as a common link to an external resource if there is a **"link"** attribute in the "front matter" section of that file, cf. the code snippet below
+   * provide a common link to an external resource if there is a **"link"** attribute in the "front matter" section of that file, cf. the code snippet below
 ```
 ---
 title: Brookhaven National Lab
