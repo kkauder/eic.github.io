@@ -39,13 +39,34 @@ The dropdown menus in the navigation bar are populated automatically based on th
 (called "collections" in the Jekyll framework). This site's design uses the following conventions:
 * each folder contains a collection of Markdown-formatted ("MD") files
 * in general each file will be mapped to an entry in the dropdown menu
-* each MD file is expected to be equipped with the "front matter" section
+* **each MD file is expected to be equipped with the "front matter" section**, which could look like the excerpt below. The "weight" atribute defines the position of the item in the respective dropdown menu, the "level" attribute determines whether it's included at all in the menu (it happens if the level is 0) or it's parsed into other pages (for level > 0).
+```
+---
+title: My Cool Software
+name: my_cool_software
+category: mysoftware
+layout: default
+level: 0
+weight: 10
+---
+```
 * each MD file can be either
    * the source for the page referenced in the respective dropdown menu entry
-   * rendered as a common link to an external resource if there is a *"link"* attribute in the "front matter" section of that file
+* rendered as a common link to an external resource if there is a **"link"** attribute in the "front matter" section of that file, cf. the code snippet below
+```
+---
+title: Brookhaven National Lab
+abbrev: bnl
+layout: default
+link: http://bnl.gov
+level: 0
+div: yes
+weight: 20
+---
+```
 * the ordering of items in the menu is defined by the "weight" attribute in the "front matter" section, with smaller weights on top and larger on the bottom
 * to include a divider right above an entry in a dropdown menu the following entry should be added
-to the front matter: "*div: yes*"
+to the front matter: "**div: yes**" (just like in the example above)
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
