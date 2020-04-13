@@ -6,5 +6,3 @@ level: 0
 div: yes
 weight: 99
 ---
-
-{% include layouts/software.md category='beast' %}
