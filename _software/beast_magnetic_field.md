@@ -13,7 +13,7 @@ weight: 99
 {% include layouts/software-link.md category='beast' %}
 
 <div class="row">
-  <div class="col-sm-12 blog-main">
+  <div class="col-sm-13 blog-main">
     <hr>
     <center>
       <div class=row>
