@@ -16,7 +16,7 @@ weight: 99
   <div class="col-sm-13 blog-main">
     <hr>
     <center>
-      <div class=row>
+      <div class="row">
         <div class="col-sm-6">
 	  <img src="/assets/images/site/beast-opera-map.png" width="400"/>
         </div>
@@ -33,8 +33,7 @@ weight: 99
 	      polar angles)
 	  </p>   
           <p class="lead">
-	      Field map originally produced by a collection of Open Source tools (Elmer, Netgen,
-	      ROOT)
+	      Field map originally produced by a collection of Open Source tools (Elmer, Netgen, ROOT)
 	  </p> 
 	</div>
       </div>
