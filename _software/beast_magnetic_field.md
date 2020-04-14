@@ -15,13 +15,12 @@ weight: 99
 <div class="row">
   <div class="col-sm-12 blog-main">
     <hr>
-    <left>
+    <center>
       <div class=row>
         <div class="col-sm-6">
 	  <img src="/assets/images/site/beast-opera-map.png" width="400"/>
         </div>
         <div class="col-sm-6">
-    	<center> 
           <p class="lead">
 	      Open solenoid design (no field clamps) 
 	  </p>
@@ -37,9 +36,8 @@ weight: 99
 	      Field map originally produced by a collection of Open Source tools (Elmer, Netgen,
 	      ROOT)
 	  </p> 
-    	</center>   
 	</div>
       </div>
-    </left>
+    </center>
   </div>
 </div>
