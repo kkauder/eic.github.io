@@ -10,7 +10,7 @@
 
 {% if item.link %}
 {% assign theLink=item.link %}
-{% assign target='target="_blank"' %}
+{% assign target=site.blank %}
 {% else %}
 {% assign theLink=item.url | relative_url %}
 {% assign target='' %}

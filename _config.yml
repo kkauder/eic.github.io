@@ -11,10 +11,17 @@ markdown: kramdown
 future: true
 exclude: [vendor]
 
+#################################################################################
 # !!! Important if we are not serving from the top folder !!! - baseurl: /web
 #
 # If the path is changed, please make sure you use the "relative_path" directive
 # everywhere you include URLs in the page
+#################################################################################
+
+# Custom helper variables:
+blank: 'target="_blank"'
+
+
 
 #
 plugins:

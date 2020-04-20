@@ -1,0 +1,34 @@
+- name: eic
+  full: EIC
+  submenus:
+    -
+      name: eic_website
+      full: EIC Website
+      link: https://www.bnl.gov/eic/
+    -
+      name: eicug
+      full: EIC User Group
+      link: http://www.eicug.org/web/
+    -
+      name: eicug_phonebook
+      full: The User Group Database
+      link: http://www.eicug.org/pnb/client/
+    -
+      name: eic_software
+      full: The Software Working Group
+      link: http://www.eicug.org/web/content/eic-software
+      div: yes
+    -
+      name: bnl
+      full: Brookhaven National Lab
+      link: http://bnl.gov
+      div: yes
+    -
+      name: jlab
+      full: Jefferson Lab
+      link: https://www.jlab.org
+    -
+      name: jlab
+      full: Yellow Report
+      link: http://www.eicug.org/web/content/yellow-report-initiative
+      div: yes
