@@ -9,12 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
 	<!-- li class="nav-item active"><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li -->
-	{% include layouts/autodrop_data.md what="eic" %}
-	{% include layouts/autodrop_data.md what="software" %}
-	{% include layouts/autodrop_data.md what="computing" %}
-	{% include layouts/autodrop_data.md what="teams" %}
-      </ul>
-      <ul class="navbar-nav mr-auto text-right">
+	{% for menu in site.data.menus %}
+	{% include layouts/autodrop_data.md what=menu.name %}
+	{% endfor %}
+      </ul><ul class="navbar-nav mr-auto text-right">
 	{% include layouts/autodrop.md title='About'	what=site.about %}
       </ul>
     </div>

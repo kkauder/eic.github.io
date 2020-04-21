@@ -1,6 +1,6 @@
 ---
 title: Overview
-abbrev: overview
+name: overview
 layout: default
 level: 0
 ---

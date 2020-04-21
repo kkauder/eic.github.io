@@ -1,6 +1,7 @@
 {% case include.what %}
 {% when "software" %}	{% assign theCollection=site.software %}
 {% when "computing" %}	{% assign theCollection=site.computing %}
+{% when "teams" %}	{% assign theCollection=site.teams %}
 {% endcase %}
 
 {% assign menus = site.data.menus | where: "name", include.what %}
