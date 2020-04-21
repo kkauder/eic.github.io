@@ -45,6 +45,9 @@
       name: escalate_singularity_1
       full: Escalate with Singularity
     -
+      name: eicsmear_1
+      full: Smearing with eic-smear
+    -
       name: pepsi
       full: PEPSI
     -

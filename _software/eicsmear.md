@@ -1,5 +1,5 @@
 ---
-title: Eic-emar
+title: Smearing with eic-smear
 name: eicsmear_1
 category: eicsmear
 layout: default
