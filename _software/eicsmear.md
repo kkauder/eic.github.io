@@ -8,8 +8,6 @@ level: 0
 
 {% include layouts/title.md %}
 
-### eic-smear ###
-
 #### About ####
 
 Currently hosted at
@@ -293,7 +291,9 @@ EEprime->Draw("colz");
 
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
-    
+
+* Implement a function returning a Smear::Detector, set up the
+detector object and activate some additional calculation options.
 ```c++
 // ... omitted some includes and helpers
 Smear::Detector BuildMyDetector() {
@@ -304,8 +304,11 @@ Smear::Detector BuildMyDetector() {
   det.SetEventKinematicsCalculator("NM JB DA");
 ```
 
-* Implement a function returning a Smear::Detector. Setup the detector
-object and activate some additional calculation options.
+
+* Set up a device that smears. In this case, momentum is smeared
+  * in eta = -3.5 --  -2.5,
+  * with sigma_p/p = 0.1 % p+ 2.0 %,
+  * accepting all charged particles.
 ```c++
   // Tracking
   // eta = -3.5 --  -2.5
@@ -317,11 +320,6 @@ object and activate some additional calculation options.
   det.AddDevice(TrackBack1P);
   ```
   
-* Set up a device that smears. In this case, momentum is smeared
-  * in eta = -3.5 --  -2.5,
-  * with sigma_p/p = 0.1 % p+ 2.0 %,
-  * accepting all charged particles.
-
 * IMPORTANT: For more realistic representation of electrons, it may
   make sense to only accept hadrons and create a separate device for
   electrons that represents the combined information from multiple
@@ -340,12 +338,13 @@ object and activate some additional calculation options.
 
 * Continue on, adding $`\phi`$ and $`\theta`$ devices, calorimetry,
 etc.
+
+* Finally, after adding all desired devices return the complete
+detector.
 ```
   return det;
 }
 ```
-* Finally, after adding all desired devices return the complete
-detector.
 
 * Formulas are based on ROOT::TFormula and accept kP, kPhi, kTheta, kE. In
 principle, kPt and kPz is also supported but currently not working.
