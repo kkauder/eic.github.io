@@ -23,15 +23,18 @@ as hard limits on repositories of sites which are hosted as "GitHub pages"
 of the top navigation bar and the dropdown menus
 
 #### The Navigation Bar
-Entries in the navigation bar on top are named in a manner
-consistent with the names of the folders in this project, for example the "EIC" entry in the navigation
-bard is a dropdown menu with the content defined in the "_eic" folder, "Software" is associated with the
-folder "_software". These folders are treated as "collections" by the Jekyll framework and they need
-to be declared in the main configuration file
+Entries in the navigation bar on top are named in the same manner as the folders in this
+project, for example the "Software" is associated with the folder "_software". These folders are treated as
+"collections" by the Jekyll framework and they need to be declared in the main configuration file
 <a href="https://github.com/eic/eic.github.io/blob/master/_config.yml" target="_blank">_config.yml</a>.
-
-The top-level entries (and therefore the folders) included in the navigation bar are defined in a concise way in its
-<a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">code</a>.
+As is clear from the navigation bar
+<a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">code</a>,
+its menu entries are  generated automatically based on the content of the file
+```
+_data/menus.yml
+```
+Both the content and order of entries in the navigation bar as well as ordering of the items in all dropdowns
+are defined in that file.
 
 #### Front Matter
 "Front Matter" is a piece of YAML code (typically short) on the very top of a Markdown-formatted
@@ -40,12 +43,9 @@ in one convenient place. Importantly, it also serves to inform the platform "Jek
 page needs to be rendered into HTML and can be used to define its behavior in menus and other
 contructs referencing it.
 
-#### Dropdown Menus
-The dropdown menus in the navigation bar are populated automatically based on the content of respective folders
-(called "collections" in the Jekyll framework). This site's design uses the following conventions:
-* each folder contains a collection of Markdown-formatted ("MD") files
-* in general each file will be mapped to an entry in the dropdown menu
-* **each MD file is expected to be equipped with the "front matter" section**, which could look like the excerpt below. The "weight" atribute defines the position of the item in the respective dropdown menu, the "level" attribute determines whether it's included at all in the menu (it happens if the level is 0) or it's parsed into other pages (for level > 0).
+All files are expected to be in the Markdown (MD) format, and 
+**each MD file is to be equipped with the "front matter" section**, which could look like the excerpt below.
+The "level" attribute determines whether it's included at all in the menu (it happens if the level is 0) or it's parsed into other pages (for level > 0).
 ```
 ---
 title: My Cool Software
@@ -53,26 +53,15 @@ name: my_cool_software
 category: mysoftware
 layout: default
 level: 0
-weight: 10
 ---
 ```
-* each MD file can be either
-   * the source for the page referenced in the respective dropdown menu entry
-   * provide a common link to an external resource if there is a **"link"** attribute in the "front matter" section of that file, cf. the code snippet below
-```
----
-title: Brookhaven National Lab
-abbrev: bnl
-layout: default
-link: http://bnl.gov
-level: 0
-div: yes
-weight: 20
----
-```
-* the ordering of items in the menu is defined by the "weight" attribute in the "front matter" section, with smaller weights on top and larger on the bottom
-* to include a divider right above an entry in a dropdown menu the following entry should be added
-to the front matter: "**div: yes**" (just like in the example above)
+
+There is no source code for the "submenus" containing links to external resources i.e. in such cases
+clicking on a menu item will result in opening an exernal page. Examples are easy to spot in the file
+_data/menus.yml.
+
+To include a divider right above an entry in a dropdown menu the following line should be added
+respective section of the _data/menus.yml file: "**div: yes**"
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
