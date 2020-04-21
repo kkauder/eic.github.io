@@ -1,7 +1,9 @@
 
 # EIC Software
 
-This is the future home of the EIC software website.
+This is the home of the EIC software website. It is currently under development.
+
+Deployment: https://eic.github.io/
 
 # Useful links
 
