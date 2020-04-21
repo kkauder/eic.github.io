@@ -374,6 +374,16 @@ regarding calculation of smeared kinematic variables.
   translated dynamically into the four available free variables
   x,y,z,t).
 
+* If two devices of the same type have overlapping acceptance, only
+  the last one added to the detector will act. An example would be an
+  inner and outer tracker. In such a case, a combined parameterization
+  must be used. Two smearings of the same variable cannot act both
+  (that would be unphysical), nor be used in the way a human
+  experimenter would, i.e. by choosing the better device or combining
+  the two to reduce the uncertainty. Furthermore, the framework cannot
+  detect such acceptance collisions (under development), so it cannot
+  issue a warning. When you make changes to a detector, keep this in
+  mind and proceed with caution.
 
 #### Doxygen ####
 
