@@ -1,7 +1,7 @@
 ---
 title: Storage
 description: Storage
-abbrev: storage
+name: storage
 layout: default
 level: 0
 weight: 10

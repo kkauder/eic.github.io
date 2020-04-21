@@ -74,3 +74,17 @@
     -
       name: overview
       full: Overview
+- name: about
+  full: About
+  right: yes
+  submenus:
+    -
+      name: site
+      full: This Site
+    -
+      name: howto
+      full: How-to
+    -
+      name: contact
+      full: Contact us
+      div: yes

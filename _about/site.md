@@ -1,9 +1,8 @@
 ---
 title: This Site
-abbrev: site
+name: site
 layout: default
 level: 0
-weight: 0
 ---
 {% include navigation/find_link.md where=site.about what='howto' %}
 {% assign howto_url=page_url %}

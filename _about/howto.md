@@ -1,9 +1,8 @@
 ---
 title: How-to
-abbrev: howto
+name: howto
 layout: default
 level: 0
-weight: 10
 ---
 {% include layouts/title.md %}
 

@@ -10,10 +10,9 @@
       <ul class="navbar-nav mr-auto">
 	<!-- li class="nav-item active"><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li -->
 	{% for menu in site.data.menus %}
+	{% if menu.right %}</ul><ul class="navbar-nav mr-auto text-right">{% endif %}
 	{% include layouts/autodrop_data.md what=menu.name %}
 	{% endfor %}
-      </ul><ul class="navbar-nav mr-auto text-right">
-	{% include layouts/autodrop.md title='About'	what=site.about %}
       </ul>
     </div>
   </div>

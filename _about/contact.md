@@ -1,9 +1,8 @@
 ---
 title: Contact us
-abbrev: contact
+name: contact
 layout: default
 level: 0
-weight: 20
 div: yes
 ---
 {% include layouts/title.md %}
