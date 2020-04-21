@@ -1,3 +1,14 @@
+---
+title: Escalate with Singularity
+name: escalate_singularity_1
+category: escalate
+layout: default
+level: 0
+weight: 10
+---
+
+{% include layouts/title.md %}
+
 ## Running ESCalate on HPC clusters
 
 To run the ESCalate docker container on HPC clusters, we use singularity. This does not require super-user privileges.
