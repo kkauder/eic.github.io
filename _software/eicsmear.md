@@ -8,9 +8,9 @@ level: 0
 
 {% include layouts/title.md %}
 
-# eic-smear
+### eic-smear ###
 
-## About
+#### About ####
 
 Currently hosted at
 https://gitlab.com/eic/eic-smear
@@ -25,7 +25,7 @@ Contacts
 * Kolja Kauder <kkauder@bnl.gov>
 * Maxim Potekhin <potekhin@bnl.gov>
 
-## Overview
+#### Overview ####
 
 eic-smear is a Monte Carlo analysis package originally developed by the BNL EIC task force.
 
@@ -82,15 +82,16 @@ Both portions of the code are included in the eic-smear shared
 library.
 
 
-## Building
+#### Building ####
 
-### Prerequisites
+##### Prerequisites #####
 
 * CMake version >3.1 is required.
 * Compiler with C++11 support
 * ROOT is required. ROOT6 strongly preferred, although ROOT5 may work
 
-### Procedure
+##### Procedure #####
+
 Create a directory in which to build eic-smear and navigate to that
 ```
 cd eic-smear
@@ -113,7 +114,7 @@ make -j 2
 make install
 ```
 
-### Notes:
+##### Notes: #####
 
 * If you see instances of things like
 ```
@@ -122,13 +123,15 @@ Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
    requested to autoload type erhic::VirtualParticle
 ```
 please setenv or export the environment variable ROOT_INCLUDE_PATH to point to the include directory in your installation.
-If building at BNL, get ROOT6 in the following manner
+
+* If building at BNL, you can get ROOT6 in the following manner
 ```
 source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh
 setenv EIC_LEVEL pro
 #verify
 which root
 ```
+
 * If you want to build PYTHIA6-dependent components, pass the location
 of libPythia6 to cmake:
 ```
@@ -145,7 +148,8 @@ root [] gSystem->Load("libeicsmear");
 ```
 even if that same command is in your rootlogon.C. 
 
-## Tests and Examples
+#### Tests and Examples ####
+
 if you prepare building using the cmake option
 ```
 -DBUILD_TESTS=ON
@@ -163,7 +167,8 @@ will read a (provided) e+D BeAGLE file.
 is a customizable particle gun that creates a few simplee histograms
 and plots to see and test the acceptance dependence of smearing.
 
-### A canonic example
+#### A canonic example ####
+
 When tests are built, a particularly useful example is 
 ```
 ./tests/qaplots
@@ -216,14 +221,16 @@ random number details) the provided small reference plots in
 ```
 
 
-### Deconstructed example
+#### Deconstructed example ####
+
 All steps can be performed interactively and individually in ROOT as
 follows:
 
-#### Generate EicTree
+##### Generate EicTree #####
+
 ```
 root [] gSystem->Load("libeicsmear");
-root [] BuildTree ("tests/ep_lowQ2.20x250.small.txt",".",-1);
+root [] BuildTree ("tests/ep_hiQ2.20x250.small.txt",".",-1);
 Processed 10000 events containing 346937 particles in 6.20576 seconds (0.000620576 sec/event)
 ```
 BuildTree accepts the name of an input file, the output directory, and
@@ -233,11 +240,12 @@ other files, please make sure to include the generator name in the
 filename. Currently accepted are pythia, pepsi, lepto, rapgap, djangoh, beagle,milou, sartre, simple.
 
 
-#### Smear the tree
+##### Smear the tree #####
+
 ```
 root [] gSystem->Load("libeicsmear")
 root [] .L smearBeAST.cxx // Assuming you copied this here
-root [] SmearTree(BuildBeAST(), "ep_lowQ2.20x250.small.root", "smeared.root",-1)
+root [] SmearTree(BuildBeAST(), "ep_hiQ2.20x250.small.root", "smeared.root",-1)
 /-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-/
 /  Commencing Smearing of 10000 events.
 /-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-/
@@ -248,12 +256,13 @@ the number of events to smear (-1 for all);
 * IMPORTANT: The file type is by default assumed to be pythia6. For
 other files, please make sure to include the generator name in the filename.
 
-#### Analyze the Tree
+##### Analyze the Tree #####
+
 (Suppressing the root prompts for easier copy/paste):
 ```
 root -l 
 gSystem->Load("libeicsmear");
-TFile mcf ("ep_lowQ2.20x250.small.txt.root"); // truth
+TFile mcf ("ep_hiQ2.20x250.small.txt.root"); // truth
 TTree* mc=(TTree*)mcf.Get("EICTree");
 mc->AddFriend("Smeared","smeared.root"); // befriend
 	
@@ -280,7 +289,8 @@ for(long iEvent=0; iEvent<mc->GetEntries(); iEvent++){
 EEprime->Draw("colz");
 ```
 
-## Anatomy of a Smearer
+#### Anatomy of a Smearer ####
+
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
     
@@ -305,7 +315,8 @@ object and activate some additional calculation options.
   TrackBack1P.Accept.AddZone(TrackBack1Zone);
   TrackBack1P.Accept.SetCharge(Smear::kCharged);
   det.AddDevice(TrackBack1P);
-```
+  ```
+  
 * Set up a device that smears. In this case, momentum is smeared
   * in eta = -3.5 --  -2.5,
   * with $`\sigma_p/p = 0.1 \% p+2.0 \%`$,
@@ -339,7 +350,8 @@ detector.
 * Formulas are based on ROOT::TFormula and accept kP, kPhi, kTheta, kE. In
 principle, kPt and kPz is also supported but currently not working.
 
-### IMPORTANT NOTES:
+##### IMPORTANT NOTES: #####
+
 * If you want to have an unsmeared value in the smeared tree, use a
 perfect device, e.g:
 ```
@@ -364,7 +376,8 @@ regarding calculation of smeared kinematic variables.
   x,y,z,t).
 
 
-## Doxygen
+#### Doxygen ####
+
 A recent version of the detailed class documentation is temporarily
 hosted at www4.rcf.bnl.gov/~eickolja/.
 You can also create an up-to-date one by running
