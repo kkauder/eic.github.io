@@ -319,7 +319,7 @@ object and activate some additional calculation options.
   
 * Set up a device that smears. In this case, momentum is smeared
   * in eta = -3.5 --  -2.5,
-  * with $`\sigma_p/p = 0.1 \% p+2.0 \%`$,
+  * with sigma_p/p = 0.1 % p+ 2.0 %,
   * accepting all charged particles.
 
 * IMPORTANT: For more realistic representation of electrons, it may
