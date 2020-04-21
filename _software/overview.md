@@ -1,9 +1,8 @@
 ---
 title: Overview
-abbrev: overview
+name: overview
 layout: default
 level: 0
-weight: 0
 ---
 
 {% include layouts/title.md %}

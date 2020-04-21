@@ -4,7 +4,6 @@ name: escalate_singularity_1
 category: escalate
 layout: default
 level: 0
-weight: 10
 ---
 
 {% include layouts/title.md %}

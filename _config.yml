@@ -20,7 +20,7 @@ exclude: [vendor]
 
 # Custom helper variables:
 blank: 'target="_blank"'
-
+foo: site.software
 
 
 #

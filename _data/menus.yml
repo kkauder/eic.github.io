@@ -32,3 +32,27 @@
       full: Yellow Report
       link: http://www.eicug.org/web/content/yellow-report-initiative
       div: yes
+- name: software
+  full: Software
+  submenus:
+    -
+      name: overview
+      full: Overview
+    -
+      name: fun4all_tutorial_1
+      full: Fun4All
+    -
+      name: escalate_singularity_1
+      full: Escalate with Singularity
+    -
+      name: pepsi
+      full: PEPSI
+    -
+      name: beast_magnetic_field
+      full: BeAST Magnetic Field
+      div: yes
+    -
+      name: doxygen
+      full: Doxygen
+      link: https://eic.github.io/doxygen/
+      div: yes
