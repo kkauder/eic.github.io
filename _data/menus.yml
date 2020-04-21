@@ -48,6 +48,9 @@
       name: eicsmear_1
       full: Smearing with eic-smear
     -
+      name: pythia6
+      full: PYTHIA6 
+    -
       name: pepsi
       full: PEPSI
     -
