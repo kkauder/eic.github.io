@@ -45,6 +45,7 @@ The following Monte Carlo generators are supported:
 * Sartre
 * DPMJet
 * gmc_trans
+
 Most of these are currently hosted at https://gitlab.com/eic/mceg.
 Please see the associated documentation for further information on
 individual generators.
@@ -91,7 +92,7 @@ library.
 
 ### Procedure
 Create a directory in which to build eic-smear and navigate to that
-```sh
+```
 cd eic-smear
 mkdir build
 cd build
@@ -99,7 +100,7 @@ cd build
 
 Configure using cmake. Optionally, you can specify a location where to
 install include files and libraries:
-We'll assume that the installation path is in $EICDIRECTORY
+we'll assume that the installation path is in $EICDIRECTORY
 ```
 setenv EICDIRECTORY=</path/to/install>
 cmake ../ -DCMAKE_INSTALL_PREFIX=$EICDIRECTORY
@@ -121,14 +122,13 @@ Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
    requested to autoload type erhic::VirtualParticle
 ```
 please setenv or export the environment variable ROOT_INCLUDE_PATH to point to the include directory in your installation.
-
 If building at BNL, get ROOT6 in the following manner
-```source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh
+```
+source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh
 setenv EIC_LEVEL pro
-# verify
+#verify
 which root
 ```
-
 * If you want to build PYTHIA6-dependent components, pass the location
 of libPythia6 to cmake:
 ```
@@ -283,6 +283,7 @@ EEprime->Draw("colz");
 ## Anatomy of a Smearer
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
+    
 ```c++
 // ... omitted some includes and helpers
 Smear::Detector BuildMyDetector() {
@@ -292,9 +293,9 @@ Smear::Detector BuildMyDetector() {
   // The detector will calculate event kinematics from smeared values
   det.SetEventKinematicsCalculator("NM JB DA");
 ```
+
 * Implement a function returning a Smear::Detector. Setup the detector
 object and activate some additional calculation options.
-
 ```c++
   // Tracking
   // eta = -3.5 --  -2.5
@@ -314,7 +315,6 @@ object and activate some additional calculation options.
   make sense to only accept hadrons and create a separate device for
   electrons that represents the combined information from multiple
   detectors, e.g.:
-
 ```c++
   TrackBack1P.Accept.SetCharge(Smear::kCharged);
   TrackBack1P.Accept.SetGenre(Smear::kHadronic);
@@ -329,7 +329,6 @@ object and activate some additional calculation options.
 
 * Continue on, adding $`\phi`$ and $`\theta`$ devices, calorimetry,
 etc.
-
 ```
   return det;
 }
@@ -346,7 +345,6 @@ perfect device, e.g:
 ```
 Smear::Device TrackTheta(Smear::kTheta, "0");
 ```
-
 
 * Once any variable is smeared, all remaining fields are initialized
 to 0, meaning eic-smear treats them as measured with a zero value. It
