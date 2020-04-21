@@ -56,3 +56,21 @@
       full: Doxygen
       link: https://eic.github.io/doxygen/
       div: yes
+- name: computing
+  full: Computing
+  submenus:
+    -
+      name: overview
+      full: Overview
+    -
+      name: sites
+      full: Computing Sites
+    -
+      name: storage
+      full: Storage
+- name: teams
+  full: Teams
+  submenus:
+    -
+      name: overview
+      full: Overview
