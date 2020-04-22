@@ -97,3 +97,45 @@ a development machine. This way any modification can be validated immediately si
 the locally running development server provided by Jekyll will render the site
 on the local host. Basic knolwede of the <a href="https://shopify.github.io/liquid/" target="_blank">
 Liquid</a> template language and in particular the "filters" that are part of it is extremely helpful.
+
+#### Checking the Results of Your Contribution
+
+It is often desirable to assess the result of changes before publishing them. There is no services at GitHub to do that: 
+you can only render the markdown contents, without all the CSS and other things. To achieve this, you need to install 
+Jekyll on your local machine. Detailed instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/installation/) 
+but the short story is:
+
+* Install [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](https://rubygems.org/pages/download)
+* Install Bundler (a Ruby package manager):
+
+  ```bash
+  gem install bundler
+  ```
+
+* If you don't have one yet, create a clone of the website repository and move to the directory created:
+
+  ```bash
+  git clone https://github.com/eic/eic.github.io.git
+  cd eic.github.io
+  ```
+
+* Install/update your Jekyll installation (must be done regularly):
+
+  ```bash
+  bundler update
+  ```
+
+* Run Jekyll installation:
+
+  ```bash
+  bundler exec jekyll serve
+  ```
+
+
+Once Jekyll has been started you can view the web site by connecting to `localhost:4000`.
+Changes made to files are immediately reflected on the displayed site (at the next page load). This makes it extremely efficient to make changes and debug entirely locally before uploading the final changes to GitHub.
+
+At this point, pushes are allowed for site developers. A pull request/approval process may be put in place later if needed.
+
+
+
