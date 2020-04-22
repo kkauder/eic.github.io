@@ -26,9 +26,9 @@ upon request.
 
 A WEBDAV interface exists and can be accessed under the base url
 ```
-bash
+# bash
 export slingerurl='https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/eicslinger@gmail.com'
-csh
+# csh
 setenv slingerurl 'https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/eicslinger@gmail.com'
 ```
 
