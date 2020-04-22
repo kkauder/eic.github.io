@@ -104,10 +104,7 @@ otherwise convenience and feedback to the user are right now rather sparse.
 /gpfs02/eic/DATA
 ```
 
-* To repeat for emphasis, DO NOT change the password or otherwise
-  impede others from using it. If this mechanism is repeatedly abused,
-  the community guest account will be deleted and sharing can only be
-  done individually on request.
+### To repeat for emphasis, DO NOT change the password or otherwise impede others from using it. If this mechanism is repeatedly abused,  the community guest account will be deleted and sharing can only be  done individually on request. ###
 
 
 
