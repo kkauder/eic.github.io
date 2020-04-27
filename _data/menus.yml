@@ -48,13 +48,16 @@
       full: Fun4All
     -
       name: singularity
-      full: Singularity
+      label: yes
+      full: Singularity Applications
+      div: yes
     -
       name: escalate_singularity_1
-      full: Escalate with Singularity
+      full: Escalate
     -
       name: eicsmear_1
-      full: Smearing with eic-smear
+      full: EIC-smear
+      div: yes
     -
       name: pythia6
       full: PYTHIA6 

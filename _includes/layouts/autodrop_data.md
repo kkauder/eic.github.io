@@ -28,14 +28,10 @@
 {% endif %}
 
 {% if submenu.div %}<div class="dropdown-divider"></div>{% endif %}
-{% if submenu.submenus %}
-
-<a class="dropdown-item" href="{{ experiment }}" {{ target }}>{{ submenu.full }}</a>
-
+{% if submenu.label %}
+<div class="dropdown-item" style="color: #fff; background-color: #444;">{{ submenu.full }}</div>
 {% else %}
-
 <a class="dropdown-item" href="{{ theLink }}" {{ target }}>{{ submenu.full }}</a>
-
 {% endif %}
 
 {% endfor %}
