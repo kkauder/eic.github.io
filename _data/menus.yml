@@ -38,6 +38,11 @@
     -
       name: overview
       full: Overview
+      submenus:
+        -
+          name: test
+          full: test
+          link: https://www.bnl.gov/eic/
     -
       name: fun4all_tutorial_1
       full: Fun4All

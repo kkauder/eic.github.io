@@ -5,8 +5,7 @@
 {% when "about" %}	{% assign theCollection=site.about %}
 {% endcase %}
 
-{% assign menus = site.data.menus | where: "name", include.what %}
-{% assign the_menu=menus[0] %}
+{% assign the_menu = site.data.menus | where: "name", include.what | first %}
 {% assign target='' %}
 
 <li class="nav-item dropdown px-4">
@@ -21,15 +20,17 @@
 
 {% else %}
 
-{% assign items=theCollection | where: "name", submenu.name %}
-{% assign item=items[0] %}
+{% assign item=theCollection | where: "name", submenu.name | first %}
 {% assign theLink=item.url | relative_url %}
-{{ coll }}
+
 {% endif %}
 
 {% if submenu.div %}<div class="dropdown-divider"></div>{% endif %}
-
+{% if submenu.submenus %}
 <a class="dropdown-item" href="{{ theLink }}" {{ target }}>{{ submenu.full }}</a>
+{% else %}
+<a class="dropdown-item" href="{{ theLink }}" {{ target }}>{{ submenu.full }}</a>
+{% endif %}
 
 {% endfor %}
 
