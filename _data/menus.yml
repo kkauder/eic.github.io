@@ -38,14 +38,22 @@
     -
       name: overview
       full: Overview
+      exclude: yes
       submenus:
         -
           name: test
           full: testing
           link: https://www.bnl.gov/eic/
     -
+      name: tools_and_frameworks
+      label: yes
+      full: Tools and Frameworks
+    -
       name: fun4all_tutorial_1
       full: Fun4All
+    -
+      name: eicsmear_1
+      full: EIC-smear
     -
       name: singularity
       label: yes
@@ -55,8 +63,12 @@
       name: escalate_singularity_1
       full: Escalate
     -
-      name: eicsmear_1
-      full: EIC-smear
+      name: eicsmear_generators_singularity
+      full: EIC-smear and Generators
+    -
+      name: generators
+      label: yes
+      full: Generators
       div: yes
     -
       name: pythia6
