@@ -41,11 +41,14 @@
       submenus:
         -
           name: test
-          full: test
+          full: testing
           link: https://www.bnl.gov/eic/
     -
       name: fun4all_tutorial_1
       full: Fun4All
+    -
+      name: singularity
+      full: Singularity
     -
       name: escalate_singularity_1
       full: Escalate with Singularity

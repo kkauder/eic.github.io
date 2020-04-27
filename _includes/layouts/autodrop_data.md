@@ -23,13 +23,19 @@
 {% assign item=theCollection | where: "name", submenu.name | first %}
 {% assign theLink=item.url | relative_url %}
 
+{% assign experiment=theCollection | where: "name", submenu.name | map: "url" | first | relative_url %}
+
 {% endif %}
 
 {% if submenu.div %}<div class="dropdown-divider"></div>{% endif %}
 {% if submenu.submenus %}
-<a class="dropdown-item" href="{{ theLink }}" {{ target }}>{{ submenu.full }}</a>
+
+<a class="dropdown-item" href="{{ experiment }}" {{ target }}>{{ submenu.full }}</a>
+
 {% else %}
+
 <a class="dropdown-item" href="{{ theLink }}" {{ target }}>{{ submenu.full }}</a>
+
 {% endif %}
 
 {% endfor %}
