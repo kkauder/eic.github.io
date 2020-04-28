@@ -10,9 +10,14 @@ Deployment: https://eic.github.io/
 * The EIC Software Group page on the EIC User Group Website: http://www.eicug.org/web/content/eic-software
 * The EIC User Group Wiki: https://wiki.bnl.gov/eicug/
 
-# Recent changes
+# Navigation Logic Updates
+* Menu logic updated for easier edits and maintenance
+  * Items ordering and other characteristics of its appearance in the menu is no longer defined in Front Matter but instead in one centralized file, "menus.yml"
+* Both "menu" and "submenu" entries can now have an optional "exclude" attribute which if set results in this element being excluded from the layout while still being coded and documented, to simplify development
+* Introduced sections to dropdown menus (with labels also defined in "menus.yml")
 
-* Removed the "EIC" menu category (menu logic updated for easy edits)
+# Recent changes
+* Removed the "EIC" menu category
 * New labels for entries in the "About" dropdown menu
 
 # In the works
