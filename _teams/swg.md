@@ -1,0 +1,17 @@
+---
+title: Software Working Group
+name: swg
+layout: default
+level: 0
+---
+
+{% include layouts/title.md %}
+
+<table width="100%">
+{% assign people=site.data.people | sort: "name" %}
+{% for who in people %}
+<tr>
+<td>{{ who.full }}</td>
+<td><a href="mailto:{{ who.email }}">{{ who.email }}</a></td>
+</tr>
+{% endfor %}

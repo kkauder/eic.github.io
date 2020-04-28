@@ -86,6 +86,7 @@
       full: Doxygen
       link: https://eic.github.io/doxygen/
       div: yes
+
 - name: computing
   full: Computing
   submenus:
@@ -98,12 +99,22 @@
     -
       name: storage
       full: Storage
+
 - name: teams
-  full: Teams
+  full: People
   submenus:
     -
       name: overview
       full: Overview
+      exclude: yes
+    -
+      name: swg
+      full: Software Working Group
+
+    -
+      name: teams
+      full: Software Teams
+
 - name: about
   full: About
   right: yes
