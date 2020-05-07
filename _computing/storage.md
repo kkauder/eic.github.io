@@ -10,102 +10,36 @@ level: 0
 
 #### Pre-generated Monte Carlo data at BNL
 
-The EIC group at BNL has a large amount (26 TB and growing) of
+The EIC group at BNL has a large amount (13 TB and growing) of
 pre-generated events from Pythia, Milou, Djangoh, and others available
-for download via NextCloud/BNLbox at
-```
+for download via NextCloud/BNLbox.
+To access this data, no lab association is necessary. Simply contact Kolja Kauder, kkauder@bnl.gov, and request a guest account.
+
+You will receive an invitation where you can choose your password. From then on, you can log into
 https://bnlbox.sdcc.bnl.gov
-```
+and find everything in the ```EIC_Data``` directory via the web interface.
 
-You can log in using a guest account
-```
-eicslinger@gmail.com
-```
-The password will be changed semi-frequently and made available to you
-upon request.
 
-A WEBDAV interface exists and can be accessed under the base url
-```
-# bash
-export slingerurl='https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/eicslinger@gmail.com'
-# csh
-setenv slingerurl 'https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/eicslinger@gmail.com'
-```
+##### Download from the command line ####
 
-##### Download via web interface and curl
+Instructions for using curl, cadaver, and a script that can download entire directories can be found
+[here](https://racfjira.atlassian.net/wiki/spaces/BBD/pages/604307461/How+To+Access+BNL+Box+From+The+Command+Line).
 
-You can navigate and download individual files directly from the web
-interface.
-
-To use the curl instead, identify the path to it from the web
-interface and use
+A few additional points that may simplify life for guest users:
+* A copy of the ```copy_bnl_box.rb``` script is found inside ```EIC_Data```.
+* IMPORTANT: As the documentation notes, guest accounts work simply with the email + password combination. However, do choose a reasonably strong password, but do NOT reuse a password you use for any other service! If you use the command line interface, this password may well be sent unencrypted and/or be in a clear-text file on your computer.
+* Assuming your guest account was created for myemail@myprovider.com, the path to the directory will always have a specific form and you can use an environment variable as a shortcut:
 ```
-curl -O -u ‘eicslinger@gmail.com:<password>'
-${slingerurl}/path/to/file
+export eicdataurl='https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/myemail@myprovider.com/EIC_Data'
 ```
-For example,
+or
 ```
-curl -O -u 'eicslinger@gmail.com:' ${slingerurl}/EIC_Data/PYTHIA/ep/TREES/5x50.lepton.png
+setenv eicdataurl 'https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/myemail@myprovider.com/EIC_Data'
 ```
-
-##### Navigation and Download via cadaver
-A more feature-rich command line tool is cadaver,
-http://www.webdav.org/cadaver/.
-
-You enter a session with the username and password:
+This way, you can (with a suitably configured .netrc) use something like:
 ```
-r$ cadaver $slingerurl 
-Authentication required for BNL Box on server `bnlbox.sdcc.bnl.gov':
-Username: eicslinger@gmail.com
-Password: 
-dav:/remote.php/dav/files/eicslinger@gmail.com/>
+curl -O -n ${eicdataurl}/copy_bnl_box.rb
 ```
-And you can use ls, cd, get, etc. to navigate the file system.
-
-To avoid repeatedly entering the credentials, you can create a .netrc
-file in your home directory:
-```
- cat ~/.netrc
-machine bnlbox.sdcc.bnl.gov
-login eicslinger@gmail.com
-password <password>
-```
-
-##### Download entire directories
-For entire directories at once, we provide a ruby script at
-[need to upload to github or so].
-To use it, first prepare a file called .bnlbox in your home directory
-and give it the right permissions:
-```
-$ cat ~/.bnlbox 
-user:eicslinger@gmail.com
-pwd:<password>
-$ chmod 600 ~/.bnlbox
-```
-Then, you can use it to recursively download entire directories, e.g.
-```
-ruby copy_bnl_box.rb box:/EIC_Data/PYTHIA/ep/TREES
-```
-where the "box:" prefix makes the usage uf $slingerurl
-unnecessary. Note that this script is still in development, and
-otherwise convenience and feedback to the user are right now rather sparse.
-
-##### IMPORTANT #####
-* These are shared credentials for the whole community. With the
-  password, you have the power to change it, turn on additional
-  security features and so on. Please DO NOT do so, since it will make
-  it unusable for everyone else.
-
-* You cannot log into this gmail account, and emails sent to it will
-  be ignored. It is purely a throwaway account.
-
-* Note to RCF users, you can access this data directly at
-```
-/gpfs02/eic/DATA
-```
-
-### To repeat for emphasis, DO NOT change the password or otherwise impede others from using it. If this mechanism is repeatedly abused,  the community guest account will be deleted and sharing can only be  done individually on request. ###
-
 
 
 #### Adding to the collection ####
@@ -114,10 +48,3 @@ of the Yellow Report effort as reported in the recent poll to working
 groups. To make use of it, please contact the software working group
 so we can determine together the most efficient way to upload your
 data and make it accessible to the whole community!
-
-
-
-
-
-
-
