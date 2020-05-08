@@ -99,7 +99,7 @@ cd build
 
 Configure using cmake. Optionally, you can specify a location where to
 install include files and libraries:
-we'll assume that the installation path is in $EICDIRECTORY
+We'll assume that the installation path is in $EICDIRECTORY
 ```
 setenv EICDIRECTORY=</path/to/install>
 cmake ../ -DCMAKE_INSTALL_PREFIX=$EICDIRECTORY
@@ -194,7 +194,7 @@ or
 ./tests/qaplots -i tests/ep_hiQ2.20x250.small.txt -det handbook
 ```
 
-The first set of event-wise observables (`$y, x,`$ and `$Q^2`$ using
+The first set of event-wise observables (y, x, and Q^2 using
 three different methods) is set up to loosely compare to the plots on
 p. 88f in the eRHIC design study,  http://arxiv.org/pdf/1409.1633.pdf,
 but be aware of statistics limitations and specific settings (e.g.,
@@ -238,12 +238,11 @@ other files, please make sure to include the generator name in the
 filename. Currently accepted are pythia, pepsi, lepto, rapgap, djangoh, beagle,milou, sartre, simple.
 
 
-##### Smear the tree #####
-
+#### Smear the tree
 ```
 root [] gSystem->Load("libeicsmear")
-root [] .L smearBeAST.cxx // Assuming you copied this here
-root [] SmearTree(BuildBeAST(), "ep_hiQ2.20x250.small.root", "smeared.root",-1)
+root [] .L smearHandBook.cxx // Assuming you copied this here
+root [] SmearTree(BuildHandBookDetector(), "ep_hiQ2.20x250.small.root", "smeared.root",-1)
 /-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-/
 /  Commencing Smearing of 10000 events.
 /-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-/
@@ -260,7 +259,7 @@ other files, please make sure to include the generator name in the filename.
 ```
 root -l 
 gSystem->Load("libeicsmear");
-TFile mcf ("ep_hiQ2.20x250.small.txt.root"); // truth
+TFile mcf ("ep_hiQ2.20x250.small.root"); // truth
 TTree* mc=(TTree*)mcf.Get("EICTree");
 mc->AddFriend("Smeared","smeared.root"); // befriend
 	
@@ -292,24 +291,21 @@ EEprime->Draw("colz");
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
 
-* Implement a function returning a Smear::Detector, set up the
-detector object and activate some additional calculation options.
-```c++
+```
 // ... omitted some includes and helpers
 Smear::Detector BuildMyDetector() {
 	
 // Create the detector object to hold all devices
-  Smear::Detector det;
+   Smear::Detector det;
   // The detector will calculate event kinematics from smeared values
   det.SetEventKinematicsCalculator("NM JB DA");
 ```
-
 
 * Set up a device that smears. In this case, momentum is smeared
   * in eta = -3.5 --  -2.5,
   * with sigma_p/p = 0.1 % p+ 2.0 %,
   * accepting all charged particles.
-```c++
+```
   // Tracking
   // eta = -3.5 --  -2.5
   // sigma_p/p ~ 0.1% p+2.0%
@@ -324,7 +320,8 @@ Smear::Detector BuildMyDetector() {
   make sense to only accept hadrons and create a separate device for
   electrons that represents the combined information from multiple
   detectors, e.g.:
-```c++
+
+```
   TrackBack1P.Accept.SetCharge(Smear::kCharged);
   TrackBack1P.Accept.SetGenre(Smear::kHadronic);
   det.AddDevice(TrackBack1P);
@@ -353,6 +350,7 @@ principle, kPt and kPz is also supported but currently not working.
 
 * If you want to have an unsmeared value in the smeared tree, use a
 perfect device, e.g:
+
 ```
 Smear::Device TrackTheta(Smear::kTheta, "0");
 ```
