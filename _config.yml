@@ -24,7 +24,7 @@ blank: 'target="_blank"'
 # for testing
 foo: site.software
 
-display_news: no
+display_news: yes
 #
 plugins:
   - jekyll-mentions
