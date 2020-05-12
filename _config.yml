@@ -24,6 +24,7 @@ blank: 'target="_blank"'
 # for testing
 foo: site.software
 
+blog: yes
 #
 plugins:
   - jekyll-mentions

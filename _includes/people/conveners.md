@@ -13,4 +13,5 @@
 </tr>
 {% endif %}
 {% endfor %}
+</table>
 
