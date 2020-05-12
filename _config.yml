@@ -24,7 +24,7 @@ blank: 'target="_blank"'
 # for testing
 foo: site.software
 
-blog: yes
+display_news: no
 #
 plugins:
   - jekyll-mentions
@@ -48,9 +48,9 @@ collections:
   teams:
     output: true
     permalink: /teams/:title.html
-  posts:
+  news:
     output: true
-    permalink: /posts/:title.html
+    permalink: /news/:title.html
   about:
     output: true
     permalink: /about/:title.html
