@@ -1,10 +1,12 @@
 ---
 title: Petrel/Globus
-description: Globus-enabled data service Petrel
+description: Petrel/Globus
 name: petrel
 layout: default
 level: 0
 ---
+
+{% include layouts/title.md %}
 
 # Worldwide access through Petrel/Globus
 ​
