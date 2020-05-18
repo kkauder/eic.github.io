@@ -8,6 +8,8 @@ level: 0
 
 {% include layouts/title.md %}
 
+# Worldwide access through Petrel/Globus
+
 Petrel is a Globus-enabled data service for researchers that provides a 
 simple and intuitive interface for self-managed project-based data 
 sharing. Our Petrel allocation is 100TB (more can be added if needed). 

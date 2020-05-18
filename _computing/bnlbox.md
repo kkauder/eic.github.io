@@ -1,7 +1,7 @@
 ---
-title: Storage
-description: Storage
-name: storage
+title: BNLBox
+description: BNLBox
+name: bnlbox
 layout: default
 level: 0
 ---
