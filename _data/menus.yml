@@ -102,8 +102,8 @@
       full: Storage
       div: yes
     -
-      name: bnlbox
-      full: BNLBox
+      name: storage
+      full: NextCloud
     -
       name: petrel
       full: Petrel/Globus

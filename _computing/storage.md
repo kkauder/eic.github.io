@@ -1,7 +1,7 @@
 ---
-title: BNLBox
-description: BNLBox
-name: bnlbox
+title: NextCloud
+description: NextCloud
+name: storage
 layout: default
 level: 0
 ---
