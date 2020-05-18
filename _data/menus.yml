@@ -103,7 +103,7 @@
       div: yes
     -
       name: storage
-      full: storage
+      full: NextCloud
     -
       name: petrel
       full: Petrel/Globus
