@@ -98,7 +98,15 @@
       full: Computing Sites
     -
       name: storage
+      label: yes
       full: Storage
+      div: yes
+    -
+      name: storage
+      full: Storage
+    -
+      name: petrel
+      full: Petrel/Globus
 
 - name: teams
   full: People
