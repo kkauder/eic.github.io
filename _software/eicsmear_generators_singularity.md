@@ -8,7 +8,7 @@ level: 0
 
 {% include layouts/title.md %}
 
-The simplest way to use eic-smear and a wide range of HERA generators is to take advantage of cvmfs and singularity to be placed directly into the  environment that's running natively at BNL. This combination is widely available at national labs, CERN, and many other facilities, as long as $CVMFS_REPOSITORIES  contains eic.opensciencegrid.org. But simple instructions for any system can be found below.
+The simplest way to use eic-smear and a wide range of HERA generators is to take advantage of cvmfs and singularity to be placed directly into the  environment that's running natively at BNL. This combination is widely available at national labs, CERN, and many other facilities, as long as $CVMFS_REPOSITORIES contains "eic.opensciencegrid.org". But simple instructions for any system can be found below.
 
 In all cases, a single line
 ```
@@ -62,21 +62,17 @@ module load /apps/modulefiles/singularity/3.4.0
 ```
 
 #### Singularity+cvmfs anywhere
-You can also install these easily on most UNIX systems. It's tested on a minimal Ubuntu 18.04 install via VirtualBox.  On OSX, using the VirtualBox solution is also recommended, since cvmfs isn't as well supported.
-  
-cvmfs:
-```  
-https://cernvm.cern.ch/portal/filesystem/quickstart
-```
-Singularity:
-```
-sudo apt install singularity singularity-container
-```
-Ensure that
-CVMFS_REPOSITORIES contains eic.opensciencegrid.org
-and when in doubt, use
-CVMFS_REPOSITORIES=eic.opensciencegrid.org
-(both usually in /etc/cvmfs/default.local)
+You can also use the software on any computer that can run [VirtualBox]( https://www.virtualbox.org/)
+(i.e., Windows, OSX, Linux, even Solaris).
+
+A ready-made image can be downloaded at
+https://www.phenix.bnl.gov/WWW/publish/phnxbld/sPHENIX/Singularity/Fun4AllSingularityDistribution.ova
+Some more instructions at
+https://github.com/eic/Singularity/blob/master/VirtualBox.md
+
+Note: All that's needed is cvmfs, singularity, and
+eic.opensciencegrid.org in CVMFS_REPOSITORIES.
+The image just has this already done for you.
 
 #### At BNL
 No need for containers, just add
