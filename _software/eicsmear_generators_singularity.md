@@ -87,7 +87,6 @@ source /cvmfs/eic.opensciencegrid.org/x8664_sl7/MCEG/releases/etc/eic_cshrc.csh
 ```  
 to your ~/.cshrc.
 
-(source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh also works. But in the future we will probably switch completely to using the cvmfs mirror as the new standard location)
+( Note that ```source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh``` also works. But in the future we will probably switch completely to using the cvmfs mirror as the new standard location).
 
-For more information on singularity, see Wouter's excellent
-introduction here: https://eic.github.io/software/escalate_singularity_1.html
+For more information on singularity, see Wouter's [excellent introduction])(https://eic.github.io/software/escalate_singularity_1.html).
