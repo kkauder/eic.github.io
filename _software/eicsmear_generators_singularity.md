@@ -18,7 +18,11 @@ and one setup script
 ```
 % source /cvmfs/eic.opensciencegrid.org/x8664_sl7/MCEG/releases/etc/eic_bash.sh
 ```
-will place you in the same environment where the libraries are installed natively. All libraries and executables are in your $PATH and $LD_LIBRARY_PATH, and the full packages can be found under $EICDIRECTORY. That means you can directly copy and paste instructions from https://eic.github.io/software/eicsmear.html and the README's of MCEG packages at https://gitlab.com/eic/mceg
+will place you in the same environment where the libraries are
+installed natively. All libraries and executables are in your $PATH
+and $LD_LIBRARY_PATH, and the full packages can be found under
+$EICDIRECTORY. That means you can directly copy and paste instructions
+from [here](https://eic.github.io/software/eicsmear.html) and from the README's of [MCEG packages](https://gitlab.com/eic/mceg).
 
 For example
 ```
@@ -34,18 +38,19 @@ root[] BuildTree ("tests/ep_hiQ2.20x250.small.txt");
 root[] .L smearHandBook.cxx
 root[] SmearTree(BuildHandBookDetector(), "ep_hiQ2.20x250.small.root")
 ```
-will smear the result. The documentation in
-https://eic.github.io/software/eicsmear.html
+will smear the result. The [documentation](https://eic.github.io/software/eicsmear.html)
 contains instructions on how to work with the result, and files in $EICDIRECTORY/PACKAGES/eic-smear/tests
 provide practical examples. 
 
 Also in the $EICDIRECTORY/PACKAGES and $EICDIRECTORY/bin are the generators BeAGLE, Milou, DJANGOH, RAPGAP, and PEPSI.
 
-Of course, eic-smear and many MCEGs are also part of the escalate package:
-https://eic.gitlab.io/documents/quickstart/
-  Instructions and examples on how to use it in conjunction with PYTHIA8, how to write your own eJana plugins, how to perform analyses within JupyterLab or on the command line and much more are part of the included tutorial, and the recording of the recent tutorial is (soon) in our YouTube channel:
-
-  https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
+Of course, eic-smear and many MCEGs are also part of the
+[escalate package](https://eic.gitlab.io/documents/quickstart/).
+Instructions and examples on how to use it in conjunction with
+PYTHIA8, how to write your own eJana plugins, how to perform analyses
+within JupyterLab or on the command line and much more are part of the
+included tutorial, and the recording of the recent tutorial is (soon)
+in our [YouTube channel](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w).
 
 #### Singularity+cvmfs at JLAB:
 On your computer
@@ -66,9 +71,9 @@ You can also use the software on any computer that can run [VirtualBox]( https:/
 (i.e., Windows, OSX, Linux, even Solaris).
 
 A ready-made image can be downloaded at
-https://www.phenix.bnl.gov/WWW/publish/phnxbld/sPHENIX/Singularity/Fun4AllSingularityDistribution.ova
+[https://www.phenix.bnl.gov/WWW/publish/phnxbld/sPHENIX/Singularity/Fun4AllSingularityDistribution.ova].
 Some more instructions at
-https://github.com/eic/Singularity/blob/master/VirtualBox.md
+[https://github.com/eic/Singularity/blob/master/VirtualBox.md].
 
 Note: All that's needed is cvmfs, singularity, and
 eic.opensciencegrid.org in CVMFS_REPOSITORIES.
