@@ -8,4 +8,4 @@ level: 0
 
 {% include layouts/title.md %}
 
-To download singularity follow these [steps](https://github.com/eic/Singularity/blob/master/README.md)
+To download the Fun4All singularity container follow these [steps](https://github.com/eic/Singularity/blob/master/README.md)
