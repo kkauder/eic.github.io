@@ -1,6 +1,6 @@
 ---
 title: Fun4All under Singularity
-name: fun4all
+name: fun4all_singularity
 category: fun4all
 layout: default
 level: 0
