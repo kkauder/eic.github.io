@@ -1,10 +1,9 @@
 ---
 title: Fun4All under Singularity
 name: fun4all_singularity
-category: fun4all
+category: singularity
 layout: default
 level: 0
-div: yes
 ---
 
 {% include layouts/title.md %}
