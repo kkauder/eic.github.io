@@ -67,6 +67,10 @@
       name: eicsmear_generators_singularity
       full: EIC-smear and Generators
     -
+    -
+      name: fun4all_singularity
+      full: Fun4All in Sigularity
+    -
       name: generators
       label: yes
       full: Generators
