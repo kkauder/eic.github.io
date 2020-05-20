@@ -68,7 +68,8 @@
       full: EIC-smear and Generators
     -
       name: fun4all_singularity
-      full: Fun4All in Sigularity
+      full: Fun4All in Singularity
+      link: https://github.com/eic/Singularity/blob/master/README.md
     -
       name: generators
       label: yes
