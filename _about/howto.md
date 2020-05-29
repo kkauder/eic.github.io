@@ -23,45 +23,42 @@ as hard limits on repositories of sites which are hosted as "GitHub pages"
 of the top navigation bar and the dropdown menus
 
 #### The Navigation Bar
-Entries in the navigation bar on top are named in the same manner as the folders in this
-project, for example the "Software" is associated with the folder "_software". These folders are treated as
-"collections" by the Jekyll framework and they need to be declared in the main configuration file
+Entries in the navigation bar on top are named similar to the folders in this
+project, for example the "Software" is associated with the folder "_software" etc.
+These folders are treated as "collections" by the Jekyll framework and they need to be declared
+in the main configuration file
 <a href="https://github.com/eic/eic.github.io/blob/master/_config.yml" target="_blank">_config.yml</a>.
-As is clear from the navigation bar
-<a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">code</a>,
-its menu entries are  generated automatically based on the content of the file
-```
-_data/menus.yml
-```
-Both the content and order of entries in the navigation bar as well as ordering of the items in all dropdowns
-are defined in that file.
+As one can see in 
+<a href="https://github.com/eic/eic.github.io/blob/master/_includes/layouts/navbar.html" target="_blank">the navigation bar code</a>,
+its menu entries are generated automatically based on the content of the file
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target="_blank">_data/menus.yml</a>.
+The content and order of top entries in the navigation bar as well as content and ordering of all items in all dropdown
+menus are defined in that file.
 
 #### Front Matter
 "Front Matter" is a piece of YAML code (typically short) on the very top of a Markdown-formatted
-document which can contain any sort of data, for example define variables used to render the page
-in one convenient place. Importantly, it also serves to inform the platform "Jekyll" that this
-page needs to be rendered into HTML and can be used to define its behavior in menus and other
-contructs referencing it.
+document which can contain any sort of data, for example variables used to render the page.
+It can be used to define the behavior and treatment of the page in higher-level
+contructs referencing it, since the data in the Front Matter is accessible as object attributes.
+Importantly, it also serves to inform the platform "Jekyll" that this particular page needs to be
+rendered into HTML for inclusion in the site being built.
 
 All files are expected to be in the Markdown (MD) format, and 
 **each MD file is to be equipped with the "front matter" section**, which could look like the excerpt below.
-The "level" attribute determines whether it's included at all in the menu (it happens if the level is 0) or it's parsed into other pages (for level > 0).
 ```
 ---
 title: My Cool Software
 name: my_cool_software
 category: mysoftware
 layout: default
-level: 0
 ---
 ```
 
-There is no source code for the "submenus" containing links to external resources i.e. in such cases
-clicking on a menu item will result in opening an exernal page. Examples are easy to spot in the file
-_data/menus.yml.
-
+There is no source code (i.e. markdown page content) for links to external resources included in the menus.
+Examples are easy to spot in the file <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
 To include a divider right above an entry in a dropdown menu the following line should be added
-respective section of the _data/menus.yml file: "**div: yes**"
+respective section of the _data/menus.yml file: "**div: yes**". Additionally, the "exclude" attribute is provided, mainly for development purposes, if
+a section of the menu needs to be ignored when building the site.
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.

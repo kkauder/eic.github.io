@@ -42,6 +42,9 @@ The code is <a href="https://github.com/eic/eic.github.io">available on GitHub</
 #### Credits
 Information collected here is managed by the <a href="http://www.eicug.org/web/content/eic-software" target="_blank" >EIC software Group</a>.
 Design of this site was inspired by the <a href="http://hepsoftwarefoundation.org/">HEP Software Foundation</a> Web site.
-We are grateful to the authors and maintainers of the following technologies: <a href="https://pages.github.com/">GitHub Pages</a>,
- <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://shopify.github.io/liquid/">Liquid</a>, <a href="http://getbootstrap.com/">Bootstrap</a>.
+We are grateful to the authors and maintainers of the following technologies:
+* <a href="https://pages.github.com/">GitHub Pages</a>
+* <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+* <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a>
+* <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
 
