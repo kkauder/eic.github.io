@@ -1,8 +1,8 @@
 {% case include.what %}
-{% when "software" %}	{% assign theCollection=site.software %}{% assign icon='' %}
-{% when "computing" %}	{% assign theCollection=site.computing %}{% assign icon='' %}
-{% when "teams" %}	{% assign theCollection=site.teams %}{% assign icon='' %}
-{% when "about" %}	{% assign theCollection=site.about %}{% assign icon='' %}
+{% when "software" %}	{% assign theCollection=site.software %}{% assign icon=site.software_icon %}
+{% when "computing" %}	{% assign theCollection=site.computing %}{% assign icon=site.computing_icon %}
+{% when "teams" %}	{% assign theCollection=site.teams %}{% assign icon=site.people_icon %}
+{% when "about" %}	{% assign theCollection=site.about %}{% assign icon=site.about_icon %}
 {% endcase %}
 
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
