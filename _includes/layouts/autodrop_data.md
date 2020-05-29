@@ -5,9 +5,6 @@
 {% when "about" %}	{% assign theCollection=site.about %}
 {% endcase %}
 
-
-{% assign external_link='<img src="{{ site.external_link | relative_url }}">' %}
-
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
 
 <li class="nav-item dropdown px-4">
@@ -24,7 +21,7 @@
 
 {% if submenu.link %}
 {% assign theLink=submenu.link %}
-<a class="dropdown-item" href="{{ theLink }}" {{ site.blank }}>{{ submenu.full }}&nbsp;<img src="{{ site.external_link | relative_url }}" height="12" width="12"></a>
+<a class="dropdown-item" href="{{ theLink }}" {{ site.blank }}>{{ submenu.full }}&nbsp;<img src="{{ site.external_icon | relative_url }}" height="12" width="12"></a>
 {% else %}
 
 {% assign item=theCollection | where: "name", submenu.name | first %}
