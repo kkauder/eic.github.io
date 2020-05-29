@@ -6,7 +6,6 @@
 {% endcase %}
 
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
-{% assign target='' %}
 
 <li class="nav-item dropdown px-4">
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}</a>
@@ -25,6 +24,7 @@
 {% assign theLink=item.url | relative_url %}
 
 {% assign experiment=theCollection | where: "name", submenu.name | map: "url" | first | relative_url %}
+{% assign target='' %}
 
 {% endif %}
 
