@@ -21,8 +21,9 @@ exclude: [vendor]
 # Custom helper variables:
 blank: 'target="_blank"'
 
-# for testing
-foo: site.software
+# Layout/decorations
+logo: /assets/images/site/EIClogo_small.png
+external_link: /assets/images/site/external-link-48.png
 
 display_news: yes
 #
