@@ -21,12 +21,15 @@ exclude: [vendor]
 # Custom helper variables:
 blank: 'target="_blank"'
 
-# Layout/decorations
+# Layout/decorations:
 eic_logo: /assets/images/site/EIClogo_small.png
-home_icon: /assets/images/site/house-32.png
-external_icon: /assets/images/site/external-link-48.png
+splash: /assets/images/site/ion-collision-xparent-cropped.png
 
-software_icon: /assets/images/site/house-32.png
+# Icons:
+home_icon: /assets/images/site/icons/house-32.png
+external_icon: /assets/images/site/icons/external-link-48.png
+
+software_icon: /assets/images/site/icons/house-32.png
 
 
 # Development:
