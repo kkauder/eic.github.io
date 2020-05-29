@@ -1,14 +1,19 @@
 {% case include.what %}
-{% when "software" %}	{% assign theCollection=site.software %}
-{% when "computing" %}	{% assign theCollection=site.computing %}
-{% when "teams" %}	{% assign theCollection=site.teams %}
-{% when "about" %}	{% assign theCollection=site.about %}
+{% when "software" %}	{% assign theCollection=site.software %}{% assign icon='' %}
+{% when "computing" %}	{% assign theCollection=site.computing %}{% assign icon='' %}
+{% when "teams" %}	{% assign theCollection=site.teams %}{% assign icon='' %}
+{% when "about" %}	{% assign theCollection=site.about %}{% assign icon='' %}
 {% endcase %}
 
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
 
 <li class="nav-item dropdown px-4">
+{% if icon.size > 0 %}  
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}&nbsp;&nbsp;<img src="{{ icon | relative_url }}" height="16" width="16"></a>
+{% else %}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}</a>
+{% endif %}
+
 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 {% for submenu in the_menu.submenus %}
