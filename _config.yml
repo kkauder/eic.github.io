@@ -1,21 +1,26 @@
-name: The EIC website
-title: The EIC website
-description: The EIC website
-url: http://eicug.org
-
+#
+#
+#
+name: The EIC Software Group Website
+title: The EIC Software Group Website
+description: The EIC Software Group Website
+url: https://eic.github.io
+#
 excerpt_separator: <!--more-->
 timezone: America/New_York
 highlighter: rouge
-
+#
 markdown: kramdown
 future: true
 exclude: [vendor]
 
 ##################################################################################
-# !!! Important if we are not serving from the top folder !!! - baseurl: /web    #
+# Important if we are not serving from the top folder - baseurl: /web            #
+# In that case, please make sure you use the "relative_path" directive           #
+# everywhere you include various site URLs in your pages.                        #
 #                                                                                #
-# If the path is changed, please make sure you use the "relative_path" directive #
-# everywhere you include URLs in the page                                        #
+# Currently serving from the top folder i.e.                                     #
+# in this case this does not apply until further notice.                         #
 ##################################################################################
 
 # Custom helper variables:
@@ -61,9 +66,6 @@ collections:
   teams:
     output: true
     permalink: /teams/:title.html
-  news:
-    output: true
-    permalink: /news/:title.html
   about:
     output: true
     permalink: /about/:title.html
