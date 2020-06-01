@@ -26,9 +26,12 @@ exclude: [vendor]
 # Custom helper variables:
 blank: 'target="_blank"'
 
-# Layout/decorations:
-eic_logo: /assets/images/site/EIClogo_small.png
 
+# Layout
+tablepadding: ' '
+
+# Decorative elements
+eic_logo: /assets/images/site/EIClogo_small.png
 splash: /assets/images/site/ion-collision-xparent-cropped.png
 
 # Icons:
