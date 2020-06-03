@@ -21,7 +21,7 @@ We are preparing JupyterHub resources at BNL and JLAB that will allow you to run
 The common simulation tools and workflow environment can only grow with user input. The EICUG Software Working Group asks interested users to join our support team to ensure fast response to user requests. This is an ideal opportunity to learn more about the software and its development. 
 
 #### Tutorials 
-The tutorials for fast and detector full simulations are available on the YouTube channel of the EICUG.
+The tutorials for fast and detector full simulations are available on the <a href="https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w" target="_blank">EICUG YouTube channel</a>.
 
 #### Uproot and Awkward Array Tutorial
 * Jim Pivarski (Princeton), known for innovative software in DIANA/HEP, IRIS-HEP and other projects, will give tutorials on how to process and analyze Root files with pure Python libraries: uproot and awkward array The tutorials are aimed for anyone who would like to learn more about using data science tools in Python for Nuclear Physics analysis. 
