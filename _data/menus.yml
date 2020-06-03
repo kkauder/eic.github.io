@@ -131,6 +131,10 @@
   full: Resources
   submenus:
     -
+      name: github
+      full: EIC Software on GitHub
+      link: https://github.com/eic
+    -
       name: youtube
       full: EUCUG YouTube Channel
       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
