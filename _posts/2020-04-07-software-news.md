@@ -7,7 +7,7 @@ until: 2020-12-31
 ---
 <p/>
 
-<img src="{{ '/assets/images/site/EICUG-SWG-News-Banner.png' | relative_url }}" width="535"/>
+<img src="{{ '/assets/images/site/EICUG-SWG-News-Banner.png' | relative_url }}" width="800"/>
 
 The EICUG Software Working Group is working on physics and detector simulations that enable for the Yellow Report Initiative a quantitative assessment of the measurement capabilities of the EIC detector(s) and their physics impact. The common simulation tools and workflow environment being setup by the working group allow the EICUG to pursue Yellow Report studies in a manner that is accessible, consistent, and reproducible to the EICUG as a whole.
 
@@ -23,14 +23,14 @@ The common simulation tools and workflow environment can only grow with user inp
 #### Tutorials 
 The tutorials for fast and detector full simulations are available on the <a href="https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w" target="_blank">EICUG YouTube channel</a>.
 
-#### Uproot and Awkward Array Tutorial
+##### Uproot and Awkward Array Tutorial
 * Jim Pivarski (Princeton), known for innovative software in DIANA/HEP, IRIS-HEP and other projects, will give tutorials on how to process and analyze Root files with pure Python libraries: uproot and awkward array The tutorials are aimed for anyone who would like to learn more about using data science tools in Python for Nuclear Physics analysis. 
 * Wednesday, April 8, at 10:00 a.m. (EDT)
 * Remote access will be provided via BlueJeans: [https://bluejeans.com/920347364](https://bluejeans.com/920347364)
 * The tutorial will be recorded. 
 * More details are available on: [https://indico.bnl.gov/event/8242/](https://indico.bnl.gov/event/8242/)
 
-#### Advanced Fast Simulations Tutorial
+##### Advanced Fast Simulations Tutorial
 * Dmitry Romanov (JLAB) and Kolja Kauder (BNL) will give an advanced tutorial on fast simulations based on the feedback and requests of the last months. 
 * Thursday, April 9, at 10:00 a.m. (EDT)
 * Remote access will be provided via BlueJeans: [https://bluejeans.com/920347364](https://bluejeans.com/920347364)
