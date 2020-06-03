@@ -127,6 +127,14 @@
       name: teams
       full: Software Teams
 
+- name: resources
+  full: Resources
+  submenus:
+    -
+      name: youtube
+      full: EUCUG YouTube Channel
+      link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
+
 - name: about
   full: About
   right: yes
