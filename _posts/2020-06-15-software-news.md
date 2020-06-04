@@ -1,5 +1,5 @@
 ---
-title: Software News April
+title: Software News June
 author: Markus Diefenthaler
 layout: default
 symbol: glyphicon-calendar
