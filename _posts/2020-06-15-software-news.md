@@ -17,6 +17,32 @@ The EICUG Software Working Group is working on physics and detector simulations 
 In our first Software News, updates on eic_smear and ESCalate are included. Further updates on these and other packages will be in future newsletters. 
 
 
+##### eic-smear
+
+###### Stand-alone detector repository with versioning
+
+We have separated the detector smearing scripts from the main code. If you have eic-smear installed, use [this repository](https://github.com/eic/eicsmeardetectors) to quickly select and experiment with different versions simply via
+```
+$ git clone https://github.com/eic/eicsmeardetectors.git
+$ root -l
+root[] gSystem->Load("libeicsmear")
+root[] .L eicsmeardetectors/SmearHandBook_1_2.cxx
+root[] SmearTree(BuildHandBook_1_2(), "in.root", "out.root")
+```
+The README.md, which nicely displays on the github page, has a table with all available versions and more instructions.
+Improvements to eic-smear for comfortable compiling a local detector script and/or using a library of all available ones is in the works.
+
+
+###### Advanced usage example
+
+In order to demonstrate some of the more subtle issues of eic-smear output, we created an [example project](github.com:eic/eicsmear-jetexample.git).
+
+The repo just has two cxx files, meant to be self-documenting, and a detailed README. The first example demonstrates how to use just smeared output, the second how to compare to the truth level and/or how to extract some information from the truth level that should be in the smeared level but as of now isn't yet.
+
+It is intentionally meant to be stand-alone, with a very simple Makefile and no cmake complications.
+Please note that while the sample analysis is jet-specific, this is purely because that is a natural application to show 4-vector calculations from partial information.
+
+
 ##### Fun4All
 Fun4All is a well established simulation/reconstruction framework initially developed to reconstruct and analyze data from the PHENIX experiment. In recent years it has provided the simulations to shepherd the sPHENIX experiment from the first drawing on a napkin all the way through CD1. For the EIC it was used to develop a concept for an [EIC detector based on the Babar magnet](https://arxiv.org/pdf/1402.1209.pdf) and [an EIC detector Built around the sPHENIX Solenoid](https://indico.bnl.gov/event/5283/attachments/20546/27556/eic-sphenix-dds-final-2018-10-30.pdf). It can be used interactively (run a few events, have a look, run a few more, look again) as well as running massive productions on large farms (and as of recent also on CORI and on the OSG). For more details (and program flow charts) have a look at the [presentation](https://indico.in2p3.fr/event/18281/contributions/71607/) at the 2019 EIC User Group Meeting.
 
