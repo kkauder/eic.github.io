@@ -84,6 +84,7 @@ The framework is modular on package and library levels, provides command line in
 python and jupyter APIs and ensures data consistency between its loose coupled parts.
 
 <div style="clear: left;"></div>
+<br>
 
 #### Fast simulations made simple
 
@@ -117,7 +118,7 @@ In many cases one can analyse the output of the ESCalate framework with ROOT mac
 But for extended cases, reconstruction or extension of eJana users can write their own plugins. 
 Assuming that the most convenient workflow for users is to keep their analysis in their own separate repositories, 
 we added examples of standalone plugins, which work completely independently of eJana location, 
-so no modification of the central repository is needed. The [gallery of standalone plugins with examples is here](https://gitlab.com/eic/escalate/plugins) and will be expanding.
+so no modification of the central repository is needed. The [standalone plugins examples are here](https://gitlab.com/eic/escalate/plugins) and will be expanding.
  
 It is also possible to use pyjano to generate new plugins on fly. Newly generated plugins instanly work with 
 command line, python or in Jupyter. 
@@ -144,29 +145,39 @@ ejana -Pplugins=beagle_reader,hepmc_writer beagle_file.txt
 ```
 
 Beagle and other generators provide extended info such as true x, Q2 and other DIS values, one of the advantages of HepMC3
-is that now it allows to have custom attributes for events and particles, i.e. allows to save those values. Now only 
-basic number of values is supported but work is ongoing to ship them all at least for main MCEG such as Beagle. 
+is that it allows to have custom attributes for events and particles, i.e. allows to save those values. At this point only 
+basic values are converted but we are working to ship them all for Beagle and PythiaEIC. 
 
 
 #### eJana, G4E, Containers
 
-- Everything versioned. One can now get the [versions table](https://gitlab.com/eic/containers) of ESCalate images.
-- In Cloud. One now can open Jupyter examples library on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)
-(It might take some time to load as Binder is free, has limited resources and our image provide ROOT, Geant4 and other giant packages)
-So no installation is needed. While Binder provides limiter resources, we work on adding an ability to submit a job to OSG right from the Jupyter.     
-- Validation and Analysis. We added some validation and analysis plugins for ejana, that allows to check fast simulation
-results as well as to get DIS plots (x, Q2, t, etc.) with a simple CLI command. 
-- G4E has many changes mainly related to forward and far forward region such as new ZDC, virtual detectors for B0 tracking, etc.
+- **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
+   of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
+   
+- **In Cloud**. One can now open Escalate Jupyter examples in Binder. So no installation needed!  
+   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
+   *(It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
+   Geant4 and other packages)* 
+   Binder provides limited resources, but we work on adding an ability to submit a job to OSG right from the Jupyter.
+   
+   For some time now we also have Escalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
+   Hopefully soon we will have it working on BNL JupyterHub also.
+   
+- **MCEG examples**. [Examples](https://gitlab.com/eic/escalate/workspace/-/tree/master/01_fast_sim_tutorial) of using Pythia6 with radiative corrections and Pythia8+Dire to generate DIS events 
+and process them with fast simulations are added. 
+        
+- **Validation and Analysis**. We added some validation and analysis plugins for ejana, that allows to check fast simulation
+results as well as to get DIS plots (x, Q2, t, etc.) with a simple CLI command.
+ 
+- **Full simulations**. G4E has many changes related to forward and far forward region such as new ZDC, virtual tracking for B0 tracking, etc.
 (Results are presented in Pavia's meeting and on [Meson and Kaon structure workshop](https://indico.bnl.gov/event/8315/overview))
-<img src="{{ '/assets/images/diagrams/escalate/G4E_with_zdc.png' | relative_url }}" width="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+<img src="{{ '/assets/images/diagrams/escalate/G4E_with_zdc.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+<img src="{{ '/assets/images/diagrams/escalate/g4e_lambda_decay_example.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
 
 
-
-
-
-
-
-
+<div style="clear: left;"></div>
 
 
 
