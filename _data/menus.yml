@@ -113,7 +113,7 @@
       name: petrel
       full: Petrel/Globus
 
-- name: _swg
+- name: swg
   full: Working Group
   submenus:
     -
