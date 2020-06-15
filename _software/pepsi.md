@@ -40,7 +40,7 @@ Pepsi is linked with the pdflib such that all PDFs included in there can be used
 *PGF*: Photon Gluon Fusion
 
 #### Running PEPSI
-In the standard setup in the singularity cvmfs envirtonment or at BNL, the code can be found in
+In the standard setup in the singularity cvmfs environment or at BNL, the code can be found in
 ```
 $EICDIRECTORY/PACKAGES/pepsi
 ```
@@ -120,9 +120,10 @@ The output file is in a text format which has the following structure:
 | P(I,5): | mass of particle                                                                                         |
 | V(I,1): | x vertex information                                                                                     |
 | V(I,2): | y vertex information                                                                                     |
-| V(I,3): | z vertex information<br><br>                                                                             |
+| V(I,3): | z vertex information                                                                             |
 {:.table-bordered}
 {:.table-striped}
+<br />
 
 * 6th line: <tt>============================================</tt>
 * 7th line: event information for first event
@@ -203,7 +204,7 @@ Fortran runtime error: Expected REAL for item 42 in formatted
 transfer, got INTEGER
 ```
 
-Details about radiative corrections can be found [here](https://wiki.bnl.gov/eic/index.php/PYTHIA#Documentation_on_Radiative_Corrections).
+Details about radiative corrections can be found [here](pythia6.html/#radiative-corrections).
 
 <br />
 
