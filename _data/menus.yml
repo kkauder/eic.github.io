@@ -97,6 +97,7 @@
     -
       name: overview
       full: Overview
+      exclude: yes
     -
       name: sites
       full: Computing Sites
@@ -126,6 +127,7 @@
     -
       name: teams
       full: Software Teams
+      exclude: yes
 
 - name: resources
   full: Resources
@@ -145,7 +147,7 @@
   submenus:
     -
       name: site
-      full: Information
+      full: Website Information
     -
       name: howto
       full: Website How-To
