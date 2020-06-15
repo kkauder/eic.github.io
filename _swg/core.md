@@ -1,6 +1,6 @@
 ---
-title: Software Working Group
-name: swg
+title: Core Group
+name: core
 layout: default
 level: 0
 ---
