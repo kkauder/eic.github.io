@@ -120,7 +120,7 @@
       name: charge
       full: Charge
     -
-      name: swg
+      name: core
       full: Core Group
     -
       name: teams
