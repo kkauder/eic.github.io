@@ -69,6 +69,9 @@ where the *All Silicon Tracker* is put inside the Beast magnet and is being used
 ###### Verification
 Fun4All is also being used to reconstruct test beam data which allows a direct comparison of simulations with data. sPHENIX has performed extensive test beam campaigns for its detectors at energies which are relevant for EIC detectors. The calorimeter test beam results have been [published](https://ieeexplore.ieee.org/document/8519782) recently, the analysis of TPC and Maps detector data is ongoing. A good agreement with previous EICRoot based simulations has been found for the All Silicon Tracker ([slide 8](https://indico.bnl.gov/event/7894/contributions/37609/attachments/28098/43125/200514_AllSi_in_Fun4All_2.pdf))
 
+###### Help
+Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non Scientific Data Center Accounts need an invite - contact us
+
 
 ## ESCalate
 
@@ -76,26 +79,58 @@ Fun4All is also being used to reconstruct test beam data which allows a direct c
 
 **ESCalate** is a modern framework, which brings together Monte Carlo event generators, 
 [Eic Smear](https://gitlab.com/eic/eic-smear.git) for fast simulations, 
-[G4E](https://gitlab.com/eic/escalate/g4e.git) for full detector simulations, 
-as well as 
-[JANA2](https://github.com/JeffersonLab/JANA2) and 
+[G4E](https://gitlab.com/eic/escalate/g4e.git) for full detector simulations and
 [eJana](https://gitlab.com/eic/escalate/ejana.git) for analysis and reconstruction.
 The framework is modular on package and library levels, provides command line interface, 
-python and jupyter APIs and ensures data consistency between its loose coupled parts.
+python and Jupyter APIs for user analysis and ensures data consistency between its loose coupled parts.
 
 <div style="clear: left;"></div>
 <br>
 
-#### Fast simulations made simple
+#### MCEG
+
+
+<img src="{{ '/assets/images/diagrams/escalate/q2_jb.png' | relative_url }}" width="200" style="float:left; padding: 0px 20px 10px 20px;"/>
+
+**MCEG examples**. [Examples](https://gitlab.com/eic/escalate/workspace/-/tree/master/01_fast_sim_tutorial) of using Pythia6 with radiative corrections and Pythia8+Dire to generate DIS events 
+and process them with fast simulations added. With eJana you can instantly see the resulting DIS plots (see Validation section of eJana below)
+
+<div style="clear: left;"></div>
+
+**HepMC3 and file converter** As [HepMC3](https://gitlab.cern.ch/hepmc/HepMC3) was named "stable" with the 3.2.1 release, 
+we switched eJana to work with HepMC3 (previously it worked with HepMC2), which can read files of both versions.
+
+We also now provide ```hepmc_writer``` plugin. As eJana can read a number of Lund file formats (Beagle, HepEvents, PythiaEIC, etc.) it can be easily used as a converter
+of Beagle and other files to HepMC3 which later can be processed with Delphes, in [python](https://pypi.org/project/HepMC3/), etc.
+As there are users adapting [Delphes for EIC](https://github.com/miguelignacio/delphes_EIC). 
+We are working on verification and validation of using the feature in Delphes workflow.
+
+
+Example command to convert Beagle file to HepMC3:
+
+```bash
+ejana -Pplugins=beagle_reader,hepmc_writer beagle_file.txt
+```
+
+Beagle and other generators provide extended info such as true x, Q2 and other DIS values, one of the advantages of HepMC3
+is that it allows to have custom attributes for events and particles, i.e. allows to save those values. At this point only 
+basic values are converted, but we are working to ship them all for Beagle and PythiaEIC.
+
+
+
+
+#### Fast simulations 
+
+
 
 <img src="https://gitlab.com/eic/escalate/smear/-/raw/master/logo.png" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
 
-Now it is easy to smear any EIC MCEG supported file as simple as running a console command:
+**Fast simulations made simple**. Now it is easy to smear any EIC MCEG supported file as simple as running a console command:
 
 ```bash
 smear my_mc_file.txt
 ```
-(And it is also easy to select a detector, its version, events to process, etc.)
+See the [documentation](https://gitlab.com/eic/escalate/smear/) for how to easily select a detector, its versions, and various other options
 
 <div style="clear: left;"></div>
 
@@ -109,68 +144,13 @@ scenarios:
 1. [Run docker on your local machine](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_docker.md),
 2. [Using singularity (at labs or locally)](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_singularity.md)
 3. [Run directly on IFarm or JLab Jupyterhub](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_ifarm.md)
-4. [Full documentation](https://gitlab.com/eic/escalate/smear/)
  
 
-#### Standalone plugins
+#### Full simulations
 
-In many cases one can analyse the output of the ESCalate framework with ROOT macros, pyROOT or uproot. 
-But for extended cases, reconstruction or extension of eJana users can write their own plugins. 
-Assuming that the most convenient workflow for users is to keep their analysis in their own separate repositories, 
-we added examples of standalone plugins, which work completely independently of eJana location, 
-so no modification of the central repository is needed. The [standalone plugins examples are here](https://gitlab.com/eic/escalate/plugins) and will be expanding.
- 
-It is also possible to use pyjano to generate new plugins on fly. Newly generated plugins instanly work with 
-command line, python or in Jupyter. 
-
-
-#### HepMC3, file converter and Delphes
-
-<img src="https://avatars3.githubusercontent.com/u/8037711?s=200&v=4" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
-
-As [HepMC3](https://gitlab.cern.ch/hepmc/HepMC3) was named "stable" with the 3.2.1 release, 
-we switched eJana to work with HepMC3 (previously it worked with HepMC2), which can read files of both versions.
-
-We also now provide ```hepmc_writer``` plugin. As eJana can read a number of Lund file formats (Beagle, HepEvents, PythiaEIC, etc.) it can be easily used as a converter
-of Beagle and other files to HepMC3 which later can be processed with Delphes, in [python](https://pypi.org/project/HepMC3/), etc.
-As there are users adapting [Delphes for EIC](https://github.com/miguelignacio/delphes_EIC), the work is being done towards verification and validation 
-of using the feature in Delphes workflow.
-
-<div style="clear: left;"></div>
-
-Example command to convert Beagle file to HepMC3:
-
-```bash
-ejana -Pplugins=beagle_reader,hepmc_writer beagle_file.txt
-```
-
-Beagle and other generators provide extended info such as true x, Q2 and other DIS values, one of the advantages of HepMC3
-is that it allows to have custom attributes for events and particles, i.e. allows to save those values. At this point only 
-basic values are converted but we are working to ship them all for Beagle and PythiaEIC. 
-
-
-#### eJana, G4E, Containers
-
-- **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
-   of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
-   
-- **In Cloud**. One can now open Escalate Jupyter examples in Binder. So no installation needed!  
-   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
-   *(It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
-   Geant4 and other packages)* 
-   Binder provides limited resources, but we work on adding an ability to submit a job to OSG right from the Jupyter.
-   
-   For some time now we also have Escalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
-   Hopefully soon we will have it working on BNL JupyterHub also.
-   
-- **MCEG examples**. [Examples](https://gitlab.com/eic/escalate/workspace/-/tree/master/01_fast_sim_tutorial) of using Pythia6 with radiative corrections and Pythia8+Dire to generate DIS events 
-and process them with fast simulations are added. 
-        
-- **Validation and Analysis**. We added some validation and analysis plugins for ejana, that allows to check fast simulation
-results as well as to get DIS plots (x, Q2, t, etc.) with a simple CLI command.
- 
-- **Full simulations**. G4E has many changes related to forward and far forward region such as new ZDC, virtual tracking for B0 tracking, etc.
+G4E has many changes related to forward and far forward region such as new ZDC, virtual tracking for B0 tracking, etc.
 (Results are presented in Pavia's meeting and on [Meson and Kaon structure workshop](https://indico.bnl.gov/event/8315/overview))
+
 
 <img src="{{ '/assets/images/diagrams/escalate/G4E_with_zdc.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
 
@@ -180,6 +160,43 @@ results as well as to get DIS plots (x, Q2, t, etc.) with a simple CLI command.
 <div style="clear: left;"></div>
 
 
+#### Reconstruction and analysis in eJana
 
-###### Help
-Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non Scientific Data Center Accounts need an invite - contact us
+**Standalone plugins**  You can always analyze the output of the ESCalate framework with ROOT macros, pyROOT or uproot. 
+But to integrate your reconstruction algorithm, physics analysis or extend eJana, users can write their own plugins. 
+Assuming that the most convenient workflow keep users' analysis in their own separate repositories, 
+we added examples of standalone plugins, which work completely independently of eJana location, 
+so no modification of the central repository is needed. 
+The [standalone plugins examples are here](https://gitlab.com/eic/escalate/plugins) (and will be expanding).
+ 
+It is also possible to use pyjano to generate and/or compile new plugins on fly. 
+Newly generated plugins instantly work with command line, python or in Jupyter. 
+
+**Validation and Analysis**. We added some validation and analysis plugins for ejana, that allows checking fast simulation
+results as well as to build DIS plots (x, Q2, t, etc.) with a simple CLI command. 
+
+Here is an example of how to read a Beagle file, build DIS plots with new ```dis``` plugin and write a ROOT tree, which you can analyse with ROOT 
+macros or other tools.  
+
+```bash
+ejana -Pplugins=beagle_reader,dis,event_writer beagle_file.txt
+```
+
+#### Delivery
+
+- **In Cloud!**. One can now open Escalate Jupyter examples in Binder. So no installation needed!  
+   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
+   *(It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
+   Geant4 and other packages)* 
+   Binder provides limited resources, but we work on adding an ability to submit a job to OSG right from the Jupyter.
+   
+   For some time now we also have Escalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
+   Hopefully soon we will have it working on BNL JupyterHub also.
+   
+
+- **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
+   of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
+   
+
+<br><br> 
+ 
