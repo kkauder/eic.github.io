@@ -1,8 +1,9 @@
 ---
 title: Get Involved
-name: join
+name: contact
 layout: default
 level: 0
+div: yes
 ---
 {% include layouts/title.md %}
 

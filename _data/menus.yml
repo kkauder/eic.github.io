@@ -33,6 +33,29 @@
       full: Yellow Report
       link: http://www.eicug.org/web/content/yellow-report-initiative
       div: yes
+
+- name: computing
+  full: Computing
+  submenus:
+    -
+      name: overview
+      full: Overview
+      exclude: yes
+    -
+      name: sites
+      full: Computing Sites
+    -
+      name: storage
+      label: yes
+      full: Storage
+      div: yes
+    -
+      name: storage
+      full: NextCloud
+    -
+      name: petrel
+      full: Petrel/Globus
+
 - name: software
   full: Software
   submenus:
@@ -48,7 +71,11 @@
     -
       name: tools_and_frameworks
       label: yes
-      full: Tools and Frameworks
+      full: Frameworks and Tools
+      div: yes
+    -
+      name: escalate_1
+      full: ESCalate
     -
       name: fun4all_tutorial_1
       full: Fun4All
@@ -73,7 +100,7 @@
     -
       name: generators
       label: yes
-      full: Generators
+      full: Monte Carlo Event Generators
       div: yes
     -
       name: pythia6
@@ -82,38 +109,15 @@
       name: pepsi
       full: PEPSI
     -
+      name: other
+      label: yes
+      full: Other Software
+      div: yes
+    -
       name: beast_magnetic_field
       full: BeAST Magnetic Field
-      div: yes
-    -
-      name: doxygen
-      full: Doxygen
-      link: https://eic.github.io/doxygen/
-      div: yes
 
-- name: computing
-  full: Computing
-  submenus:
-    -
-      name: overview
-      full: Overview
-      exclude: yes
-    -
-      name: sites
-      full: Computing Sites
-    -
-      name: storage
-      label: yes
-      full: Storage
-      div: yes
-    -
-      name: storage
-      full: NextCloud
-    -
-      name: petrel
-      full: Petrel/Globus
-
-- name: swg
+- name: teams
   full: Working Group
   submenus:
     -
@@ -123,23 +127,27 @@
       name: core
       full: Core Group
     -
+      name: join
+      full: Get Involved
+    -
       name: teams
       full: Software Teams
       exclude: yes
-    -
-      name: join
-      full: Get Involved
 
 - name: resources
-  full: Resources
+  full: Information
   submenus:
     -
+      name: doxygen
+      full: Doxygen
+      link: https://eic.github.io/doxygen/
+    -
       name: github
-      full: EIC Software on GitHub
+      full: GitHub organization for the EIC(UG)
       link: https://github.com/eic
     -
       name: youtube
-      full: EIC User Group YouTube Channel
+      full: YouTube Channel of the EICUG
       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
 
 - name: about
@@ -147,8 +155,12 @@
   right: yes
   submenus:
     -
+      name: contact
+      full: Contact
+    -
       name: site
       full: Website Information
+      div: yes
     -
       name: howto
       full: Website How-To
