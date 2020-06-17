@@ -8,41 +8,31 @@ level: 0
 
 {% include layouts/title.md %}
 
+- [Singularity images on CVMFS](#Singularity-images-on-CVMFS)
+- [Running ESCalate on HPC clusters](#Running-ESCalate-on-HPC-clusters)
+- [Running scripts inside the singularity container](#Running-scripts-inside-the-singularity-container)
+- [Running programs inside the singularity container](#Running-programs-inside-the-singularity-container)
+- [Scripts with multiple commands inside the singularity container](#Scripts-with-multiple-commands-inside-the-singularity-container)
+- [Building a local singularity container](#Building-a-local-singularity-container)
+
 ## Running ESCalate on HPC clusters
+
+### Singularity images on CVMFS
 
 To run the ESCalate docker container on HPC clusters, we use singularity. This does not require super-user privileges.
 
-### Building a local singularity container
+Our [docker image](https://gitlab.com/eic/containers) is being automatically converted to singularity on any update. 
 
-Since the docker container is quite large, you will want to build the singularity image in a directory where you have plenty of space (e.g. `/volatile` at Jefferson Lab). You do *not* want to save this image to your home directory!
+If you site has access to the EIC repository on the cvmfs filesystem (at `/cvmfs/eic.opensciencegrid.org`), 
+you may also be able to use the build stored at `/cvmfs/eic.opensciencegrid.org/singularity/escalate:latest/`.
+This singularity available on BNL and JLab (farms and anywhere with cvmfs)
 
-```bash
-mkdir -p /volatile/eic/$USER/singularity
-cd /volatile/eic/$USER/singularity
-module load singularity
-export SINGULARITY_CACHEDIR="."
-singularity build --sandbox electronioncollider/escalate:latest docker://electronioncollider/escalate:latest
+```
+/cvmfs/singularity.opensciencegrid.org/electronioncollider/escalate\:latest
 ```
 
-Setting the singularity cache directory `SINGULARITY_CACHEDIR` prevents singularity from filling up a hidden directory in your home directory with 10 GB of docker container layers.
+<br>
 
-While building the container, singularity may complain a bit about `EPERMS` and `setxattr`, but you can ignore this (the drawback of doing this without super-user privileges).
-
-After lunch, you should have a sandbox container (i.e. a directory which encapsulates an entire operating system) at `/volatile/eic/$USER/singularity/electronioncollider/escalate:latest/`.
-
-Note: If you aready have pulled the container into docker locally, you can save some downloading time by building the singularity image from the local container with
-```bash
-singularity build --sandbox electronioncollider/escalate:latest docker-daemon://electronioncollider/escalate:latest
-```
-
-Note: As a temporary fix for older kernels < 3.15 (check with `uname -r`) , run the following before using the image:
-```bash
-strip --remove-section=.note.ABI-tag electronioncollider/escalate:latest/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
-```
-
-### Using a cvmfs singularity container
-
-If you site has access to the EIC repository on the cvmfs filesystem (at `/cvmfs/eic.opensciencegrid.org`), you may also be able to use the build stored at `/cvmfs/eic.opensciencegrid.org/singularity/escalate:latest/`.
 
 ### Running interactive shells inside the singularity container
 
@@ -168,4 +158,34 @@ and run
 ```bash
 wget https://gitlab.com/eic/escalate/workspace/-/raw/master/data/beagle_eD.txt
 $ESC python3 full.py
+```
+
+
+
+### Building a local singularity container
+
+Since the docker container is quite large, you will want to build the singularity image in a directory where you have plenty of space (e.g. `/volatile` at Jefferson Lab). You do *not* want to save this image to your home directory!
+
+```bash
+mkdir -p /volatile/eic/$USER/singularity
+cd /volatile/eic/$USER/singularity
+module load singularity
+export SINGULARITY_CACHEDIR="."
+singularity build --sandbox electronioncollider/escalate:latest docker://electronioncollider/escalate:latest
+```
+
+Setting the singularity cache directory `SINGULARITY_CACHEDIR` prevents singularity from filling up a hidden directory in your home directory with 10 GB of docker container layers.
+
+While building the container, singularity may complain a bit about `EPERMS` and `setxattr`, but you can ignore this (the drawback of doing this without super-user privileges).
+
+After lunch, you should have a sandbox container (i.e. a directory which encapsulates an entire operating system) at `/volatile/eic/$USER/singularity/electronioncollider/escalate:latest/`.
+
+Note: If you aready have pulled the container into docker locally, you can save some downloading time by building the singularity image from the local container with
+```bash
+singularity build --sandbox electronioncollider/escalate:latest docker-daemon://electronioncollider/escalate:latest
+```
+
+Note: As a temporary fix for older kernels < 3.15 (check with `uname -r`) , run the following before using the image:
+```bash
+strip --remove-section=.note.ABI-tag electronioncollider/escalate:latest/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
 ```
