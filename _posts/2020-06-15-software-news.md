@@ -85,6 +85,13 @@ The framework is modular on package and library levels, provides command line in
 python and Jupyter APIs for user analysis and ensures data consistency between its loose coupled parts.
 
 <div style="clear: left;"></div>
+
+To run ESCalate: 
+
+- [Run in docker on your machine (Linux, Mac, Win)](https://eic.gitlab.io/documents/quickstart/#ESCalate)
+- [Run in singularity on lab farms (or also your machine)]()
+[https://gitpod.io/#https://gitlab.com/eic/escalate/workspace](gitpod)
+
 <br>
 
 #### MCEG
@@ -200,21 +207,29 @@ ejpm install ejana   # add --force flag to recompile existing version
 
 
 
-#### Delivery
+#### Containers
 
-- **In Cloud!**. One can now open Escalate Jupyter examples in Binder. So no installation needed!  
+- **In Cloud!**. One can now open ESCalate Jupyter examples in Binder. So no installation needed!  
    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
    *(It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
    Geant4 and other packages)* 
    Binder provides limited resources, but we work on adding an ability to submit a job to OSG right from the Jupyter.
    
-   For some time now we also have Escalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
+   For some time now we also have ESCalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
    Hopefully soon we will have it working on BNL JupyterHub also.
    
 
 - **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
    of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
    
+
+#### Help and support
+
+<a href="https://join.slack.com/t/eicug/shared_invite/zt-djjvylq9-zmRphsvRLpDBiYb_jJwgCQ">
+<img src="{{ '/assets/images/diagrams/escalate/slack_qr.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+</a> 
+
+Get to our Slack channel to get help with the software and participate in other channels like YP analysis. 
 
 <br><br> 
  
