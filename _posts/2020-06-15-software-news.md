@@ -182,6 +182,24 @@ macros or other tools.
 ejana -Pplugins=beagle_reader,dis,event_writer beagle_file.txt
 ```
 
+<img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+**Reconstruction**. Recently we've been rehauling our reconstruction part. At this moment we do track fitting through Genfit and vertexing through ACTS and working with ACTS developers on implementing full
+ACTS tracking+vertexing so one can select and compare both. We also plan to use ACTS wider and put ACTS Fatras (Fast Tracking Simulation) to G4E. 
+
+<div style="clear: left;"></div>
+We try to keep escalate packages easily installable on users machines ([using ejpm](https://gitlab.com/eic/escalate/ejpm)). ACTS requires C++17 and the latest Boost libraries and it might be a problem to build it even
+on not very old machines without attaching CVMFS or using Conda. So we made ACTS a peer dependency - if one installs it, ejana is build with its reconstruction plugins. Without ACTS ejana it built with only fast simulation modules and minimal dependencies. 
+
+```
+ejpm install acts
+ejpm install genfit
+ejpm install ejana   # add --force flag to recompile existing version
+```
+
+
+
+
 #### Delivery
 
 - **In Cloud!**. One can now open Escalate Jupyter examples in Binder. So no installation needed!  
