@@ -88,9 +88,13 @@ python and Jupyter APIs for user analysis and ensures data consistency between i
 
 To run ESCalate: 
 
-- [Run in docker on your machine (Linux, Mac, Win)](https://eic.gitlab.io/documents/quickstart/#ESCalate)
-- [Run in singularity on lab farms (or also your machine)]()
-[https://gitpod.io/#https://gitlab.com/eic/escalate/workspace](gitpod)
+- [In docker on your machine (Linux, Mac, Win)](https://eic.gitlab.io/documents/quickstart/#ESCalate)
+- [In singularity on lab farms (or on your machine)](https://eic.github.io/software/escalate_singularity_1.html)
+- [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
+
+Now also in Binder! (No installation needed) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
+> It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
+   Geant4 and other packages. We work on adding an ability to submit a job to OSG right from the Jupyter.
 
 <br>
 
@@ -189,35 +193,20 @@ macros or other tools.
 ejana -Pplugins=beagle_reader,dis,event_writer beagle_file.txt
 ```
 
-<img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
 
 **Reconstruction**. Recently we've been rehauling our reconstruction part. At this moment we do track fitting through Genfit and vertexing through ACTS and working with ACTS developers on implementing full
 ACTS tracking+vertexing so one can select and compare both. We also plan to use ACTS wider and put ACTS Fatras (Fast Tracking Simulation) to G4E. 
 
-<div style="clear: left;"></div>
+<img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="200" style="float:left; padding: 10px 20px 10px 20px;"/> 
 We try to keep escalate packages easily installable on users machines ([using ejpm](https://gitlab.com/eic/escalate/ejpm)). ACTS requires C++17 and the latest Boost libraries and it might be a problem to build it even
 on not very old machines without attaching CVMFS or using Conda. So we made ACTS a peer dependency - if one installs it, ejana is build with its reconstruction plugins. Without ACTS ejana it built with only fast simulation modules and minimal dependencies. 
 
-```
-ejpm install acts
-ejpm install genfit
-ejpm install ejana   # add --force flag to recompile existing version
-```
-
-
+<div style="clear: left;"></div>
 
 
 #### Containers
 
-- **In Cloud!**. One can now open ESCalate Jupyter examples in Binder. So no installation needed!  
-   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
-   *(It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
-   Geant4 and other packages)* 
-   Binder provides limited resources, but we work on adding an ability to submit a job to OSG right from the Jupyter.
-   
-   For some time now we also have ESCalate image running on [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
-   Hopefully soon we will have it working on BNL JupyterHub also.
-   
 
 - **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
    of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
@@ -229,7 +218,7 @@ ejpm install ejana   # add --force flag to recompile existing version
 <img src="{{ '/assets/images/diagrams/escalate/slack_qr.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
 </a> 
 
-Get to our Slack channel to get help with the software and participate in other channels like YP analysis. 
+[Subscribe to our Slack channel](https://join.slack.com/t/eicug/shared_invite/zt-djjvylq9-zmRphsvRLpDBiYb_jJwgCQ) to get help with the software and participate in other channels like YP analysis. 
 
 <br><br> 
  
