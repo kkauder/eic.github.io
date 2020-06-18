@@ -94,7 +94,8 @@ To run ESCalate:
 
 Now also in Binder! (No installation needed) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
 > It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
-   Geant4 and other packages. We work on adding an ability to submit a job to OSG right from the Jupyter.
+   Geant4 and other packages. Even with the limited resources the link can be used as a live examples and demonstration.
+   And we work on adding an ability to submit jobs to OSG right from the Jupyter.
 
 <br>
 
