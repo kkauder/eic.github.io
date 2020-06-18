@@ -10,7 +10,37 @@ level: 0
 
 ## Running ESCalate on HPC clusters
 
+- [Singularity images on CVMFS](#singularity-images-on-cvmfs)
+- [Building a local singularity container](#building-a-local-singularity-container)
+- [Running ESCalate on HPC clusters](#running-escalate-on-hpc-clusters)
+- [Running scripts](#running-scripts-inside-the-singularity-container)
+- [Running programs](#running-programs-inside-the-singularity-container)
+- [Scripts with multiple commands](#scripts-with-multiple-commands-inside-the-singularity-container)
+- [Scheduling batch jobs](#-scheduling-batch-jobs-with-the-singularity-container)
+- [Advanced ways of running](#advanced-ways-of-running)
+
+
+
+<br>
+
+### Singularity images on CVMFS
+
 To run the ESCalate docker container on HPC clusters, we use singularity. This does not require super-user privileges.
+
+
+Our [docker image](https://gitlab.com/eic/containers) is being automatically converted to singularity on any update. 
+
+This singularity images available at **BNL** and **JLab** and anywhere where one has has access to the EIC repository 
+on the cvmfs filesystem (at `/cvmfs/eic.opensciencegrid.org`).
+
+```
+/cvmfs/singularity.opensciencegrid.org/electronioncollider/escalate\:latest
+```
+
+**(!)** All instructions below works if you put the above link there instead of `electronioncollider/escalate:latest`
+
+
+<br>
 
 ### Building a local singularity container
 
@@ -40,9 +70,8 @@ Note: As a temporary fix for older kernels < 3.15 (check with `uname -r`) , run 
 strip --remove-section=.note.ABI-tag electronioncollider/escalate:latest/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
 ```
 
-### Using a cvmfs singularity container
 
-If you site has access to the EIC repository on the cvmfs filesystem (at `/cvmfs/eic.opensciencegrid.org`), you may also be able to use the build stored at `/cvmfs/eic.opensciencegrid.org/singularity/escalate:latest/`.
+<br>
 
 ### Running interactive shells inside the singularity container
 
@@ -68,6 +97,9 @@ This will generate files in the current directory (300 KB, 30 seconds).
 
 You can exit the shell again with `exit` or Ctrl-D.
 
+
+<br>
+
 ### Running scripts inside the singularity container
 
 Instead of interactively logging in and running commands, we can also create a script and run that from the host system command line. If we have an executable script `script.sh` with content
@@ -83,6 +115,9 @@ singularity run electronioncollider/escalate:latest ./script.sh
 We need the `./` because that is what we would have typed inside the container because the current directory is (likely) not in the search path.
 
 Note: You may encounter a warning from `tini`, the master process inside the container (similar to `init`, see what they did there?). You can remove the warning by defining an empty environment variable with `export TINI_SUBREAPER=""`.
+
+
+<br>
 
 ### Running programs inside the singularity container
 
@@ -103,6 +138,9 @@ We can now prepend this to any command we want to run inside the container, no m
 $ESC dire --nevents 50 --setting "WeakSingleBoson:ffbar2gmZ = on"
 ```
 
+
+<br>
+
 ### Scripts with multiple commands inside the singularity container
 
 To be able to run batch jobs, we want to submit job scripts. For example, we can create a script with the following content (anywhere you want):
@@ -116,6 +154,9 @@ export ESC="singularity run /volatile/eic/$USER/singularity/electronioncollider/
 $ESC dire --nevents 50 --setting "WeakSingleBoson:ffbar2gmZ = on"
 ```
 This will use the container to run the `dire` command specified and write the output to your home directory.
+
+
+<br>
 
 ### Scheduling batch jobs with the singularity container
 
@@ -135,6 +176,9 @@ export ESC="singularity run /volatile/eic/$USER/singularity/electronioncollider/
 $ESC dire --nevents 50 --setting "WeakSingleBoson:ffbar2gmZ = on"
 ```
 and submit this with `sbatch`.
+
+
+<br>
 
 ### Advanced ways of running
 
@@ -169,3 +213,5 @@ and run
 wget https://gitlab.com/eic/escalate/workspace/-/raw/master/data/beagle_eD.txt
 $ESC python3 full.py
 ```
+
+<br>

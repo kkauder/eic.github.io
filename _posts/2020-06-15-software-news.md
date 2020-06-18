@@ -104,3 +104,155 @@ Fun4All is also being used to reconstruct test beam data which allows a direct c
 
 ###### Help
 Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non Scientific Data Center Accounts need an invite - contact us
+
+
+## ESCalate
+
+<img src="{{ '/assets/images/diagrams/escalate/escalate-logo.png' | relative_url }}" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+**ESCalate** is a modern framework, which brings together Monte Carlo event generators, 
+[Eic Smear](https://gitlab.com/eic/eic-smear.git) for fast simulations, 
+[G4E](https://gitlab.com/eic/escalate/g4e.git) for full detector simulations and
+[eJana](https://gitlab.com/eic/escalate/ejana.git) for analysis and reconstruction.
+The framework is modular on package and library levels, provides command line interface, 
+python and Jupyter APIs for user analysis and ensures data consistency between its loose coupled parts.
+
+<div style="clear: left;"></div>
+
+To run ESCalate: 
+
+- [In docker on your machine (Linux, Mac, Win)](https://eic.gitlab.io/documents/quickstart/#ESCalate)
+- [In singularity on lab farms (or on your machine)](https://eic.github.io/software/escalate_singularity_1.html)
+- [JupyterHub at jupyterhab.jlab.org](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md)
+
+Now also in Binder! (No installation needed) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)  
+> It might take some time to load - Binder is free, has limited resources, while our image is large because of ROOT, 
+   Geant4 and other packages. Even with the limited resources the link can be used as a live examples and demonstration.
+   And we work on adding an ability to submit jobs to OSG right from the Jupyter.
+
+<br>
+
+#### MCEG
+
+
+<img src="{{ '/assets/images/diagrams/escalate/q2_jb.png' | relative_url }}" width="200" style="float:left; padding: 0px 20px 10px 20px;"/>
+
+**MCEG examples**. [Examples](https://gitlab.com/eic/escalate/workspace/-/tree/master/01_fast_sim_tutorial) of using Pythia6 with radiative corrections and Pythia8+Dire to generate DIS events 
+and process them with fast simulations added. With eJana you can instantly see the resulting DIS plots (see Validation section of eJana below)
+
+<div style="clear: left;"></div>
+
+**HepMC3 and file converter** As [HepMC3](https://gitlab.cern.ch/hepmc/HepMC3) was named "stable" with the 3.2.1 release, 
+we switched eJana to work with HepMC3 (previously it worked with HepMC2), which can read files of both versions.
+
+We also now provide ```hepmc_writer``` plugin. As eJana can read a number of Lund file formats (Beagle, HepEvents, PythiaEIC, etc.) it can be easily used as a converter
+of Beagle and other files to HepMC3 which later can be processed with Delphes, in [python](https://pypi.org/project/HepMC3/), etc.
+As there are users adapting [Delphes for EIC](https://github.com/miguelignacio/delphes_EIC). 
+We are working on verification and validation of using the feature in Delphes workflow.
+
+
+Example command to convert Beagle file to HepMC3:
+
+```bash
+ejana -Pplugins=beagle_reader,hepmc_writer beagle_file.txt
+```
+
+Beagle and other generators provide extended info such as true x, Q2 and other DIS values, one of the advantages of HepMC3
+is that it allows to have custom attributes for events and particles, i.e. allows to save those values. At this point only 
+basic values are converted, but we are working to ship them all for Beagle and PythiaEIC.
+
+
+
+
+#### Fast simulations 
+
+
+
+<img src="https://gitlab.com/eic/escalate/smear/-/raw/master/logo.png" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+**Fast simulations made simple**. Now it is easy to smear any EIC MCEG supported file as simple as running a console command:
+
+```bash
+smear my_mc_file.txt
+```
+See the [documentation](https://gitlab.com/eic/escalate/smear/) for how to easily select a detector, its versions, and various other options
+
+<div style="clear: left;"></div>
+
+Smear tool can use different *smearing engines* under the hood. Eic-Smear C++ API is the main one, 
+but one can also select detectors from Simple Smear written by Yulia Furletova. 
+We are now considering integration of Delphes as the third engine.
+
+The ```smear``` command requires installation of ROOT and other packages, so we have instructions for different
+scenarios:
+
+1. [Run docker on your local machine](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_docker.md),
+2. [Using singularity (at labs or locally)](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_singularity.md)
+3. [Run directly on IFarm or JLab Jupyterhub](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_ifarm.md)
+ 
+
+#### Full simulations
+
+G4E has many changes related to forward and far forward region such as new ZDC, virtual tracking for B0 tracking, etc.
+(Results are presented in Pavia's meeting and on [Meson and Kaon structure workshop](https://indico.bnl.gov/event/8315/overview))
+
+
+<img src="{{ '/assets/images/diagrams/escalate/G4E_with_zdc.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+<img src="{{ '/assets/images/diagrams/escalate/g4e_lambda_decay_example.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+
+
+<div style="clear: left;"></div>
+
+
+#### Reconstruction and analysis in eJana
+
+**Standalone plugins**  You can always analyze the output of the ESCalate framework with ROOT macros, pyROOT or uproot. 
+But to integrate your reconstruction algorithm, physics analysis or extend eJana, users can write their own plugins. 
+Assuming that the most convenient workflow keep users' analysis in their own separate repositories, 
+we added examples of standalone plugins, which work completely independently of eJana location, 
+so no modification of the central repository is needed. 
+The [standalone plugins examples are here](https://gitlab.com/eic/escalate/plugins) (and will be expanding).
+ 
+It is also possible to use pyjano to generate and/or compile new plugins on fly. 
+Newly generated plugins instantly work with command line, python or in Jupyter. 
+
+**Validation and Analysis**. We added some validation and analysis plugins for ejana, that allows checking fast simulation
+results as well as to build DIS plots (x, Q2, t, etc.) with a simple CLI command. 
+
+Here is an example of how to read a Beagle file, build DIS plots with new ```dis``` plugin and write a ROOT tree, which you can analyse with ROOT 
+macros or other tools.  
+
+```bash
+ejana -Pplugins=beagle_reader,dis,event_writer beagle_file.txt
+```
+
+
+
+**Reconstruction**. Recently we've been rehauling our reconstruction part. At this moment we do track fitting through Genfit and vertexing through ACTS and working with ACTS developers on implementing full
+ACTS tracking+vertexing so one can select and compare both. We also plan to use ACTS wider and put ACTS Fatras (Fast Tracking Simulation) to G4E. 
+
+<img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="200" style="float:left; padding: 10px 20px 10px 20px;"/> 
+We try to keep escalate packages easily installable on users machines ([using ejpm](https://gitlab.com/eic/escalate/ejpm)). ACTS requires C++17 and the latest Boost libraries and it might be a problem to build it even
+on not too old machines without attaching CVMFS or using non system compilers. So we made ACTS a peer dependency - if one installs it, ejana is built with its reconstruction plugins. Without ACTS ejana it built with only fast simulation and minimal dependencies. 
+
+<div style="clear: left;"></div>
+
+
+#### Containers
+
+
+- **Containers versioning**. One can now get the [full versions table](https://gitlab.com/eic/containers) of all the softare 
+   of ESCalate images and [the images change log](https://gitlab.com/eic/containers/-/blob/master/CHANGELOG.rst).
+   
+
+#### Help and support
+
+<a href="https://join.slack.com/t/eicug/shared_invite/zt-djjvylq9-zmRphsvRLpDBiYb_jJwgCQ">
+<img src="{{ '/assets/images/diagrams/escalate/slack_qr.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+</a> 
+
+[Subscribe to our Slack channel](https://join.slack.com/t/eicug/shared_invite/zt-djjvylq9-zmRphsvRLpDBiYb_jJwgCQ) to get help with the software and participate in other channels like YP analysis. 
+
+<br><br> 
+ 
