@@ -201,7 +201,7 @@ ACTS tracking+vertexing so one can select and compare both. We also plan to use 
 
 <img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="200" style="float:left; padding: 10px 20px 10px 20px;"/> 
 We try to keep escalate packages easily installable on users machines ([using ejpm](https://gitlab.com/eic/escalate/ejpm)). ACTS requires C++17 and the latest Boost libraries and it might be a problem to build it even
-on not very old machines without attaching CVMFS or using Conda. So we made ACTS a peer dependency - if one installs it, ejana is build with its reconstruction plugins. Without ACTS ejana it built with only fast simulation modules and minimal dependencies. 
+on not too old machines without attaching CVMFS or using non system compilers. So we made ACTS a peer dependency - if one installs it, ejana is built with its reconstruction plugins. Without ACTS ejana it built with only fast simulation and minimal dependencies. 
 
 <div style="clear: left;"></div>
 
