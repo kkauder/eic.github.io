@@ -19,7 +19,7 @@ consistent, and reproducible.
 
 ## Table of contents
 
-* [Working Group Update](#swg)
+* [General Update](#swg)
     * [Detector Working Group: Detector Matrix Version 0.1](#dwg)
     * [GitHub for the EICUG](#github)
     * [Worldwide data storage and sharing solution with Petrel](#petrel)
@@ -31,7 +31,7 @@ consistent, and reproducible.
 
 ---
 
-## Working Group Update {#swg}
+## General Update {#swg}
 
 ### Detector Working Group: Detector Matrix Version 0.1 {#dwg}
 
@@ -50,7 +50,7 @@ For the Backward Detector the Tracking Resolution column was updated as follows:
 
 The abstract, reference files, and note sections of these fields have been updated accordingly. 
 
-Parameterizations based on the Detector Matrix Version 0.1 are [available for usage](https://github.com/eic/eicsmeardetectors). They will be included in the QA plots macros of the upcoming next release of eic-smear. 
+Parameterizations based on the Detector Matrix Version 0.1 are [available for usage](https://github.com/eic/eicsmeardetectors). You can select them via `SmearDetectorMatrix_0_1.cxx`. Please see the [section on Official parameterizations](https://github.com/eic/eicsmeardetectors) for details. The parameterizations will be included in the QA plots macros of the upcoming next release of eic-smear. 
 
 ### GitHub for the EICUG {#github}
 
@@ -127,7 +127,7 @@ Improvements to eic-smear for comfortable compiling a local detector script and/
 
 ##### Advanced usage example
 
-In order to demonstrate some of the more subtle issues of eic-smear output, we created an [example project](github.com:eic/eicsmear-jetexample.git).
+In order to demonstrate some of the more subtle issues of eic-smear output, we created an [example project]((https://github.com/eic/eicsmear-jetexample.git).
 
 The repo just has two cxx files, meant to be self-documenting, and a detailed README. The first example demonstrates how to use just smeared output, the second how to compare to the truth level and/or how to extract some information from the truth level that should be in the smeared level but as of now isn't yet.
 
