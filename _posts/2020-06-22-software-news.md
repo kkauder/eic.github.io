@@ -50,7 +50,7 @@ For the Backward Detector the Tracking Resolution column was updated as follows:
 
 The abstract, reference files, and note sections of these fields have been updated accordingly. 
 
-Parameterizations based on the Detector Matrix Version 0.1 are [available for usage](https://github.com/eic/eicsmeardetectors). You can select them via `SmearDetectorMatrix_0_1.cxx`. Please see the [section on Official parameterizations](https://github.com/eic/eicsmeardetectors) for details. The parameterizations will be included in the QA plots macros of the upcoming next release of eic-smear. 
+Parameterizations based on the Detector Matrix Version 0.1 are [available for usage](https://github.com/eic/eicsmeardetectors). You can select them via `SmearDetectorMatrix_0_1.cxx`. Please see [the section on Official Parameterizations](https://github.com/eic/eicsmeardetectors) for details. The parameterizations will be included in the QA plots macros of the upcoming next release of eic-smear. 
 
 ### GitHub for the EICUG {#github}
 
@@ -79,7 +79,6 @@ will be added soon as well. You can find more info on Petrel
 [here](https://petrel.alcf.anl.gov/). 
 Petrel is supported and maintained by ALCF.
 
-​
 Because of the Globus back-end it is easy to move, share and discover 
 data via a single interface, regardless if you are working with on a HPC 
 facility, computer farm or your local machine. All major laboratories 
@@ -90,12 +89,13 @@ access the storage space, [log in to globus.org](https://globus.org)
 with your existing laboratory or university credentials and access the 
 `petrel#eic` endpoint. It's as easy as that!
 
-​
 Write-access is available to anyone in the EIC Globus Group.
 If you want write-access to the storage space, 
 or if you encounter any issues, 
 you can contact [Sylvester Joosten](mailto:sjoosten@anl.gov) or 
 [Markus Diefenthaler](mailto:mdiefent@jlab.org).
+
+Additional storage options are available on [BNLBox/NextCloud](https://eic.github.io/computing/storage.html). 
 
 
 
