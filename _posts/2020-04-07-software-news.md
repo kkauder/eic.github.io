@@ -67,6 +67,6 @@ ESCalate provides modularity in two ways:
 
 The framework itself ensures that data between packages is consistent and output of one package can be correctly read from another. ESCalate provides Python orchestration to facilitate the configuration of each package and allow for a workflow between the packages. 
 
-<img src="{{ '/assets/images/diagrams/escalate/ESCalate-Structure.png' | relative_url }}" width="597"/>
+<img src="{{ '/assets/images/software/escalate/ESCalate-Structure.png' | relative_url }}" width="597"/>
 
 <br/>

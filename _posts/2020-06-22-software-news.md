@@ -136,7 +136,7 @@ Please note that while the sample analysis is jet-specific, this is purely becau
 
 ### ESCalate {#escalate}
 
-<img src="{{ '/assets/images/diagrams/escalate/escalate-logo.png' | relative_url }}" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
+<img src="{{ '/assets/images/software/escalate/escalate-logo.png' | relative_url }}" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
 
 **ESCalate** is a modern framework, which brings together Monte Carlo
   event generators, [eic-smear](https://gitlab.com/eic/eic-smear.git)
@@ -159,7 +159,7 @@ Please note that while the sample analysis is jet-specific, this is purely becau
 
 ##### MCEG
 
-<img src="{{ '/assets/images/diagrams/escalate/q2_jb.png' | relative_url }}" width="200" style="float:left; padding: 0px 20px 10px 20px;"/>
+<img src="{{ '/assets/images/software/escalate/q2_jb.png' | relative_url }}" width="200" style="float:left; padding: 0px 20px 10px 20px;"/>
 
 **MCEG examples**. [Examples](https://gitlab.com/eic/escalate/workspace/-/tree/master/01_fast_sim_tutorial) of using Pythia6 with radiative corrections and Pythia8+Dire to generate DIS events 
 and process them with fast simulations added. With eJana you can instantly see the resulting DIS plots (see Validation section of eJana below)
@@ -212,9 +212,9 @@ scenarios:
 G4E has many changes related to forward and far forward region such as new ZDC, virtual tracking for B0 tracking, etc.. Results have been presented at the Pavia meeting and in the workshop on [Meson and Kaon Structure](https://indico.bnl.gov/event/8315/overview)).
 
 
-<img src="{{ '/assets/images/diagrams/escalate/G4E_with_zdc.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+<img src="{{ '/assets/images/software/escalate/G4E_with_zdc.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
 
-<img src="{{ '/assets/images/diagrams/escalate/g4e_lambda_decay_example.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
+<img src="{{ '/assets/images/software/escalate/g4e_lambda_decay_example.png' | relative_url }}" height="250" style="float:left; padding: 10px 20px 10px 20px;"/>
 
 <div style="clear: left;"></div>
 
@@ -243,7 +243,7 @@ ejana -Pplugins=beagle_reader,dis,event_writer beagle_file.txt
 **Reconstruction**. Recently, we have been overhauling our reconstruction part. At this moment we do track fitting through Genfit and vertexing through ACTS and working with ACTS developers on implementing full
 ACTS tracking+vertexing so one can select and compare both. We also plan to use ACTS wider and put ACTS Fatras (Fast Tracking Simulation) to G4E. 
 
-<img src="{{ '/assets/images/diagrams/escalate/tracking_fit_crop.png' | relative_url }}" height="200" style="float:left; padding: 10px 20px 10px 20px;"/> 
+<img src="{{ '/assets/images/software/escalate/tracking_fit_crop.png' | relative_url }}" height="200" style="float:left; padding: 10px 20px 10px 20px;"/> 
 We try to keep escalate packages easily installable on users machines ([using ejpm](https://gitlab.com/eic/escalate/ejpm)). ACTS requires C++17 and the latest Boost libraries and it might be a problem to build it even
 on not too old machines without attaching CVMFS or using non system compilers. So we made ACTS a peer dependency - if one installs it, ejana is built with its reconstruction plugins. Without ACTS ejana it built with only fast simulation and minimal dependencies. 
 
@@ -265,19 +265,19 @@ Fun4All is a well established simulation/reconstruction framework initially deve
 ##### New developments
 All fieldmaps (Babar, Beast and JLeic) are now available. They can be chosen on the ROOT macro level for details have a look at this [tutorial](https://github.com/eic/fun4all_eic_tutorials/tree/master/MagneticField).
 
-<img src="{{ '/assets/images/diagrams/fun4all/fun4all_fieldmaps.png' | relative_url }}" width="800"/>
+<img src="{{ '/assets/images/software/fun4all/fun4all_fieldmaps.png' | relative_url }}" width="800"/>
 
 The magnetic field was verified using charged geantinos (shown here are 0.5, 1, 2, 3 GeV/c) compared to constant solenoidal fields as shown on the right for the Beast magnet.
 
 Importing detectors via gdml files has its quirks but is now well understood and fully supported. It is not possible to do this generically since one has to address the volumes by name but this only needs minor modifications to existing code and is largely cut and paste.
 
-<img src="{{ '/assets/images/diagrams/fun4all/fun4all_gdml.png' | relative_url }}" width="800"/>
+<img src="{{ '/assets/images/software/fun4all/fun4all_gdml.png' | relative_url }}" width="800"/>
 
 Here are the latest additions to our selection of implemented detectors (all of which can be combined in a ROOT macro). We have a detailed model of the [Beast magnet](https://github.com/eic/fun4all_eicdetectors/tree/master/source) (already used in the fieldmap plots) as well as the [*All Silicon Tracker*](https://github.com/eic/g4lblvtx) and the EIC beam pipe.
 
 The ability to combine these (and other detectors) at will is shown here:
 
-<img src="{{ '/assets/images/diagrams/fun4all/fun4all_allsilicon.png' | relative_url }}" width="800"/>
+<img src="{{ '/assets/images/software/fun4all/fun4all_allsilicon.png' | relative_url }}" width="800"/>
 
 where the *All Silicon Tracker* is put inside the Beast magnet and is being used as central tracker inside the EIC detector based on the Babar magnet.
 
