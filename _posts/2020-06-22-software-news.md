@@ -20,9 +20,11 @@ consistent, and reproducible.
 ## Table of contents
 
 * [General Update](#swg)
+    * [Communication](#communication)
     * [Detector Working Group: Detector Matrix Version 0.1](#dwg)
     * [GitHub for the EICUG](#github)
-    * [Worldwide data storage and sharing solution with Petrel](#petrel)
+    * [Petrel: Worldwide data storage and sharing solution](#petrel)
+    * [Support us to support you better](#support)
     * [Tutorials](#tutorials)
 * [Software Update](#update)
     * [eic-smear](#eic-smear)
@@ -32,6 +34,17 @@ consistent, and reproducible.
 ---
 
 ## General Update {#swg}
+
+### Communication {#communication}
+
+The Software Working Group will start to announce software updates,
+known bugs, and other software related news on the
+[eicug-software@eicug.org](mailto:eicug-software@eicug.org) mailing
+list. While summaries will be provided in our
+Software News, we encourage all working groups to subscribe to
+[eicug-software@eicug.org](mailto:eicug-software@eicug.org).
+
+
 
 ### Detector Working Group: Detector Matrix Version 0.1 {#dwg}
 
@@ -64,7 +77,7 @@ We encourage you to share your software and documentation on [https://github.com
 
 
 
-### Worldwide data storage and sharing solution with Petrel {#petrel}
+### Petrel: Worldwide data storage and sharing solution {#petrel}
 
 We are happy to announce that we can offer the community
 a large new data storage allocation on Petrel
@@ -99,7 +112,16 @@ Additional storage options are available on [BNLBox/NextCloud](https://eic.githu
 
 
 
-### ToDo: Tutorials {#tutorials}
+### Support us to support you better {#support}
+The common simulation tools and workflow environment can only grow
+with user input. The EICUG Software Working Group asks interested
+users to join our support team to ensure fast response to user
+requests. This is an ideal opportunity to learn more about the
+software and its development.
+
+
+
+### Tutorials {#tutorials}
 The tutorials for fast and detector full simulations are available on the [EICUG YouTube channel](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w). The next tutorials will be on Monte Carlo Event Generators. The dates will be slighlty adjusted due to the new dates for the EIC User Group Meeting (July 15-17).
 
 <img src="{{ '/assets/images/tutorials/SWG-Tutorials.pdf' | relative_url }}" width="500"/>
