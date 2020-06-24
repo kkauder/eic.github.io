@@ -27,6 +27,7 @@ consistent, and reproducible.
     * [Support us to support you better](#support)
     * [Tutorials](#tutorials)
 * [Software Update](#update)
+    * [EicRoot](#eicroot)
     * [eic-smear](#eic-smear)
     * [ESCalate](#escalate)
     * [Fun4All](#fun4all)
@@ -129,7 +130,26 @@ The tutorials for fast and detector full simulations are available on the [EICUG
 ---
 
 ## Software Update {#update}
-In the June Software News, updates on eic_smear, ESCalate, and Fun4All are included. 
+In the June Software News, updates on EicRoot, eic_smear, ESCalate, and Fun4All are included. 
+
+### EicRoot {#eicroot}
+
+A new version of EicRoot has been prepared for the Yellow Report
+initiative: The source code was cleaned up and all of the unnecessary
+dependencies on third-party software packages were dropped. The
+simulation framework now depends only on ROOT6, Geant4 and G3/G4 VMC
+packages. ROOT5 support is discontinued.
+
+The new version is available on
+[https://github.com/eic/EicRoot](https://github.com/eic/EicRoot). Instructions
+for how to install EicRoot locally or run a EicRoot Docker container
+are provided.
+
+EicRoot is used in the Yellow Report initiative for tracking studies
+and the simulation of far-forward detectors and will be supported for
+Yellow Report initiative and the work on the EIC CDR. The GDML (or
+ROOT TGeo) export of pre-configured detector models into ESCalate of
+Fun4All will be tested.
 
 ### eic-smear {#eic-smear}
 
