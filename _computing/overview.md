@@ -7,5 +7,8 @@ level: 0
 
 {% include layouts/title.md %}
 
-Computing overview: TBD
+This section of the site is under construction. It currently contains
+descriptions of the storage solutions currently employed by the EIC community.
+A catalog of the exidting MC data will be added soon.
+
 
