@@ -41,6 +41,9 @@
       name: overview
       full: Overview
     -
+      name: github
+      full: GitHub Organization
+    -
       name: sites
       full: Computing Sites
       exclude: yes
