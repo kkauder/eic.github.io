@@ -106,6 +106,48 @@ finalized.
 
 ### Fun4All {#fun4all}
 
-Chris will add text. 
+The macros were reorganized to disentangle the various large detector concepts. The macros which set up the subsystems for the [EIC detector based on the Babar magnet](https://github.com/eic/fun4all_macros/tree/master/common) and for other [EIC detector implementations](https://github.com/eic/fun4all_eicmacros/tree/master/common) were moved into separate areas. They are installed during the build and are available via the ROOT_INCLUDE_PATH (just like any other include). The advantage of this setup is that detector systems can now share these subsystems without having to copy those macros locally. Development is done locally - the local macro takes precedence over the installed macro.
+
+Why should you care?
+
+This makes it much easier to set up your own complete eic detector with components of your choosing (but you are responsible that they fit - better run with overlap check for the first time). We have a handful of pre-defined configurations, all using the proper scalable fieldmaps or constant solenoidal field:
+  * [All Silicon Tracker inside the Babar magnet](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/AllSilicon)
+<img src="{{ '/assets/images/software/fun4all/2020-july/allsilicon.png' | relative_url }}" width="200"/>
+  * [Beast Magnet](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/Beast) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="{{ '/assets/images/software/fun4all/2020-july/beast_template.png' | relative_url }}" width="200"/>
+  * [Partial JLeic](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/JLeic) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="{{ '/assets/images/software/fun4all/2020-july/jleic.png' | relative_url }}" width="200"/>
+  * [LANL Barrel+Forward](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/EICDetector) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="{{ '/assets/images/software/fun4all/2020-july/lanl.png' | relative_url }}" width="200"/>
+  * [EIC detector based on the Babar magnet](https://github.com/eic/fun4all_macros/tree/master/detectors/EICDetector) &nbsp;&nbsp; 
+<img src="{{ '/assets/images/software/fun4all/2020-july/eicdetector.png' | relative_url }}" width="200"/>
+
+  * [sPHENIX](https://github.com/eic/fun4all_macros/tree/master/detectors/sPHENIX) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="{{ '/assets/images/software/fun4all/2020-july/sphenix.png' | relative_url }}" width="200"/>
+  * [fsPHENIX](https://github.com/eic/fun4all_macros/tree/master/detectors/fsPHENIX) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+<img src="{{ '/assets/images/software/fun4all/2020-july/fsphenix.png' | relative_url }}" width="200"/>
+
+You will find a Fun4All_G4_XXX.C and G4Setup_XXX.C macro in those directories. The G4Setup_XXX.C macro set up the magnet and the selection of subsystems which can be used. The Fun4All_G4_XXX.C selects the options what you want to run.
+
+All Fun4All_G4_XXX.C macros can run all our event generators (single particles - gun and distributions, pythia6, pythia8, generators from eic-smear, sartre, hijing, upsilons). The Beast implementation is currently the magnet with the eic beampipe only - lets see if we can fill the empty space. Fast truth based tracking based on genfit is enabled for all eic detectors. sPHENIX and fsPHENIX have actual tracking for the barrel which is under development, if someone is interested to work on eic tracking we have some ideas and some code to start with (caveat: this is an expert operation where some experience is needed). The raw output can be written to root TTrees for inspection.
+
+The macros run out of the box (after sourcing the [/cvmfs/eic.opensciencegrid.org/x8664_sl7/opt/fun4all/core/bin/eic_setup.csh](https://github.com/eic/fun4all_opt_scripts/blob/master/bin/sphenix_setup.csh) script using a single particle generator).
+
+##### Create Your Own Detector Concepts
+If you want to create your own you can start with our newest addition to our [tutorial](https://github.com/eic/fun4all_eic_tutorials/tree/master/detectors). They contain the Fun4All_G4 and G4Setup templates for the available magnets (which differ in size and strength):
  
+  * [Babar](https://github.com/eic/fun4all_eic_tutorials/tree/master/detectors/Babar)
+<img src="{{ '/assets/images/software/fun4all/2020-july/babar_template.png' | relative_url }}" width="200"/>
+
+  * [Beast](https://github.com/eic/fun4all_eic_tutorials/tree/master/detectors/Beast)
+<img src="{{ '/assets/images/software/fun4all/2020-july/beast_template.png' | relative_url }}" width="200"/>
+
+  * [Cleo](https://github.com/eic/fun4all_eic_tutorials/tree/master/detectors/Cleo)
+<img src="{{ '/assets/images/software/fun4all/2020-july/cleo_template.png' | relative_url }}" width="200"/>
+
+By default the respective fieldmaps are used but you can switch to a constant solenoidal field and the eic beam pipe is included. Once you decided on the volume names of your tracking detectors you can run our [fast genfit based track fitting](https://github.com/eic/fun4all_coresoftware/tree/master/simulation/g4simulation/g4trackfastsim). It supports cylinders and planes (barrel detectors and forward/backward disks).
+
+##### Help
+Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non BNL Accounts need an invite - contact us.  
+
 ---
