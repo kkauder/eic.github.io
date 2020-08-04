@@ -62,7 +62,7 @@ software and its development.
 ### Tutorials {#tutorials}
 The tutorials for fast and detector full simulations are available on the [EICUG YouTube channel](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w). The next tutorials will be on Monte Carlo Event Generators. 
 
-<img src="{{ '/assets/images/tutorials/SWG-Tutorials.pdf' | relative_url }}" width="500"/>
+<img src="{{ '/assets/images/tutorials/SWG-Tutorials.png' | relative_url }}" width="500"/>
 
 ### Workshop on “Machine Learning for Particle Physics Experiments” {#workshop}
 
