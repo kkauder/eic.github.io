@@ -125,7 +125,7 @@ software and its development.
 ### Tutorials {#tutorials}
 The tutorials for fast and detector full simulations are available on the [EICUG YouTube channel](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w). The next tutorials will be on Monte Carlo Event Generators. The dates will be slighlty adjusted due to the new dates for the EIC User Group Meeting (July 15-17).
 
-<img src="{{ '/assets/images/tutorials/SWG-Tutorials.pdf' | relative_url }}" width="500"/>
+<img src="{{ '/assets/images/tutorials/SWG-Tutorials.png' | relative_url }}" width="500"/>
 
 ---
 
