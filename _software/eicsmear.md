@@ -3,7 +3,6 @@ title: Smearing with eic-smear
 name: eicsmear_1
 category: eicsmear
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

@@ -3,12 +3,11 @@ title: Petrel/Globus
 description: Worldwide data storage and access through Petrel/Globus
 name: petrel
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}
 
-# Worldwide data storage and access through Petrel/Globus
+#### Worldwide data storage and access through Petrel/Globus
 
 We offer the community access to a large data storage allocation on Petrel
 to address the increasing need for an easy-to-access high-performance
@@ -19,7 +18,7 @@ sharing. Our Petrel allocation is 100TB (more can be added if needed).
 The existing pre-grenerated Monte-Carlo data from BNL (13TB and growing)
 are mirrored in the `BNL-gpfs02-data` directory, and available JLab data
 will be added soon as well.  You can find more info on Petrel 
-[here](https://petrel.alcf.anl.gov/).
+{% include navigation/findlink.md name='petrel' tag='here' %}.
 Petrel is supported and maintained by ALCF.
 
 ​

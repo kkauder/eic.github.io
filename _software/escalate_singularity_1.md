@@ -3,7 +3,6 @@ title: Escalate with Singularity
 name: escalate_singularity_1
 category: escalate
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

@@ -2,7 +2,6 @@
 title: How-to
 name: howto
 layout: default
-level: 0
 ---
 {% include layouts/title.md %}
 

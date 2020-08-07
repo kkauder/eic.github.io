@@ -2,8 +2,6 @@
 title: Charge
 name: charge
 layout: default
-level: 0
-div: yes
 ---
 {% include layouts/title.md %}
 

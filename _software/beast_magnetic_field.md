@@ -2,8 +2,6 @@
 title: BeAST Magnetic Field
 name: beast_magnetic_field
 layout: default
-level: 0
-div: yes
 ---
 # BeAST solenoid magnetic field map 
 

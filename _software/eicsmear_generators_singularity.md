@@ -3,7 +3,6 @@ title: Eic-smear and Generators with Singularity
 name: eicsmear_generators_singularity
 category: singularity
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

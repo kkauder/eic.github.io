@@ -1,38 +1,45 @@
-- name: 'PHENIX website (legacy)'
-  url: 'https://www.phenix.bnl.gov/'
-  category: 'general'
-
-- name: 'PHENIX Collaboration on GitHub'
-  url: 'https://github.com/PhenixCollaboration'
-  category: 'general'
-
-- name: 'PHENIX Community on Zenodo'
-  url: 'https://zenodo.org/communities/phenixcollaboration/'
-  category: 'general'
-
-- name: 'PHENIX on HEPData'
-  url: 'https://www.hepdata.net/search/?collaboration=PHENIX'
-  category: 'general'
-
 - name: HEPData
   url: 'https://www.hepdata.net/'
 
 - name: Inspire
   url: 'https://inspirehep.net/'
 
-- name: 'PHENIX on Inspire'
-  url: 'https://inspirehep.net/literature?sort=mostrecent&q=collaboration%20phenix'
-  category: 'general'
-
 - name: npps
   url: 'https://npps.bnl.gov/'
+
+- name: petrel
+  url: 'https://petrel.alcf.anl.gov/'
+
+- name: bnlbox_cli
+  url: 'https://racfjira.atlassian.net/wiki/spaces/BBD/pages/604307461/How+To+Access+BNL+Box+From+The+Command+Line'
+
+- name: eic_software_drupal
+  url: 'http://www.eicug.org/web/content/eic-software'
 
 - name: hsf
   url: 'http://hepsoftwarefoundation.org/'
 
 - name: github
-  url: https://github.com/PhenixCollaboration
+  url: 'https://github.com/eic/'
 
+- name: github_pages
+  url: 'https://pages.github.com/'
+
+- name: github_adding_topics
+  url: 'https://help.github.com/en/enterprise/2.15/user/articles/classifying-your-repository-with-topics#adding-topics-to-your-repository'
+
+- name: github_site
+  url: 'https://github.com/eic/eic.github.io'
+
+- name: Jekyll
+  url: 'http://jekyllrb.com/'
+
+- name: Liquid
+  url: 'https://shopify.github.io/liquid/'
+  
+- name: Bootstrap
+  url: 'http://getbootstrap.com/'
+  
 - name: rivet
   url: 'https://rivet.hepforge.org/'
 

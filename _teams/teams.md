@@ -2,7 +2,6 @@
 title: Software Teams
 name: teams
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

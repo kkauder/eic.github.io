@@ -2,7 +2,6 @@
 title: Core Group
 name: core
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

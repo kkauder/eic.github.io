@@ -3,7 +3,6 @@ title: NextCloud
 description: NextCloud
 name: storage
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}
@@ -23,7 +22,7 @@ and find everything in the ```EIC_Data``` directory via the web interface.
 ##### Download from the command line ####
 
 Instructions for using curl, cadaver, and a script that can download entire directories can be found
-[here](https://racfjira.atlassian.net/wiki/spaces/BBD/pages/604307461/How+To+Access+BNL+Box+From+The+Command+Line).
+{% include navigation/findlink.md name='bnlbox_cli' tag='here' %}.
 
 A few additional points that may simplify life:
 * A copy of the ```copy_bnl_box.rb``` script is found inside ```EIC_Data```.

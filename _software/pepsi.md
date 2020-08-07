@@ -3,7 +3,6 @@ title: PEPSI
 name: pepsi
 category: pepsi
 layout: default
-level: 0
 ---
 {% include layouts/title.md %}
 

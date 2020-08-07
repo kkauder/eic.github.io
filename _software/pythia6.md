@@ -3,7 +3,6 @@ title: PYTHIA6 with Radiative Corrections
 name: pythia6
 category: pythia
 layout: default
-level: 0
 ---
 
 {% include layouts/title.md %}

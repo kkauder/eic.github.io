@@ -2,7 +2,6 @@
 title: This Site
 name: site
 layout: default
-level: 0
 ---
 
 {% capture howto_url=page_url %}{% include navigation/findpage.md folder=site.about name='howto' %}{% endcapture %}
@@ -31,20 +30,20 @@ website generator technology with the following features:
 * flexible ways to filter, manipulate, modify and format the data to be included in the pages presented to the user
 * use of a highly readable and an easy-to-edit syntax for content creation (the so-called **Markdown** syntax)
 
-To this end, the popular <a href="http://jekyllrb.com/">*Jekyll*</a> website generator is used, with
-an additional toolkit (<a href="https://getbootstrap.com/" target="_blank">*Bootstrap*</a>) for optimal user experience.
+To this end, the popular {% include navigation/findlink.md name='Jekyll' tag='Jekyll' %} website generator is used, with
+an additional toolkit {% include navigation/findlink.md name='Bootstrap' tag='*Bootstrap*' %}  for optimal user experience.
 Both Jekyll and Bootstrap are free and open source.
 
 #### Design and Implementation
 To learn about the design and conventions used on this site please see the ["How-to"]({{ howto_url }}) page.
-The code is <a href="https://github.com/eic/eic.github.io">available on GitHub</a>.
+The code is available on GitHub in its own {% include navigation/findlink.md name='github_site' tag='repository' %}
+
 
 #### Credits
-Information collected here is managed by the <a href="http://www.eicug.org/web/content/eic-software" target="_blank" >EIC software Group</a>.
-Design of this site was inspired by the <a href="http://hepsoftwarefoundation.org/">HEP Software Foundation</a> Web site.
+Information collected here is managed by the {% include navigation/findlink.md name='eic_software_drupal' tag='EIC software Group' %}. Design of this site was inspired by the {% include navigation/findlink.md name='hsf' tag='HEP Software Foundation' %} Web site.
 We are grateful to the authors and maintainers of the following technologies:
-* <a href="https://pages.github.com/">GitHub Pages</a>
-* <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
-* <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a>
-* <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+* {% include navigation/findlink.md name='github_pages' tag='GitHub Pages' %}
+* {% include navigation/findlink.md name='Jekyll' %}
+* {% include navigation/findlink.md name='Liquid' %}
+* {% include navigation/findlink.md name='Bootstrap' %}
 

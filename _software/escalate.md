@@ -4,7 +4,6 @@ name: escalate_1
 category: escalate
 layout: default
 toc: true
-level: 0
 ---
 
 {% include layouts/title.md %}
