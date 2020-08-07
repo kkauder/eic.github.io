@@ -1,5 +1,5 @@
 {% if include.center %}<center>{% endif %}
 
-## {{ page.title }}
+#### {{ page.title }}
 <hr/>
 {% if include.center %}</center>{% endif %}

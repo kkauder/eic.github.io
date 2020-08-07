@@ -5,11 +5,14 @@ layout: default
 ---
 {% include layouts/title.md %}
 
+* TOC
+{:toc}
+
 #### Overview
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
 
-Please take a look at the <a href="https://github.com/eic/eic.github.io" target="_blank">repository</a>
+Please take a look at the {% include navigation/findlink.md name='github_site' tag='repository' %}
 to get an idea of the general organization of the data, layouts and supporing logic.
 The idea is to shape the code and content in a way that is easy to navigate
 and modify. The following sections explain how this is achieved.
@@ -21,7 +24,7 @@ as hard limits on repositories of sites which are hosted as "GitHub pages"
 * interfacing the navigation tools on this site, which for the most part consists
 of the top navigation bar and the dropdown menus
 
-#### The Navigation Bar
+#### The Navigation Mechanics
 Entries in the navigation bar on top are named similar to the folders in this
 project, for example the "Software" is associated with the folder "_software" etc.
 These folders are treated as "collections" by the Jekyll framework and they need to be declared
@@ -34,13 +37,12 @@ its menu entries are generated automatically based on the content of the file
 The content and order of top entries in the navigation bar as well as content and ordering of all items in all dropdown
 menus are defined in that file.
 
-#### Front Matter
 "Front Matter" is a piece of YAML code (typically short) on the very top of a Markdown-formatted
 document which can contain any sort of data, for example variables used to render the page.
 It can be used to define the behavior and treatment of the page in higher-level
 contructs referencing it, since the data in the Front Matter is accessible as object attributes.
-Importantly, it also serves to inform the platform "Jekyll" that this particular page needs to be
-rendered into HTML for inclusion in the site being built.
+Importantly, it also serves to inform {% include navigation/findlink.md name='Jekyll' %} that
+this particular page needs to be rendered into HTML for inclusion in the site being built.
 
 All files are expected to be in the Markdown (MD) format, and 
 **each MD file is to be equipped with the "front matter" section**, which could look like the excerpt below.
@@ -53,11 +55,14 @@ layout: default
 ---
 ```
 
-There is no source code (i.e. markdown page content) for links to external resources included in the menus.
+If a menu entry in *menu.yml* is an external link, there is no source code (i.e. markdown page content is not necessary).
 Examples are easy to spot in the file <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
-To include a divider right above an entry in a dropdown menu the following line should be added
-respective section of the _data/menus.yml file: "**div: yes**". Additionally, the "exclude" attribute is provided, mainly for development purposes, if
-a section of the menu needs to be ignored when building the site.
+
+Menu entry descriptions in *menu.yml* can also have optional attributes:
+* **"div"**: to include a divider right above an entry in a dropdown menu the following line should be added
+respective section of the _data/menus.yml file: "*div: yes*".
+* **"exclude"** -  mainly for development purposes; if a section of the menu needs to be ignored when building the site one can just easily add "*exclude: yes*" to the repective section.
+* **"label"**: to insert a label into a dropdown menu. The label won't have any links or page associations, it's just a visual guide.
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
@@ -67,7 +72,7 @@ for small sites. For scalability, it is recommended to rely mostly on dedicated 
 files in the "<a href="https://github.com/eic/eic.github.io/tree/master/_data" target="_blank">_data</a>" folder)
 and keep the content of the front matter sections of individual MD files to a minimum.
 
-The <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a> template language
+The {% include navigation/findlink.md name='Liquid' %} template language
 features a variety of filters that can be applied to the data stored in YAML and other data sources
 as well as in the front matter blocks of pages, and decent (not perfect) support for collections,
 iterators and flow control constructs.
@@ -85,19 +90,20 @@ Headers of sections within a page are currently formatted in Markdown as "header
 with four hash characters like in **"#### My section header"**. Take a look at the header (Formatting)
 of this section to get an idea of how it's rendered.
 
-#### Development
+#### Development and Deployment
 
 To productively participate in the development of this site one needs to learn the
-<a href="http://jekyllrb.com/">Jekyll</a> framework and perform its installation on
+{% include navigation/findlink.md name='Jekyll' %} framework and perform its installation on
 a development machine. This way any modification can be validated immediately since
 the locally running development server provided by Jekyll will render the site
-on the local host. Basic knolwede of the <a href="https://shopify.github.io/liquid/" target="_blank">
-Liquid</a> template language and in particular the "filters" that are part of it is extremely helpful.
+on the local host. Basic knolwede of the {% include navigation/findlink.md name='Liquid' %}
+template language and in particular the "filters" that are part of it is extremely helpful.
 
-#### Checking the Results of Your Contribution
-
-It is often desirable to assess the result of changes before publishing them. There is no services at GitHub to do that: 
-you can only render the markdown contents, without all the CSS and other things. To achieve this, you need to install 
+Once modified contents are committed to the repository and you perform *git push*, the
+{% include navigation/findlink.md name='github_pages' tag='GitHub pages system' %} will build the
+site and make it publicly available. Errors may result either in failed deployment or a broken
+instance of the site. For that reason it is desirable to assess the result of changes before publishing them.
+To achieve this, you need to install 
 Jekyll on your local machine. Detailed instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/installation/) 
 but the short story is:
 
@@ -134,4 +140,5 @@ Changes made to files are immediately reflected on the displayed site (at the ne
 At this point, pushes are allowed for site developers. A pull request/approval process may be put in place later if needed.
 
 
+[top](#how-to)
 
