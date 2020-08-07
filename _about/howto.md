@@ -24,7 +24,8 @@ as hard limits on repositories of sites which are hosted as "GitHub pages"
 * interfacing the navigation tools on this site, which for the most part consists
 of the top navigation bar and the dropdown menus
 
-#### The Navigation Mechanics
+#### Navigation Mechanics
+##### The Menu System
 Entries in the navigation bar on top are named similar to the folders in this
 project, for example the "Software" is associated with the folder "_software" etc.
 These folders are treated as "collections" by the Jekyll framework and they need to be declared
@@ -37,15 +38,26 @@ its menu entries are generated automatically based on the content of the file
 The content and order of top entries in the navigation bar as well as content and ordering of all items in all dropdown
 menus are defined in that file.
 
-"Front Matter" is a piece of YAML code (typically short) on the very top of a Markdown-formatted
-document which can contain any sort of data, for example variables used to render the page.
-It can be used to define the behavior and treatment of the page in higher-level
-contructs referencing it, since the data in the Front Matter is accessible as object attributes.
-Importantly, it also serves to inform {% include navigation/findlink.md name='Jekyll' %} that
-this particular page needs to be rendered into HTML for inclusion in the site being built.
+If a menu entry in *menu.yml* is an external link, there is no source code (i.e. markdown page content is not necessary).
+Examples are easy to spot in the file <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
 
-All files are expected to be in the Markdown (MD) format, and 
-**each MD file is to be equipped with the "front matter" section**, which could look like the excerpt below.
+Menu entry descriptions in *menu.yml* can also have optional attributes:
+* **"div"**: to include a divider right above an entry in a dropdown menu the
+following line should be added respective section of the _data/menus.yml file: "*div: yes*".
+* **"exclude"** -  mainly for development purposes; if a section of the menu
+needs to be ignored when building the site one can just easily add "*exclude: yes*" to the repective section.
+* **"label"**: to insert a label into a dropdown menu. The label won't have any links or page associations, it's just a visual guide.
+
+##### Front Matter
+"Front Matter" is a piece of YAML code (typically short) embedded on the very top of a
+Markdown-formatted document which can contain any sort of data, for example variables
+used to render the page or define a tag so it can be more easily referenced in this way.
+The data in the Front Matter is accessible in a way similar to object attributes.
+Importantly, when present the Front Matter serves to inform {% include navigation/findlink.md name='Jekyll' %}
+that this particular page needs to be rendered into HTML for inclusion in the site being built. Otherwise
+it won't be included in the site. In summary, most of the files used to build the site
+are expected to be in the Markdown (MD) format, and **each MD file is to be equipped with the
+"front matter" section**, which could look like the excerpt below.
 ```
 ---
 title: My Cool Software
@@ -55,14 +67,6 @@ layout: default
 ---
 ```
 
-If a menu entry in *menu.yml* is an external link, there is no source code (i.e. markdown page content is not necessary).
-Examples are easy to spot in the file <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
-
-Menu entry descriptions in *menu.yml* can also have optional attributes:
-* **"div"**: to include a divider right above an entry in a dropdown menu the following line should be added
-respective section of the _data/menus.yml file: "*div: yes*".
-* **"exclude"** -  mainly for development purposes; if a section of the menu needs to be ignored when building the site one can just easily add "*exclude: yes*" to the repective section.
-* **"label"**: to insert a label into a dropdown menu. The label won't have any links or page associations, it's just a visual guide.
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
