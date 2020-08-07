@@ -4,8 +4,6 @@ name: site
 layout: default
 ---
 
-{% capture howto_url=page_url %}{% include navigation/findpage.md folder=site.about name='howto' %}{% endcapture %}
-
 {% include layouts/title.md %}
 
 #### The Goal
@@ -35,8 +33,9 @@ an additional toolkit {% include navigation/findlink.md name='Bootstrap' tag='*B
 Both Jekyll and Bootstrap are free and open source.
 
 #### Design and Implementation
-To learn about the design and conventions used on this site please see the ["How-to"]({{ howto_url }}) page.
-The code is available on GitHub in its own {% include navigation/findlink.md name='github_site' tag='repository' %}
+To learn about the design and conventions used on this site please see the
+{% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %}.
+The code is available on GitHub in its own {% include navigation/findlink.md name='github_site' tag='repository' %}.
 
 
 #### Credits

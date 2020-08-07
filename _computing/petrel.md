@@ -28,7 +28,8 @@ facility, computer farm or your local machine. All major laboratories
 and supercomputing facilities, as well as most universities support 
 Globus. This allows you to use your existing laboratory (ANL, BNL, JLab, 
 LBNL, etc.) or even university credentials to access the files. To 
-access the storage space, [log in to globus.org](https://globus.org) 
+access the storage space,
+{% include navigation/findlink.md name='globus' tag='log in to https://globus.org' %}
 with your existing laboratory or university credentials and access the 
 `petrel#eic` endpoint. It's as easy as that!
 
