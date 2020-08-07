@@ -9,5 +9,4 @@ layout: default
 
 #### MC Data
 
-This page is under development and will contain information about the MC data sets created by the EIC community.
-​
+This page is under development and will contain information about the MC data sets created by the EIC community.​

@@ -4,8 +4,8 @@ name: site
 layout: default
 level: 0
 ---
-{% include navigation/find_link.md where=site.about what='howto' %}
-{% assign howto_url=page_url %}
+
+{% capture howto_url=page_url %}{% include navigation/findpage.md folder=site.about name='howto' %}{% endcapture %}
 
 {% include layouts/title.md %}
 
@@ -36,7 +36,7 @@ an additional toolkit (<a href="https://getbootstrap.com/" target="_blank">*Boot
 Both Jekyll and Bootstrap are free and open source.
 
 #### Design and Implementation
-To learn about the design and conventions used on this site please see the <a href="{{ howto_url }}">"How-to"</a> page.
+To learn about the design and conventions used on this site please see the ["How-to"]({{ howto_url }}) page.
 The code is <a href="https://github.com/eic/eic.github.io">available on GitHub</a>.
 
 #### Credits
