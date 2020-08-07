@@ -38,8 +38,9 @@ its menu entries are generated automatically based on the content of the file
 The content and order of top entries in the navigation bar as well as content and ordering of all items in all dropdown
 menus are defined in that file.
 
-If a menu entry in *menu.yml* is an external link, there is no source code (i.e. markdown page content is not necessary).
-Examples are easy to spot in the file <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
+If a menu entry in *menu.yml* is an external link, there is no additional source
+code (i.e. markdown page content is not necessary). Examples are easy to spot in the file
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
 
 Menu entry descriptions in *menu.yml* can also have optional attributes:
 * **"div"**: to include a divider right above an entry in a dropdown menu the
@@ -67,6 +68,26 @@ layout: default
 ---
 ```
 
+##### Helper macros
+Frequently used **external** links are located in the following registry: _data/links.yml.
+They can be easily inserted in pages in a consistent manner by their name, and if the "tag" attribute
+is provided as well it will displayed as a link. This simplifies handling user-unfriendly links and ensures
+they remain the same across the site, and makes it easy to point to a different resource when necessary.
+Example:
+{% raw %}
+{% include navigation/findlink.md name='github_site' tag='repository' %}
+{% endraw %}
+will result in the following link: {% include navigation/findlink.md name='github_site' tag='repository' %}.
+Links will automatically open in a new tab.
+
+There is a similar macro for use with links to **internal** pages on the site. Example:
+{% raw %}
+{% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %}
+{% endraw %}
+will result in: {% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %} (this happens
+to the page you are reading now).
+Primary advantage of this macro is that it allows renaming the source file - while keeping the same "name" attribute
+in the Front Matter section the links will still be correct.
 
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
@@ -111,12 +132,8 @@ To achieve this, you need to install
 Jekyll on your local machine. Detailed instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/installation/) 
 but the short story is:
 
-* Install [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](https://rubygems.org/pages/download)
-* Install Bundler (a Ruby package manager):
-
-  ```bash
-  gem install bundler
-  ```
+* Install {% include navigation/findlink.md name='ruby_downloads' tag='Ruby' %} and {% include navigation/findlink.md name='rubygems_downloads' tag='RubyGems' %}
+* Install Bundler (a Ruby package manager): `gem install bundler`
 
 * If you don't have one yet, create a clone of the website repository and move to the directory created:
 
@@ -131,7 +148,7 @@ but the short story is:
   bundler update
   ```
 
-* Run Jekyll installation:
+* Run Jekyll:
 
   ```bash
   bundler exec jekyll serve
@@ -139,7 +156,9 @@ but the short story is:
 
 
 Once Jekyll has been started you can view the web site by connecting to `localhost:4000`.
-Changes made to files are immediately reflected on the displayed site (at the next page load). This makes it extremely efficient to make changes and debug entirely locally before uploading the final changes to GitHub.
+Changes made to files are immediately compiled and reflected on the
+displayed site (at the next page load). This makes it extremely efficient
+to make changes and debug entirely locally before uploading the final changes to GitHub.
 
 At this point, pushes are allowed for site developers. A pull request/approval process may be put in place later if needed.
 

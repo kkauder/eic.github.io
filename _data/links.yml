@@ -34,6 +34,12 @@
 - name: Jekyll
   url: 'http://jekyllrb.com/'
 
+- name: ruby_downloads
+  url: 'https://www.ruby-lang.org/en/downloads/'
+
+- name: rubygems_downloads
+  url: 'https://rubygems.org/pages/download'
+
 - name: globus
   url: 'https://globus.org'
 
