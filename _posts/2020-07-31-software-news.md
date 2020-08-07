@@ -117,7 +117,7 @@ This makes it much easier to set up your own complete eic detector with componen
 <img src="{{ '/assets/images/software/fun4all/2020-july/beast_template.png' | relative_url }}" width="200"/>
   * [Partial JLeic](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/JLeic) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="{{ '/assets/images/software/fun4all/2020-july/jleic.png' | relative_url }}" width="200"/>
-  * [LANL Barrel+Forward](https://github.com/eic/fun4all_eicmacros/tree/master/detectors/EICDetector) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  * [LANL Barrel+Forward](https://github.com/eic/fun4all_macros/tree/master/detectors/EICDetector) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="{{ '/assets/images/software/fun4all/2020-july/lanl.png' | relative_url }}" width="200"/>
   * [EIC detector based on the Babar magnet](https://github.com/eic/fun4all_macros/tree/master/detectors/EICDetector) &nbsp;&nbsp; 
 <img src="{{ '/assets/images/software/fun4all/2020-july/eicdetector.png' | relative_url }}" width="200"/>
