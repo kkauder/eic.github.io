@@ -72,10 +72,15 @@ layout: default
 Frequently used **external** links are located in the following registry:
 <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/links.yml" target=_blank>_data/links.yml</a>.
 
-
-They can be easily inserted in pages in a consistent manner by their name, and if the "tag" attribute
-is provided as well it will displayed as a link. This simplifies handling user-unfriendly links and ensures
-they remain the same across the site, and makes it easy to point to a different resource when necessary.
+They can be easily inserted in pages in a consistent manner by their mneumonic name using
+a macro as decribed below. This simplifies handling user-unfriendly links and ensures they
+remain the same across the site and makes
+it easy to point to a different resource when necessary. For example, this piece of code
+{% raw %}
+{% include navigation/findlink.md name='Jekyll' %}
+{% endraw %}
+will result in the link: {% include navigation/findlink.md name='Jekyll' %}. If you would like the displayed
+link name to be different, the optional "tag" argument for the macro will do that.
 Example:
 {% raw %}
 {% include navigation/findlink.md name='github_site' tag='repository' %}
