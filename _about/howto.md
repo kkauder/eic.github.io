@@ -69,7 +69,10 @@ layout: default
 ```
 
 ##### Helper macros
-Frequently used **external** links are located in the following registry: _data/links.yml.
+Frequently used **external** links are located in the following registry:
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/links.yml" target=_blank>_data/links.yml</a>.
+
+
 They can be easily inserted in pages in a consistent manner by their name, and if the "tag" attribute
 is provided as well it will displayed as a link. This simplifies handling user-unfriendly links and ensures
 they remain the same across the site, and makes it easy to point to a different resource when necessary.
