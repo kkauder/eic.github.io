@@ -150,8 +150,13 @@ Example usage:
 ```
 $ eic-smear
 eic-smear [0] BuildTree("ep_hiQ2.20x250.small.txt.gz")
-eic-smear [1] SmearTree(BuildByName["MATRIXFF"](),"ep_hiQ2.20x250.small.root")
+eic-smear [1] SmearTree(BuildByName("MATRIX"),"ep_hiQ2.20x250.small.root") // OR
+eic-smear [2] SmearTree(BuildByName("MATRIXFF",275),"ep_hiQ2.20x250.small.root")
 ```
+The forward detectors are only parameterized for a few beam energies,
+the number is given as a second parameter; see the
+[README](https://github.com/eic/eicsmeardetectors/blob/master/README.md)
+for details.
 
 ### EicToyModel {#eictoymodel}
 
