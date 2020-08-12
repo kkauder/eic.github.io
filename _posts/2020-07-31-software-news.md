@@ -104,6 +104,55 @@ free and encouraged.
 ## Software Update {#update}
 In the July Software News, updates on the EicToyModel and Fun4All are included. 
 
+### Eic-smear {#eicsmear}
+The [master branch](https://github.com/eic/eic-smear)
+is now updated to version 1.1.0 and is rolling out on farms now.
+
+This update introduces major updates and changes:
+
+- If cmake finds a HepMC3 installation or is supplied one with the
+```-DHepMC3``` flag, BuildTree() now supports HepMC2 and HepMC3 input
+files, using heuristics to determine the scattered electron and the
+virtual boson.
+
+- BuildTree() now also supports gzipped input files, removing the need
+  to unzip or the need to keep the six times larger ASCII output from
+  generators.
+  
+- By default, eic-smear now enforces strict consistency. No acceptance
+  overlaps are allowed, and all smeared particles need theta, phi
+  information. This behavior can be turned off using
+  detector.SetLegacyMode(true), but that should be used only for
+  backward compatibility.
+
+- Smeared particles now have a collection of flags to test whether a
+  specific property is smeared.
+
+- With these changes, the previously dysfunctional capability to smear
+  pT and pz is restored. 
+
+- A ROOT wrapper now can load the required libraries and display
+  version and location information. A translation table allows using a
+  detector specified with a text string.
+
+### Eic-smear Detectors {#eicsmeardetectors}
+The detector scripts now live in their
+own [repository](https://github.com/eic/eicsmeardetectors).
+Test and example code has been migrated there as well. This repository
+now also creates a separate library to use with compiled code.
+
+There is also a new category of "semi-official" parameterizations that
+branch off and add to the official one and adds functionality on
+request by individual WG's. The latest addition  is based off of the
+online matrix version 0.1 and adds rough forward  capabilities.
+
+Example usage:
+```
+$ eic-smear
+eic-smear [0] BuildTree("ep_hiQ2.20x250.small.txt.gz")
+eic-smear [1] SmearTree(BuildByName["MATRIXFF"](),"ep_hiQ2.20x250.small.root")
+```
+
 ### EicToyModel {#eictoymodel}
 
 The [EicToyModel software suite](https://github.com/eic/EicToyModel)
