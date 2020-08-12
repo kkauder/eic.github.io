@@ -27,7 +27,9 @@ consistent, and reproducible.
     * [Tutorials](#tutorials)
     * [Workshop on “Machine Learning for Particle Physics Experiments"](#workshop)
 * [Software Update](#update)
+    * [Eic-smear](#eicsmear)
     * [EicToyModel](#eictoymodel)
+    * [ESCalate](#escalate)
     * [Fun4All](#fun4all)
 
 ---
@@ -51,8 +53,8 @@ step, we invite the community to the next Project Greenfield meeting
 on DATE. In the meeting, we will leverage everyone’s experience to
 define requirements for EIC Software and work together on common
 software projects based on these requirements. Project Greenfield
-includes all components of EIC Software, simulation, reconstruction,
-physics analyses, streaming readout, online monitoring, etc.. Examples
+includes all components of EIC Software: Simulation, reconstruction,
+physics analyses, streaming readout, online monitoring, etc. Examples
 for common software in the community are ACTS, DD4hep, Gaudi, Geant4,
 JANA2, Jupyter, or ROOT. The Expression of Interest for Software will
 include emerging technologies of Artificial Intelligence and Quantum
@@ -63,14 +65,14 @@ Computing.
 
 [https://github.com/eic](https://github.com/eic) is available for the
 whole EICUG. For membership, please send your GitHub username to
-o[eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account). We
+[eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account). We
 encourage you to share your software and documentation on
 [https://github.com/eic](https://github.com/eic). Please follow [our
 guidelines](https://eic.github.io/computing/github.html) in doing so.
 
 ### Support us to support you better {#support}
 The common simulation tools and workflow environment can only grow
-with user input. The EICUG Software Working Group asks interested
+with user input. The Software Working Group asks interested
 users to join our support team to ensure fast response to user
 requests. This is an ideal opportunity to learn more about the
 software and its development.
@@ -102,7 +104,7 @@ free and encouraged.
 ---
 
 ## Software Update {#update}
-In the July Software News, updates on the EicToyModel and Fun4All are included. 
+In the July Software News, updates on eic-smear, EicToyModel, ESCalate, and Fun4All are included. 
 
 ### Eic-smear {#eicsmear}
 The [master branch](https://github.com/eic/eic-smear)
@@ -110,53 +112,54 @@ is now updated to version 1.1.0 and is rolling out on farms now.
 
 This update introduces major updates and changes:
 
-- If cmake finds a HepMC3 installation or is supplied one with the
+* If cmake finds a HepMC3 installation or is supplied one with the
 ```-DHepMC3``` flag, BuildTree() now supports HepMC2 and HepMC3 input
 files, using heuristics to determine the scattered electron and the
 virtual boson.
-
-- BuildTree() now also supports gzipped input files, removing the need
+* ```BuildTree()``` now also supports gzipped input files, removing the need
   to unzip or the need to keep the six times larger ASCII output from
   generators.
-  
-- By default, eic-smear now enforces strict consistency. No acceptance
+* By default, eic-smear now enforces strict consistency. No acceptance
   overlaps are allowed, and all smeared particles need theta, phi
   information. This behavior can be turned off using
-  detector.SetLegacyMode(true), but that should be used only for
+  ```detector.SetLegacyMode(true)```, but that should be used only for
   backward compatibility.
-
-- Smeared particles now have a collection of flags to test whether a
+* Smeared particles now have a collection of flags to test whether a
   specific property is smeared.
-
-- With these changes, the previously dysfunctional capability to smear
+* With these changes, the previously dysfunctional capability to smear
   pT and pz is restored. 
-
-- A ROOT wrapper now can load the required libraries and display
+* A ROOT wrapper now can load the required libraries and display
   version and location information. A translation table allows using a
   detector specified with a text string.
 
-### Eic-smear Detectors {#eicsmeardetectors}
-The detector scripts now live in their
-own [repository](https://github.com/eic/eicsmeardetectors).
-Test and example code has been migrated there as well. This repository
-now also creates a separate library to use with compiled code.
+#### Eic-smear Detectors 
+The detector scripts including test and example code are provided in
+their own [repository](https://github.com/eic/eicsmeardetectors). This
+repository now also creates a separate library to use with compiled
+code.
 
-There is also a new category of "semi-official" parameterizations that
-branch off and add to the official one and adds functionality on
-request by individual WG's. The latest addition  is based off of the
-online matrix version 0.1 and adds rough forward  capabilities.
+The ```MATRIX``` parameterizations are derived from the interactive
+Detector Matrix and represent the detector parameterizations by the
+Detector Working Group. In the currently available version, only
+information about the central detector but not yet the far-forward
+detectors are available. By request from various working groups, an
+interim parametrization, ```MATRIXFF```, is provided that combines the
+```MATRIX``` parameterizations with first information on the
+far-forward detectors (ZDC, B0, and Roman Pots).  This information is
+available for a few beam energies only. When using the
+```MATRIXFF``` parameterizations, the beam energy has to be specified
+as a second parameter. An example is given here:
 
-Example usage:
 ```
 $ eic-smear
 eic-smear [0] BuildTree("ep_hiQ2.20x250.small.txt.gz")
-eic-smear [1] SmearTree(BuildByName("MATRIX"),"ep_hiQ2.20x250.small.root") // OR
-eic-smear [2] SmearTree(BuildByName("MATRIXFF",275),"ep_hiQ2.20x250.small.root")
+eic-smear [1] SmearTree(BuildByName("MATRIXFF",275),"ep_hiQ2.20x250.small.root")
+//compared to: 
+//eic-smear [2] SmearTree(BuildByName("MATRIX"),"ep_hiQ2.20x250.small.root"))
 ```
-The forward detectors are only parameterized for a few beam energies,
-the number is given as a second parameter; see the
-[README](https://github.com/eic/eicsmeardetectors/blob/master/README.md)
-for details.
+Please see the [README](https://github.com/eic/eicsmeardetectors/blob/master/README.md) for details.
+
+---
 
 ### EicToyModel {#eictoymodel}
 
@@ -175,6 +178,14 @@ make use of them in the GEANT4 simulation environment. An extensive
 with several usage examples is provided. Interfaces to the EIC
 simulation frameworks ESCalate and Fun4All still needs to be
 finalized.
+
+---
+
+### ESCalate {#escalate}
+
+Dmitry will send an update. 
+
+---
 
 ### Fun4All {#fun4all}
 
@@ -223,6 +234,7 @@ By default the respective fieldmaps are used but you can switch to a constant so
 Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non BNL Accounts need an invite - contact us.  
 
 ---
+
 ### About the Software Working Group
 
 Please see our [website](https://eic.github.io) for more information
