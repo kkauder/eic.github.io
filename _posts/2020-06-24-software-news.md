@@ -329,9 +329,22 @@ where the *All Silicon Tracker* is put inside the Beast magnet and is being used
 ##### Verification
 Fun4All is also being used to reconstruct test beam data which allows a direct comparison of simulations with data. sPHENIX has performed extensive test beam campaigns for its detectors at energies which are relevant for EIC detectors. The calorimeter test beam results have been [published](https://ieeexplore.ieee.org/document/8519782) recently, the analysis of TPC and Maps detector data is ongoing. A good agreement with previous EICRoot based simulations has been found for the All Silicon Tracker ([slide 8](https://indico.bnl.gov/event/7894/contributions/37609/attachments/28098/43125/200514_AllSi_in_Fun4All_2.pdf))
 
-##### Help
+##### Help with Fun4All
 Help is available via [our support channel in Mattermost](https://chat.sdcc.bnl.gov/eic/channels/fun4all-software-support), non Scientific Data Center Accounts need an invite - contact us. 
 
+---
 
+### About the Software Working Group
 
- 
+Please see our [website](https://eic.github.io) for more information
+about the Software Working Group and engage in the discussion on our
+[mailing list](mailto:eicug-software@eicug.org). For software
+questions, please see our
+[tutorials](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w),
+contact us via
+[software-support@eicug.org](mailto:software-support@eicug.org), or
+join our [Slack channel](https://eicug.slack.com) (see QR code below).
+
+<img src="{{ '/assets/images/support/EICUG-Slack.png' | relative_url }}" width="200"/>
+
+--- 

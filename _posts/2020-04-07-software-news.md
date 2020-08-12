@@ -70,3 +70,20 @@ The framework itself ensures that data between packages is consistent and output
 <img src="{{ '/assets/images/software/escalate/ESCalate-Structure.png' | relative_url }}" width="597"/>
 
 <br/>
+
+---
+
+### About the Software Working Group
+
+Please see our [website](https://eic.github.io) for more information
+about the Software Working Group and engage in the discussion on our
+[mailing list](mailto:eicug-software@eicug.org). For software
+questions, please see our
+[tutorials](https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w),
+contact us via
+[software-support@eicug.org](mailto:software-support@eicug.org), or
+join our [Slack channel](https://eicug.slack.com) (see QR code below).
+
+<img src="{{ '/assets/images/support/EICUG-Slack.png' | relative_url }}" width="200"/>
+
+---
