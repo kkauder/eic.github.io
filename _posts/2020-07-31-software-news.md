@@ -183,51 +183,45 @@ finalized.
 
 ### ESCalate {#escalate}
 
-#### Escalate 1.1.0
+#### ESCalate v1.1.0
 
-Escalate v1.1.0. Which includes new versions of JANA2(2.0.3), ejana
-(1.2.3), g4e(1.3.5) and others. 
+ESCalate version 1.1.0 has been released. It includes JANA v2.0.3, eJANA v1.2.3, g4e v1.3.5, and many other software packages as listed in the [software version table](https://gitlab.com/eic/containers). 
 
-Try tutorials without installation on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)
+For the new release, the instructions for getting started with ESCalate have been simplified. You can run ESCalate:
 
-1. [Run using docker on your local machine](#running-in-docker),
+1. [on your local machine using Docker](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_docker.md)
+2. [at the labs (or also locally) using Singularity](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_singularity.md)
+3. [in a native build at Jefferson Lab](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_ifarm.md)
+4. [in your browser using JupyterLab](https://gitlab.com/eic/escalate/workspace/-/blob/master/RemoteWork.md) 
 
-2. [Using singularity (at labs or locally)](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_singularity.md)
+You can also try out ESCalate without any installation on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master). 
 
-3. [Run directly on Farms](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_ifarm.md)
+#### Spack and central CVMFS central installation
 
-4. [your browser in JLab jupyterlab]()  *(BNL jupyterhub is coming)*
+The Software Working Group has started to test [Spack as a package
+manager for the EIC](https://github.com/eic/eic-spack). Spack is
+open-source software that [enables and automates the deployment of
+multiple versions of a software package to a single
+installation](https://www.alcf.anl.gov/support-center/training-assets/software-deployment-spack). In
+the Software News of the next months, we will share more details on
+Spack for the EIC. For ESCalate, Spack packages are in a beta stage
+but already [very convenient to
+use](https://github.com/eic/eic-spack). The packages are installed on
+CVMFS and available at the labs but can be also installed locally. 
 
-#### Spack CVMFS central installation
+#### Calorimeter updates in g4e and eJANA
 
-Spack is a package manager that enables and automates the deployment of multiple versions of a software package to a single installation. Spack is developed as open-source software and is adopted as the primary scientific software deployment tool in the Exascale Computing Project. It also has a rapidly growing base of users, ranging from large HPC installations worldwide, vendor adopters, and a committed base of users. 
-[More info](https://www.alcf.anl.gov/support-center/training-assets/software-deployment-spack)
-
-ESCalate adopting this technology and now Spack can be used for personal
-installations and central farm installation. It is still in Beta stage, 
-but is very convenient:
-
-ESCalate framework is installed on CVMFS and can be used directly on farms or to install everything on your local machine. [More is here](https://github.com/eic/eic-spack)
-
-
-#### G4E + EJana
+For the calorimeter studies in ESCalate, a new wall standing
+calorimeter algorithm has been introduced. The ```Islreco``` reconstruction
+algorithm has been used extensively in the Segmented Large X baryon
+Spectrometer (SELEX) at Fermilab and the PrimEx-II and PrimEx-D
+experiments at Jefferson Lab. In this algorithm, island method
+clusterization is combined with common reconstruction algorithms. The
+```Islreco``` algorithm can be used for hybrid calorimeters and has many
+helpful features, e.g., the (x,y) coordinates from tracking can be
+used for or better cluster separation.
 
 <img src="{{ 'assets/images/software/escalate/2020-08-12-ecal-hit.png' | relative_url }}" style="height:250px; align:center;">
-
-**Islreco reconstruction algorithm**
-
-A new wall standing calorimters algorythm was introduced for G4E + eJANA
-
-- Island method clusterizationis combined with common reconstruction algorythms
-- Can be used for hybrid calorimeters(The main author has 20+ years of experience with hybrid calorimeters)
-- Has many features. E.g.can receive X,Y coordinates from tracking for better cluster separation and more
-- Used in existing experiments:
-   - SELEX (Segmented Large X baryon Spectrometer) Fermilab
-   - PrimEx-II (JLab HallB)
-   - PrimEx-D (JLab HallD) 
-   - Many publications based on reconstructions that embedded this library (Fermilab list, JLab list). 
-
-
 
 ---
 
