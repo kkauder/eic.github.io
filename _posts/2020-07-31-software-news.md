@@ -207,7 +207,8 @@ the Software News of the next months, we will share more details on
 Spack for the EIC. For ESCalate, Spack packages are in a beta stage
 but already [very convenient to
 use](https://github.com/eic/eic-spack). The packages are installed on
-CVMFS and available at the labs but can be also installed locally. 
+```/cmvfs/eic.opensciencegrid.org/packages/``` and available at the
+labs but can be also installed locally.
 
 #### Calorimeter updates in g4e and eJANA
 
