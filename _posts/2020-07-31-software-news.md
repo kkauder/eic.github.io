@@ -21,7 +21,7 @@ consistent, and reproducible.
 
 * [General Update](#swg)
     * [Communication](#communication)
-    * [Expression of Interest for Software](#eoi)
+    * [Expression of Interest on Software](#eoi)
     * [GitHub for the EICUG](#github)
     * [Support us to support you better](#support)
     * [Tutorials](#tutorials)
@@ -45,7 +45,7 @@ list. While summaries will be provided in our
 Software News, we encourage all working groups to subscribe to
 [eicug-software@eicug.org](mailto:eicug-software@eicug.org).
 
-### Expression of Interest for Software {#eoi}
+### Expression of Interest on Software {#eoi}
 
 The Software Working Group is coordinating an [Expression of
 Interest](https://www.bnl.gov/eic/EOI.php) on Software. In the
