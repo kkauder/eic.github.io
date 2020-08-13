@@ -48,18 +48,17 @@ Software News, we encourage all working groups to subscribe to
 ### Expression of Interest for Software {#eoi}
 
 The Software Working Group is coordinating an [Expression of
-Interest](https://www.bnl.gov/eic/EOI.php) for Software. As a next
-step, we invite the community to the next Project Greenfield meeting
-on DATE. In the meeting, we will leverage everyone’s experience to
-define requirements for EIC Software and work together on common
-software projects based on these requirements. Project Greenfield
-includes all components of EIC Software: Simulation, reconstruction,
-physics analyses, streaming readout, online monitoring, etc. Examples
-for common software in the community are ACTS, DD4hep, Gaudi, Geant4,
-JANA2, Jupyter, or ROOT. The Expression of Interest for Software will
-include emerging technologies of Artificial Intelligence and Quantum
-Computing.
-
+Interest](https://www.bnl.gov/eic/EOI.php) on Software. In the
+Expression of Interest, we would like to leverage everyone’s
+experience to define requirements for EIC Software and identify common
+software projects based on these requirements. Examples for common
+software in the community are ACTS, DD4hep, Gaudi, Geant4, JANA2,
+Jupyter, or ROOT. Our Expression of Interest on Software will cover
+all components of EIC Software: Simulation, reconstruction, physics
+analyses, streaming readout, online monitoring, etc., and will include
+the emerging technologies of Artificial Intelligence and Quantum
+Computing. As a next step, we invite you to a [meeting on Thursday,
+September 3](https://indico.bnl.gov/event/9170/).
 
 ### GitHub for the EICUG {#github}
 
@@ -85,7 +84,7 @@ The tutorials for fast and detector full simulations are available on the [EICUG
 * **August 19** Herwig 7 (Simon Plaetzer (Vienna))
 * **August 20** Sherpa 2 (Stefan Hoeche (FNAL))
 
-Details are available on the [Indico site for the MCEG tutorials](https://indico.bnl.gov/event/9153/). 
+Details will be shared on the [Indico site for the MCEG tutorials](https://indico.bnl.gov/event/9153/). 
 
 <img src="{{ '/assets/images/tutorials/SWG-Tutorials.png' | relative_url }}" width="500"/>
 
@@ -138,17 +137,18 @@ their own [repository](https://github.com/eic/eicsmeardetectors). This
 repository now also creates a separate library to use with compiled
 code.
 
-The ```MATRIX``` parameterizations are derived from the interactive
-Detector Matrix and represent the detector parameterizations by the
-Detector Working Group. In the currently available version, only
-information about the central detector but not yet the far-forward
-detectors are available. By request from various working groups, an
-interim parametrization, ```MATRIXFF```, is provided that combines the
+The ```MATRIX``` parameterizations are derived from the [interactive
+Detector Matrix](https://physdiv.jlab.org/DetectorMatrix/) and
+represent the detector parameterizations by the Detector Working
+Group. In the currently available version, only information about the
+central detector but not yet the far-forward detectors are
+available. By request from various working groups, an interim
+parametrization, ```MATRIXFF```, is provided that combines the
 ```MATRIX``` parameterizations with first information on the
 far-forward detectors (ZDC, B0, and Roman Pots).  This information is
-available for a few beam energies only. When using the
-```MATRIXFF``` parameterizations, the beam energy has to be specified
-as a second parameter. An example is given here:
+available for a few beam energies only. When using the ```MATRIXFF```
+parameterizations, the beam energy has to be specified as a second
+parameter. An example is given here:
 
 ```
 $ eic-smear
