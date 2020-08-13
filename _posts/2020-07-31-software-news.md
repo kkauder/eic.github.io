@@ -196,7 +196,7 @@ For the new release, the instructions for getting started with ESCalate have bee
 
 You can also try out ESCalate without any installation on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master). 
 
-#### Spack and central CVMFS central installation
+#### Spack and CVMFS central installation
 
 The Software Working Group has started to test [Spack as a package
 manager for the EIC](https://github.com/eic/eic-spack). Spack is
