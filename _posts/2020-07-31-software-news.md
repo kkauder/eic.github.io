@@ -183,7 +183,51 @@ finalized.
 
 ### ESCalate {#escalate}
 
-Dmitry will send an update. 
+#### Escalate 1.1.0
+
+Escalate v1.1.0. Which includes new versions of JANA2(2.0.3), ejana
+(1.2.3), g4e(1.3.5) and others. 
+
+Try tutorials without installation on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/eic%2Fescalate%2Fworkspace/master)
+
+1. [Run using docker on your local machine](#running-in-docker),
+
+2. [Using singularity (at labs or locally)](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_singularity.md)
+
+3. [Run directly on Farms](https://gitlab.com/eic/escalate/smear/-/blob/master/simple_instruction_ifarm.md)
+
+4. [your browser in JLab jupyterlab]()  *(BNL jupyterhub is coming)*
+
+#### Spack CVMFS central installation
+
+Spack is a package manager that enables and automates the deployment of multiple versions of a software package to a single installation. Spack is developed as open-source software and is adopted as the primary scientific software deployment tool in the Exascale Computing Project. It also has a rapidly growing base of users, ranging from large HPC installations worldwide, vendor adopters, and a committed base of users. 
+[More info](https://www.alcf.anl.gov/support-center/training-assets/software-deployment-spack)
+
+ESCalate adopting this technology and now Spack can be used for personal
+installations and central farm installation. It is still in Beta stage, 
+but is very convenient:
+
+ESCalate framework is installed on CVMFS and can be used directly on farms or to install everything on your local machine. [More is here](https://github.com/eic/eic-spack)
+
+
+#### G4E + EJana
+
+<img src="{{ 'assets/images/software/escalate/2020-08-12-ecal-hit.png' | relative_url }}" style="height:250px; align:center;">
+
+**Islreco reconstruction algorithm**
+
+A new wall standing calorimters algorythm was introduced for G4E + eJANA
+
+- Island method clusterizationis combined with common reconstruction algorythms
+- Can be used for hybrid calorimeters(The main author has 20+ years of experience with hybrid calorimeters)
+- Has many features. E.g.can receive X,Y coordinates from tracking for better cluster separation and more
+- Used in existing experiments:
+   - SELEX (Segmented Large X baryon Spectrometer) Fermilab
+   - PrimEx-II (JLab HallB)
+   - PrimEx-D (JLab HallD) 
+   - Many publications based on reconstructions that embedded this library (Fermilab list, JLab list). 
+
+
 
 ---
 
