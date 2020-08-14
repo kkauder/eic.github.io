@@ -16,11 +16,11 @@ toc: true
    - [Run ESCalate]()  
    - [Run fast simulations]()
    - [Run full simulations]()   
-- Detailed instructions:
-   - [Examples, tutorials and workspace]()
+- Detailed instructions:   
    - [Running in docker]()   
    - [Spack CVMFS central installation](#spack-cvmfs-central-installation)
    - [eic-image at jupyterhub.jlab.org]()
+   - [Examples, tutorials and workspace]()
 - [Remote work suggestions]()
 
 
@@ -71,7 +71,7 @@ Try tutorials without installation on [![Binder](https://mybinder.org/badge_logo
 
 4. [your browser in JLab jupyterlab]()  *(BNL jupyterhub is coming)*
 
-### Run fast simulations 
+### Fast simulations with simple command line
 
 <img src="https://gitlab.com/eic/escalate/smear/-/raw/master/logo.png" width="150" style="float:left; padding: 10px 20px 10px 20px;"/>
 
@@ -84,38 +84,20 @@ See the [documentation](https://gitlab.com/eic/escalate/smear/) for how to easil
 
 <div style="clear: left;"></div>
 
-### Run full simulations
-
-tbd;
-
-
-## Examples, tutorials and workspace
-
-When you run Docker on your machine or in cloud (such as Binder) the image is started with examples directory usually located at 
-
-```
-/home/eicuser/workspace
-```
-
-**Workspace** - is [a git repository](https://gitlab.com/eic/escalate/workspace) with collaborative workspace for EIC. It contains simulations including documentation, examples, and tutorials on how to get started with ESCalate framework.
-
-When you start on farms, Singularity or Jupyterhub, it starts inside
-your home directory and you may download (git clone) examples: 
-
-```
-git clone https://gitlab.com/eic/escalate/workspace
-```
-
-
 <br>
 
 ## Running in docker
-*(extended information about options of running this docker containers)*
+*Instructions of how to install docker on Linux, Mac or Windonws and much more documentation on running ESCalate on docker [can be found on this page](https://gitlab.com/eic/containers/-/blob/master/README.rst)*
 
 Running docker (JupyterLab):
 
 ```bash
 docker run -it --rm -p8888:8888 electronioncollider/escalate:v1.1.0
+```
+
+After the docker runs, you can open JupyterLab environment in native web browser.
+```sh
+  http://127.0.0.1:8888/
 ```
 
 You can bind any directory on your system to docker image by using **-v** flag:
@@ -131,23 +113,15 @@ Convenient place inside docker image is
 ```
 
 
-**(!) Important to know (!)** Each time `docker run` command is called, it spawns a new "container". A writeable layer over the 
-specified image is created (where all modifications will be saved), and then docker starts the container using the specified command. 
+**(!) Important to know (!)** Each time `docker run` command is called, it spawns a new "container". A writeable layer where all modifications are saved is created for the 
+ image, and then docker starts the container using the specified command. 
 **A stopped container can be restarted** with all its previous changes intact using `docker start`
 
-Please, read extended docker instructions inside [Docker.md](Docker.md)
+Please, read extended docker instructions on [docker.com](https://docs.docker.com/engine/reference/commandline/start/)
 
 
-#### Troubleshooting
-If docker gives an error like this:
-> Error starting userland proxy: listen tcp 0.0.0.0:8888: bind: address already in use.
+Troubleshooting and advanced used of docker [can be found on this page](https://gitlab.com/eic/containers/-/blob/master/README.rst)
 
-It usually means, that the port 8888 is used by another application. 
-To fix that try to change `-p 8888:8888` flag to `-p <something>:8888` 
-e.g. `-p 9999:8888`. Put the same port in your browser:
-```
-127.0.0.1:9999/lab
-```
 
 
 <br>
@@ -238,6 +212,27 @@ When you run in docker you start as *eicuser* with user-ID=1000. On JupyterHUB y
 Please, share on slack if you have any further problems
 
 
+<br>
+
+## Examples, tutorials and workspace
+
+When you run Docker on your machine or in cloud (such as Binder) the image is started with examples directory usually located at 
+
+```
+/home/eicuser/workspace
+```
+
+**Workspace** - is [a git repository](https://gitlab.com/eic/escalate/workspace) with collaborative workspace for EIC. It contains simulations including documentation, examples, and tutorials on how to get started with ESCalate framework.
+
+When you start on farms, Singularity or Jupyterhub, it starts inside
+your home directory and you may download (git clone) examples: 
+
+```
+git clone https://gitlab.com/eic/escalate/workspace
+```
+
+
+<br>
 
 ### Test run
 
