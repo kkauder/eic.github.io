@@ -31,6 +31,9 @@
 - name: github_site
   url: 'https://github.com/eic/eic.github.io'
 
+- name: jupyterhub.jlab.org
+  url: 'https://jupyterhub.jlab.org'
+
 - name: Jekyll
   url: 'http://jekyllrb.com/'
 

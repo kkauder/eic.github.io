@@ -173,11 +173,7 @@ Escalate framework image added to Jefferson Lab Jupyter Hub! It is still
 in beta stage, several features are not yet working (and we are working on them). Someting works differently compared to when you run the image in docker. This page describe this. 
 
 
-Go to [jupyterhub.jlab.org](jupyterhub.jlab.org) (follow authentication instructions if you are using it for the first time)
-
-```
-jupyterhub.jlab.org
-```
+Go to {% include navigation/findlink.md name='jupyterhub.jlab.org' %} (follow authentication instructions if you are using it for the first time).
 
 
 In the **Spawner options** -> **Select a notebook image**, 

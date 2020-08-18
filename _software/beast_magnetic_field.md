@@ -15,7 +15,7 @@ layout: default
     <center>
       <div class="row">
         <div class="col-sm-6">
-	  <img src="/assets/images/software/beast/beast-opera-map.png" width="400"/>
+	  {% include images/image.md name='beast_opera_map' format='html' width='400' %}
         </div>
         <div class="col-sm-6">
           <p class="lead">
