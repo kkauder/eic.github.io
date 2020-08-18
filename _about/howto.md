@@ -7,7 +7,7 @@ layout: default
 
 * TOC
 {:toc}
-
+<hr/>
 #### Overview
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
@@ -24,6 +24,7 @@ as hard limits on repositories of sites which are hosted as "GitHub pages"
 * interfacing the navigation tools on this site, which for the most part consists
 of the top navigation bar and the dropdown menus
 
+<hr/>
 #### Navigation Mechanics
 ##### The Menu System
 Entries in the navigation bar on top are named similar to the folders in this
@@ -70,7 +71,9 @@ layout: default
 ---
 ```
 
-##### Helper macros
+<hr/>
+#### Helper macros
+##### Links
 Frequently used **external** links are located in the following registry:
 <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/links.yml" target=_blank>_data/links.yml</a>.
 
@@ -99,6 +102,26 @@ to point to the page you are reading now).
 Primary advantage of this macro is that it allows renaming the source file - while keeping the same "name" attribute
 in the Front Matter section the links will still be correct.
 
+##### Images
+Users and developers have complete freedom in how they incorporate images into pages on this site.
+In many cases handling images will be facilitated by adding an image to the following registry:
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/gallery.yml" target=_blank>_data/gallery.yml</a>
+and then using a simple macro to refer to the image by its mneumonic name and automatically generate
+the correct link, as illustrated in the following example:
+{% raw %}
+{% include images/image.md name='news_banner' width='400' %}
+{% endraw %}
+...will produce
+
+{% include images/image.md name='news_banner' width='400' %}
+
+This will help to ensure consistency of image links throughout the site and remove
+the need to include cumbersome HTML in the page code. It also makes it possible to move
+the content across folders if necessary and only make changes to the path in one place.
+Additionally, a macro generating a gallery of images based on selection criteria is
+under development.
+
+<hr/>
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
 The data component of the site can reside in the "front matter" section of the Markdown-formatted
@@ -125,6 +148,7 @@ Headers of sections within a page are currently formatted in Markdown as "header
 with four hash characters like in **"#### My section header"**. Take a look at the header (Formatting)
 of this section to get an idea of how it's rendered.
 
+<hr/>
 #### Development and Deployment
 
 To productively participate in the development of this site one needs to learn the
