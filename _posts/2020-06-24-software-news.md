@@ -7,7 +7,7 @@ until: 2020-12-31
 ---
 <p/>
 
-<img src="{{ '/assets/images/site/EICUG-SWG-News-Banner.png' | relative_url }}" width="900"/>
+{% include images/image.md name='news_banner' width='800' %}
 
 The Software Working Group is working on physics and detector
 simulations that enable a quantitative assessment of the measurement
@@ -50,11 +50,9 @@ Software News, we encourage all working groups to subscribe to
 ### Detector Working Group: Detector Matrix Version 0.1 {#dwg}
 
 The Detector Working Group has frozen the current version of the
-[interactive Detector
-Matrix](https://physdiv.jlab.org/DetectorMatrix/) as version
-0.1. W.r.t. to the [Detector Requirements and R&D
-Handbook](http://www.eicug.org/web/sites/default/files/EIC_HANDBOOK_v1.2.pdf)
-there have been three changes:
+{% include navigation/findlink.md name='eic_handbook_v1.2' title='Detector Requirements and R&D Handbook' %}
+as version 0.1. There have been three changes with respect to the
+{% include navigation/findlink.md name='detector_matrix' title='Interactive Detector Matrix' %}:
 
 For the Backward Detector the Tracking Resolution column was updated as follows:
 
@@ -90,7 +88,7 @@ sharing. Our Petrel allocation is 100TB (more can be added if needed).
 The existing pre-grenerated Monte-Carlo data from BNL (13TB and growing)
 are mirrored in the `BNL-gpfs02-data` directory, and available JLAB data
 will be added soon as well. You can find more info on Petrel 
-[here](https://petrel.alcf.anl.gov/). 
+{% include navigation/findlink.md name='petrel' title='here'-%}.
 Petrel is supported and maintained by ALCF.
 
 Because of the Globus back-end it is easy to move, share and discover 

@@ -1,3 +1,9 @@
+- name: 'eic_handbook_v1.2'
+  url: 'http://www.eicug.org/web/sites/default/files/EIC_HANDBOOK_v1.2.pdf'
+
+- name: 'detector_matrix'
+  url: 'https://physdiv.jlab.org/DetectorMatrix/'
+
 - name: HEPData
   url: 'https://www.hepdata.net/'
 

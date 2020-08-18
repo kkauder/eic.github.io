@@ -7,7 +7,7 @@ until: 2020-12-31
 ---
 <p/>
 
-<img src="{{ '/assets/images/site/EICUG-SWG-News-Banner.png' | relative_url }}" width="900"/>
+{% include images/image.md name='news_banner' width='800' %}
 
 The Software Working Group is working on physics and detector
 simulations that enable a quantitative assessment of the measurement

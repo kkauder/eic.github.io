@@ -3,3 +3,8 @@
   title: 'Beast Magnetic Field Map'
   type: diagram
   
+- name: news_banner
+  path: '/assets/images/site/EICUG-SWG-News-Banner.png'
+  title: 'EICUG SWG News Banner'
+  type: logo
+  

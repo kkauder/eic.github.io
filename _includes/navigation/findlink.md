@@ -1,11 +1,13 @@
 {%- if include.title -%}
 {%- assign tag=include.title -%}
-{%- endif -%}
+{%- else -%}
 {%- if include.tag -%}
 {%- assign tag=include.tag -%}
 {%- else -%}
 {%- assign tag=include.name -%}
 {%- endif -%}
+{%- endif -%}
+
 {%- assign found_items=site.data.links | where: "name", include.name -%}
 {%- if include.category %}
 {%- assign found_items=found_items | where: "category", include.category | compact -%}
