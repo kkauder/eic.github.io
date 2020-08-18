@@ -38,8 +38,10 @@ its menu entries are generated automatically based on the content of the file
 The content and order of top entries in the navigation bar as well as content and ordering of all items in all dropdown
 menus are defined in that file.
 
-If a menu entry in *menu.yml* is an external link, there is no additional source
-code (i.e. markdown page content is not necessary). Examples are easy to spot in the file
+If a menu entry in
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>
+is an external link, there is no additional source code (i.e. markdown page content is not necessary).
+Examples are easy to spot in the menu definition file
 <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/menus.yml" target=_blank>_data/menus.yml</a>.
 
 Menu entry descriptions in *menu.yml* can also have optional attributes:
@@ -93,7 +95,7 @@ There is a similar macro for use with links to **internal** pages on the site. E
 {% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %}
 {% endraw %}
 will result in: {% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %} (this happens
-to the page you are reading now).
+to point to the page you are reading now).
 Primary advantage of this macro is that it allows renaming the source file - while keeping the same "name" attribute
 in the Front Matter section the links will still be correct.
 
