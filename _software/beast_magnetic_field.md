@@ -3,7 +3,7 @@ title: BeAST Magnetic Field
 name: beast_magnetic_field
 layout: default
 ---
-# BeAST solenoid magnetic field map 
+{% include layouts/title.md %}
 
 ##### The repository contains an ASCII file with the field map, a C++ class to handle it and a GDML model
 
@@ -15,7 +15,7 @@ layout: default
     <center>
       <div class="row">
         <div class="col-sm-6">
-	  <img src="/assets/images/site/beast-opera-map.png" width="400"/>
+	  <img src="/assets/images/software/beast/beast-opera-map.png" width="400"/>
         </div>
         <div class="col-sm-6">
           <p class="lead">

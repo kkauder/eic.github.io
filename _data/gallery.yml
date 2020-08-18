@@ -1,5 +1,5 @@
-- name: my_image
-  path: /mypath/foo.jpg
-  title: 'My Image'
+- name: beast_opera_map
+  path: '/assets/images/software/beast/beast-opera-map.png'
+  title: 'Beast Magnetic Field Map'
   type: diagram
   
