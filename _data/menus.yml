@@ -1,73 +1,4 @@
-- name: eic
-  full: EIC
-  exclude: yes
-  submenus:
-    -
-      name: eic_website
-      full: EIC Website
-      link: https://www.bnl.gov/eic/
-    -
-      name: eicug
-      full: EIC User Group
-      link: http://www.eicug.org/web/
-    -
-      name: eicug_phonebook
-      full: The User Group Database
-      link: http://www.eicug.org/pnb/client/
-    -
-      name: eic_software
-      full: The Software Working Group
-      link: http://www.eicug.org/web/content/eic-software
-      div: yes
-    -
-      name: bnl
-      full: Brookhaven National Lab
-      link: http://bnl.gov
-      div: yes
-    -
-      name: jlab
-      full: Jefferson Lab
-      link: https://www.jlab.org
-    -
-      name: jlab
-      full: Yellow Report
-      link: http://www.eicug.org/web/content/yellow-report-initiative
-      div: yes
-
-- name: computing
-  full: Computing
-  submenus:
-    -
-      name: overview
-      full: Overview
-    -
-      name: github
-      full: GitHub Organization
-    -
-      name: sites
-      full: Computing Sites
-      exclude: yes
-    -
-      name: storage
-      label: yes
-      full: Storage
-      div: yes
-    -
-      name: storage
-      full: NextCloud
-    -
-      name: petrel
-      full: Petrel/Globus
-    -
-      name: data
-      label: yes
-      full: Data
-      div: yes
-
-    -
-      name: catalog
-      full: Data Catalog
-
+###
 - name: software
   full: Software
   submenus:
@@ -84,7 +15,6 @@
       name: tools_and_frameworks
       label: yes
       full: Frameworks and Tools
-      div: yes
     -
       name: escalate_1
       full: ESCalate
@@ -129,6 +59,53 @@
       name: beast_magnetic_field
       full: BeAST Magnetic Field
 
+    -
+      name: infrastructure
+      label: yes
+      full: Infrastructure
+      div: yes
+    -
+      name: doxygen
+      full: Doxygen
+      link: https://eic.github.io/doxygen/
+    -
+      name: github
+      full: GitHub organization for the EIC(UG)
+      link: https://github.com/eic
+
+###
+- name: resources
+  full: Resources
+# note that submenus do not include a few of the *.md stubs found in the folder
+  submenus:
+    -
+      name: storage
+      label: yes
+      full: Storage
+    -
+      name: storage
+      full: NextCloud
+    -
+      name: petrel
+      full: Petrel/Globus
+    -
+      name: data
+      label: yes
+      full: Data
+      div: yes
+
+    -
+      name: catalog
+      full: Data Catalog
+
+###
+- name: activities
+  full: Activities
+  submenus:
+    -
+      name: overview
+      full: Overview
+###
 - name: teams
   full: Working Group
   submenus:
@@ -146,22 +123,6 @@
       full: Software Teams
       exclude: yes
 
-- name: resources
-  full: Information
-  submenus:
-    -
-      name: doxygen
-      full: Doxygen
-      link: https://eic.github.io/doxygen/
-    -
-      name: github
-      full: GitHub organization for the EIC(UG)
-      link: https://github.com/eic
-    -
-      name: youtube
-      full: YouTube Channel of the EICUG
-      link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
-
 - name: about
   full: About
   right: yes
@@ -176,3 +137,60 @@
     -
       name: howto
       full: Website How-To
+
+### Attic
+#
+# - name: eic
+#   full: EIC
+#   exclude: yes
+#   submenus:
+#     -
+#       name: eic_website
+#       full: EIC Website
+#       link: https://www.bnl.gov/eic/
+#     -
+#       name: eicug
+#       full: EIC User Group
+#       link: http://www.eicug.org/web/
+#     -
+#       name: eicug_phonebook
+#       full: The User Group Database
+#       link: http://www.eicug.org/pnb/client/
+#     -
+#       name: eic_software
+#       full: The Software Working Group
+#       link: http://www.eicug.org/web/content/eic-software
+#       div: yes
+#     -
+#       name: bnl
+#       full: Brookhaven National Lab
+#       link: http://bnl.gov
+#       div: yes
+#     -
+#       name: jlab
+#       full: Jefferson Lab
+#       link: https://www.jlab.org
+#     -
+#       name: jlab
+#       full: Yellow Report
+#       link: http://www.eicug.org/web/content/yellow-report-initiative
+#       div: yes
+
+# - name: resources
+#   full: Information
+#   exclude: yes
+#   submenus:
+#     -
+#       name: doxygen
+#       full: Doxygen
+#       link: https://eic.github.io/doxygen/
+#     -
+#       name: github
+#       full: GitHub organization for the EIC(UG)
+#       link: https://github.com/eic
+#     -
+#       name: youtube
+#       full: YouTube Channel of the EICUG
+#       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
+
+      

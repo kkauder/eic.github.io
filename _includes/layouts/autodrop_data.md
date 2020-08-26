@@ -1,15 +1,15 @@
 {% case include.what %}
 {% when "software" %}	{% assign theCollection=site.software %}  {% assign icon=site.software_icon %}
-{% when "computing" %}	{% assign theCollection=site.computing %} {% assign icon=site.computing_icon %}
+{% when "resources" %}	{% assign theCollection=site.resources %} {% assign icon=site.resources_icon %}
+{% when "activities" %}{% assign theCollection=site.activities %}{% assign icon=site.activities_icon %}
 {% when "teams" %}	{% assign theCollection=site.teams %}     {% assign icon=site.people_icon %}
-{% when "resources" %}	{% assign theCollection=site.teams %}     {% assign icon=site.resources_icon %}
 {% when "about" %}	{% assign theCollection=site.about %}     {% assign icon=site.about_icon %}
 {% endcase %}
 
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
 
 <li class="nav-item dropdown px-4">
-{% if icon.size > 0 %}  
+{% if icon.size > 0 %}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}&nbsp;&nbsp;<img src="{{ icon | relative_url }}" height="16" width="16"></a>
 {% else %}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}</a>
