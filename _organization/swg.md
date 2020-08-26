@@ -12,7 +12,7 @@ layout: default
 Conveners' mailing list: <a href="mailto:eicug-software-conveners@eicug.org">eicug-software-conveners@eicug.org</a>
 <hr/>
 
-##### The Team
+##### The Group
 
 The Software Working Group includes more than 100 motivated physicists and software professionals with interest in
 various aspects of EIC Software and Computing.
@@ -20,8 +20,8 @@ various aspects of EIC Software and Computing.
 The Software Group mailing list: <a href="mailto:eicug-software@eicug.org">eicug-software@eicug.org</a>
 <hr/>
 
-##### The Core Group
-The core group consists of EICUG collaborators making frequent contributions to the effort.
+##### The Core Team
+The core team consists of EICUG collaborators making frequent contributions to the effort.
 {% assign people=site.data.people | sort: "name" %}
 
 <table width="100%">

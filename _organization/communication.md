@@ -13,7 +13,7 @@ Google Groups are used to manage mailing lists. Please contact the <a href="mail
 <table width="80%">
 <tr><td>Conveners</td><td><a href="mailto:eicug-software-conveners@eicug.org">eicug-software-conveners@eicug.org</a></td></tr>
 <tr><td>The EICUG Software Group</td><td><a href="mailto:eicug-software@eicug.org">eicug-software@eicug.org</a></td></tr>
-<tr><td>The Core Group</td><td><a href="mailto:eicug-software-core@eicug.org">eicug-software-core@eicug.org</a></td></tr>
+<tr><td>The Core Team</td><td><a href="mailto:eicug-software-core@eicug.org">eicug-software-core@eicug.org</a></td></tr>
 <tr><td>Software support</td><td><a href="mailto:software-support@eicug.org">software-support@eicug.org</a></td></tr>
 <tr><td>Infrastructure support</td><td><a href="mailto:eicug-computing-infrastructure-support@eicug.org">eicug-computing-infrastructure-support@eicug.org</a></td></tr>
 </table>
