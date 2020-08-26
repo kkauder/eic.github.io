@@ -70,7 +70,7 @@
       link: https://eic.github.io/doxygen/
     -
       name: github
-      full: GitHub organization for the EIC(UG)
+      full: GitHub organization for the EIC User Group
       link: https://github.com/eic
 
 ###
@@ -116,12 +116,16 @@
       name: communication
       full: Communication
     -
+      name: events
+      full: Meetings and Events
+    -
+      name: youtube
+      full: Our YouTube Channel
+      link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
+    -
       name: join
       full: Get Involved
-    -
-      name: teams
-      full: Software Teams
-      exclude: yes
+      div: yes
 
 - name: about
   full: About
@@ -133,7 +137,7 @@
     -
       name: site
       full: Website Information
-      div: yes
+      exclude: yes
     -
       name: howto
       full: Website How-To

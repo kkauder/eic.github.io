@@ -1,5 +1,5 @@
 ---
-title: Get Involved
+title: Contact
 name: contact
 layout: default
 ---
@@ -11,4 +11,4 @@ For questions regarding contributions to this site and its functionality please 
 <a href="mailto:eicug-computing-infrastructure-support@eicug.org">
 eicug-computing-infrastructure-support@eicug.org</a>
 
-Design: <a href="mailto:potekhin@bnl.gov">Maxim Potekhin</a>
+Webmaster: <a href="mailto:potekhin@bnl.gov">Maxim Potekhin</a>

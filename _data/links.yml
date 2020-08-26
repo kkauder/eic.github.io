@@ -13,6 +13,12 @@
 - name: npps
   url: 'https://npps.bnl.gov/'
 
+- name: swg_indico
+  url: 'https://indico.bnl.gov/category/301/'
+
+- name: round_table
+  url: 'https://www.jlab.org/software-and-computing-round-table'
+  
 - name: petrel
   url: 'https://petrel.alcf.anl.gov/'
 
