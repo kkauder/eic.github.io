@@ -1,11 +1,14 @@
 ---
-title: Overview
+title: Overview of Software Group Activities
 name: overview
 layout: default
 ---
 
 {% include layouts/title.md %}
 
-This section of the site is under construction.
+* Validation
+* Software support of the Yellow Report
+* Community Engagement
+
 
 
