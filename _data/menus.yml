@@ -106,15 +106,15 @@
       name: overview
       full: Overview
 ###
-- name: teams
-  full: Working Group
+- name: organization
+  full: Organization
   submenus:
     -
-      name: charge
-      full: Charge
+      name: swg
+      full: Software Working Group
     -
-      name: core
-      full: Core Group
+      name: communication
+      full: Communication
     -
       name: join
       full: Get Involved

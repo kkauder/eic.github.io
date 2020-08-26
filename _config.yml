@@ -41,7 +41,7 @@ external_icon: /assets/images/site/icons/external-link-32.png
 software_icon: /assets/images/site/icons/console-32.png
 resources_icon: /assets/images/site/icons/cog-32.png
 activities_icon: /assets/images/site/icons/today-32.png
-people_icon: /assets/images/site/icons/group-32.png
+organization_icon: /assets/images/site/icons/flow-chart-32.png
 literature_icon: /assets/images/site/icons/literature-32.png
 about_icon: /assets/images/site/icons/light-bulb-5-32.png
 
@@ -65,9 +65,9 @@ collections:
   activities:
     output: true
     permalink: /activities/:title.html
-  teams:
+  organization:
     output: true
-    permalink: /teams/:title.html
+    permalink: /organization/:title.html
   about:
     output: true
     permalink: /about/:title.html
