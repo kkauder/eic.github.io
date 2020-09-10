@@ -1,3 +1,9 @@
+- name: eic_software_meeting_20190710
+  url: 'https://indico.bnl.gov/event/6336/'
+
+- name: eic_software_meeting_20190520
+  url: 'https://agenda.infn.it/event/17249/'
+
 - name: 'eic_handbook_v1.2'
   url: 'http://www.eicug.org/web/sites/default/files/EIC_HANDBOOK_v1.2.pdf'
 

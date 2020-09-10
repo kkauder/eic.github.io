@@ -17,6 +17,10 @@
 {%- if include.category -%}
 * [{{ tag }}]({{ found_link }}){:target="_blank"}
 {%- else -%}
+{% if include.html %}
+<a href="{{ found_link }}" target="_blank">{{ tag }}</a>
+{%- else -%}
 [{{ tag }}]({{ found_link }}){:target="_blank"}
+{%- endif -%}
 {%- endif -%}
 {%- endif -%}
