@@ -12,7 +12,8 @@ layout: default
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
 
-Please take a look at the {% include navigation/findlink.md name='github_site' tag='repository' %}
+We use GitHub to manage the code for this site. Please take a look at the
+{% include navigation/findlink.md name='github_site' tag='GitHub repository' %}
 to get an idea of the general organization of the data, layouts and supporing logic.
 The idea is to shape the code and content in a way that is easy to navigate
 and modify. The following sections explain how this is achieved.
@@ -121,6 +122,21 @@ the content across folders if necessary and only make changes to the path in one
 Additionally, a macro generating a gallery of images based on selection criteria is
 under development.
 
+##### Doecuments
+Similar to the logic presented above, it is preferable to create references to documents (both internal to the site
+but also as references to cloud storage such as Zenodo) in an organized manner. Similar to examples above,
+there is a registry of documents on the site:
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/documents.yml" target=_blank>_data/documents.yml</a>.
+It is quite small as the time of writing but is expected to grow. Documents can be referred to their names and links
+autogeneraged by using a macro such as one in this example:
+{% raw %}
+{% include documents/doc.md name='Jung-MCValidation.pdf' %}
+{% endraw %}
+
+One of the advantages of this approach is that the source of the document can be relocated within the site
+or even uploaded to an external resources while the links in the site code will remain valid provided
+corrections are made in just one place: _documents.yml.
+
 <hr/>
 #### Managing Data
 Jekyll is fairly flexible when it comes to storing and manipulating structured data.
@@ -150,52 +166,61 @@ of this section to get an idea of how it's rendered.
 
 <hr/>
 #### Development and Deployment
+##### Ruby and Jekyll
+To productively participate in the development of this site one needs to learn the basics of the
+{% include navigation/findlink.md name='Jekyll' %} framework and install it on
+a development machine. This is relatively straighforward but may depend on the OS specifics.
 
-To productively participate in the development of this site one needs to learn the
-{% include navigation/findlink.md name='Jekyll' %} framework and perform its installation on
-a development machine. This way any modification can be validated immediately since
+Once the environment is in place, any modification can be validated immediately since
 the locally running development server provided by Jekyll will render the site
 on the local host. Basic knolwede of the {% include navigation/findlink.md name='Liquid' %}
 template language and in particular the "filters" that are part of it is extremely helpful.
 
-Once modified contents are committed to the repository and you perform *git push*, the
-{% include navigation/findlink.md name='github_pages' tag='GitHub pages system' %} will build the
-site and make it publicly available. Errors may result either in failed deployment or a broken
-instance of the site. For that reason it is desirable to assess the result of changes before publishing them.
-To achieve this, you need to install 
-Jekyll on your local machine. Detailed instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/installation/) 
-but the short story is:
-
-* Install {% include navigation/findlink.md name='ruby_downloads' tag='Ruby' %} and {% include navigation/findlink.md name='rubygems_downloads' tag='RubyGems' %}
-* Install Bundler (a Ruby package manager): `gem install bundler`
-
-* If you don't have one yet, create a clone of the website repository and move to the directory created:
+##### GitHub Pages
+As already mentioned, we use GitHub to manage the code for this site. A fork/pull request process is optimal,
+but if you prefer direct push for some reason please get in touch with the group. To get access to the code,
+create a clone of the website repository and move to the directory created:
 
   ```bash
   git clone https://github.com/eic/eic.github.io.git
   cd eic.github.io
   ```
 
-* Install/update your Jekyll installation (must be done regularly):
+The repository is configured for ''GitHub Pages''.
+This means that once modified contents are committed to the repository and you perform *git push*, the
+{% include navigation/findlink.md name='github_pages' tag='GitHub pages system' %} will build the
+site and make it publicly available at [https://eic.github.io/](https://eic.github.io/). Errors in the
+updated code may result either in failed deployment or a broken instance of the site. For that reason
+it is desirable to assess the result of changes before publishing them.
+To achieve this, you need to install Jekyll on your local machine, as detailed below.
 
+##### Jekyll
+Instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/installation/) but the short story is:
+
+* Install {% include navigation/findlink.md name='ruby_downloads' tag='Ruby' %} and {% include navigation/findlink.md name='rubygems_downloads' tag='RubyGems' %}
+* Install Bundler (a Ruby package manager): `gem install bundler`
+* Install/update your Jekyll installation (must be done regularly):
   ```bash
   bundler update
   ```
-
-* Run Jekyll:
-
+* Run Jekyll (in the eic.github.io directory):
   ```bash
   bundler exec jekyll serve
   ```
 
-
 Once Jekyll has been started you can view the web site by connecting to `localhost:4000`.
 Changes made to files are immediately compiled and reflected on the
-displayed site (at the next page load). This makes it extremely efficient
-to make changes and debug entirely locally before uploading the final changes to GitHub.
+displayed site (at the next page load). The optimal workflow is to make changes and debug
+entirely locally before uploading the final changes to GitHub.
 
-At this point, pushes are allowed for site developers. A pull request/approval process may be put in place later if needed.
-
-
+Examples of Jekyll commands
+```
+# Start a new Jekyll project
+jekyll new myblog
+# Clean stale styling, also run after modifyig _config.yml.
+bundle exec jekyll clean
+# Serve content while filtering out some annoying warning messages
+bundle exec jekyll serve 2>&1 | grep -v ': Using'
+```
 [top](#how-to)
 
