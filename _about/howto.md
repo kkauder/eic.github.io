@@ -216,11 +216,22 @@ entirely locally before uploading the final changes to GitHub.
 Examples of Jekyll commands
 ```
 # Start a new Jekyll project
+## NB. this is a little tricky e.g. you would need to pick a correct
+## Gemfile and perhaps use --force
+## A little experimentation is in order
 jekyll new myblog
-# Clean stale styling, also run after modifyig _config.yml.
+
+# Clean stale CSS etc, also run after modifyig _config.yml.
 bundle exec jekyll clean
 # Serve content while filtering out some annoying warning messages
 bundle exec jekyll serve 2>&1 | grep -v ': Using'
 ```
+
+If you get this far, you are ready to start modifying the site. A word of caution - please check the output
+of the jekyll compiler for error messages. Normally the code compiles and you just reload the page to see
+the result, but if there was an error and you are not checking the compiler's windown the behavior of the
+page will be puzzling.
+
+
 [top](#how-to)
 
