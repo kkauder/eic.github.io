@@ -41,7 +41,7 @@
 
 - name: undrus_LXR_NPPS_Sep2020.pdf
   url: 'https://github.com/eic/documents/blob/master/software/general/undrus_LXR_NPPS_Sep2020.pdf'
-  title: EIC LXR Code Browser
+  title: EIC LXR Code Browser (slides)
   author: 'A.Undrus'
   venue: 
   resource: github

@@ -82,3 +82,5 @@
 - name: libtool
   url: 'https://www.gnu.org/software/libtool/'
 
+- name: lxr
+  url: 'https://eic-code-browser.sdcc.bnl.gov/lxr/source'
