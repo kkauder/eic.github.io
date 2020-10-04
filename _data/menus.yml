@@ -65,6 +65,10 @@
       full: Infrastructure
       div: yes
     -
+      name: lxr
+      full: LXR Code Browser
+
+    -
       name: doxygen
       full: Doxygen
       link: https://eic.github.io/doxygen/
