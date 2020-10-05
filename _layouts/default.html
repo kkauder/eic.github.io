@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>{% include layouts/header.html %}</head>
-  <body class="d-flex flex-column h-100">
-    <header>{% include layouts/navbar.html %} </header>
+  <body>
+<!-- div class="main-container mx-auto" style="width: 900px;" -->
+<div class="container-fluid" style="min-width:1000px;padding-right:300px;padding-left:300px;">
+  {% include layouts/navbar.html %}
 <!-- vertical spacing to allow room for the top navbar -->    
 &nbsp;<br/>&nbsp;<br/>&nbsp;<br/>
 
-<!-- div class="main-container mx-auto" style="width: 900px;" -->
-<div class="container-fluid" style="min-width:1000px;padding-right:300px;padding-left:300px;">
 {{ content }}
 </div>    
 {% include layouts/scripts.html %}
