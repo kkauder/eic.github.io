@@ -22,7 +22,8 @@ consistent, and reproducible.
 * [General Update](#swg)
     * [Topic](#topic)
 * [Software Update](#update)
-    * [Fun4All](#fun4all)
+	* [Fun4All](#fun4all)
+    * [Eic-smear](#eic-smear)
     * [Tool](#tool)
 
 ---
@@ -36,6 +37,39 @@ consistent, and reproducible.
 ## Software Update {#update}
 
 ### Tool {#tool}
+
+### Eic-smear {#eicsmear}
+
+The master branch of [eic-smear](https://github.com/eic/eic-smear)
+is now updated to version 1.1.2, and that of [eicsmeardetetors](https://github.com/eic/eicsmeardetetors)
+to version 1.0.1. The changes are mostly incremental/experimental, but it is recommended all users update their local installations.
+
+eic-smear:
+* improved RAPGAP support;
+* fixed support for muons;
+* improved support for less common compilers as well as installation instructions.
+
+eicsmeardetectors:
+* We introduced a new genre of semi-official scripts, dubbed "WG additions".
+These are based on the official detector matrix but have added features agreed-upon within a PWG or DWG. Currently, these are:
+   * ```MatrixDetector_0_1_FF```, which includes a rough parameterization of far forward detectors, and
+   * ```MatrixDetector_0_1_TOF```, which is only a starting point for on-going development with the PID working group (do not use it yet; it is a preview which probably shouldn't be in the master branch).
+* Note that all official and semi-official scripts have been updated to support muons.
+* Further work is on-going to support calorimetry granularity for various projective and non-projective concepts.
+
+We hope to finalize work on PID and granularity on the same time scale as the upcoming release of detector matrix 0.2.
+
+Finally, extra thanks go out to a large group of volunteers from EIC India that is working hard to add QA, testing, and validation capabilities into eic-smear!
+
+##### Recap: How to run eic-smear using cvmfs
+This package as well as a large suite of Monte Carlo generators and tools can be used the same way as detailed in the [fun4all section](#cvmfs), only changing the setup to
+```
+singularity shell -B /cvmfs:/cvmfs /cvmfs/eic.opensciencegrid.org/singularity/rhic_sl7_ext.simg
+setenv EIC_LEVEL dev
+source /cvmfs/eic.opensciencegrid.org/x8664_sl7/MCEG/releases/etc/eic_bash.sh
+```
+All packages are then under ```$EICDIRECTORY```.
+
 
 ### Fun4All {#fun4all}
 ##### TPC Endcap included
@@ -62,7 +96,7 @@ cd Singularity
 ```
 If you have an existing installation, running the updatebuild.sh will update your local installation with the most recent changes. Then issue the two commands which are printed out at the end.
 
-##### Using cmvfs
+##### Using cmvfs {#cvmfs}
 If you have cvmfs on your host (and an internet connection) - using cvmfs is the prefered way of running. It will give you access to multiple software builds and you do not have to keep it updated yourself. We do provide weekly archival builds if you want to use something stable. In this case you only have to start the singularity container which resides in cvmfs and source the setup script inside it.
 ```
 singularity shell -B /cvmfs:/cvmfs /cvmfs/eic.opensciencegrid.org/singularity/rhic_sl7_ext.simg
