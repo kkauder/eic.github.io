@@ -66,8 +66,8 @@ September 3](https://indico.bnl.gov/event/9170/).
 whole EICUG. For membership, please send your GitHub username to
 [eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account). We
 encourage you to share your software and documentation on
-[https://github.com/eic](https://github.com/eic). Please follow [our
-guidelines](https://eic.github.io/computing/github.html) in doing so.
+[https://github.com/eic](https://github.com/eic). Please follow
+{% include navigation/pagelink.md folder=site.software name='github' tag='our guidelines' %} in doing so.
 
 ### Support us to support you better {#support}
 The common simulation tools and workflow environment can only grow

@@ -73,9 +73,12 @@
       full: Doxygen
       link: https://eic.github.io/doxygen/
     -
-      name: github
-      full: GitHub organization for the EIC User Group
+      name: github_link
+      full: EICUG organization on GitHub
       link: https://github.com/eic
+    -
+      name: github
+      full: EICUG GitHub Guidelines
 
 ###
 - name: resources

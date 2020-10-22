@@ -1,18 +1,19 @@
 ---
-title: GitHub for the EICUG
+title: GitHub Guidelines
 description: GitHub
 name: github
+permalink: /github/
 layout: default
 ---
 
 {% include layouts/title.md %}
 
-### GitHub Organization
+##### GitHub Organization
 
 {% include navigation/findlink.md name='github' tag='The EIC GitHub Organization' %} is available for the whole EICUG. For membership, please send your GitHub username to [eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account)
 
 
-### GitHub Guidelines
+##### GitHub Guidelines
 
 We encourage you to share your software and documentation on {% include navigation/findlink.md name='github' tag='https://github.com/eic' %}. Please follow our guidelines in doing so: 
 
