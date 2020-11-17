@@ -12,6 +12,10 @@ layout: default
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
 
+> test
+> <br/>
+> test!
+
 We use GitHub to manage the code for this site. Please take a look at the
 {% include navigation/findlink.md name='github_site' tag='GitHub repository' %}
 to get an idea of the general organization of the data, layouts and supporing logic.
@@ -163,6 +167,14 @@ look a the code for examples of its use. It's renders the page title from the fr
 Headers of sections within a page are currently formatted in Markdown as "header level 4" i.e. prepended
 with four hash characters like in **"#### My section header"**. Take a look at the header (Formatting)
 of this section to get an idea of how it's rendered.
+
+We use blockquotes to put emphasis on quoted test. The standard way of doing it in Markdown is to
+prepend the lines that need this formatting with the ">" character. For example:
+```
+>Blockquote!
+```
+...will produce
+>Blockquote!
 
 <hr/>
 #### Development and Deployment
