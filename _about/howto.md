@@ -12,10 +12,6 @@ layout: default
 The following will be of interest to the collaborators interested in contributing to this
 site or involved in its maintenance.
 
-> test
-> <br/>
-> test!
-
 We use GitHub to manage the code for this site. Please take a look at the
 {% include navigation/findlink.md name='github_site' tag='GitHub repository' %}
 to get an idea of the general organization of the data, layouts and supporing logic.
@@ -126,7 +122,7 @@ the content across folders if necessary and only make changes to the path in one
 Additionally, a macro generating a gallery of images based on selection criteria is
 under development.
 
-##### Doecuments
+##### Documents
 Similar to the logic presented above, it is preferable to create references to documents (both internal to the site
 but also as references to cloud storage such as Zenodo) in an organized manner. Similar to examples above,
 there is a registry of documents on the site:
