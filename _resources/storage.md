@@ -27,20 +27,20 @@ Instructions for using curl, cadaver, and a script that can download entire dire
 A few additional points that may simplify life:
 * A copy of the ```copy_bnl_box.rb``` script is found inside ```EIC_Data```.
 * Note to RCF users, you can access this data directly at
-```
+```bash
 /gpfs02/eic/DATA
 ```
 * IMPORTANT: As the documentation notes, guest accounts work simply with the email + password combination. However, do choose a reasonably strong password, but do NOT reuse a password you use for any other service! If you use the command line interface, this password may well be sent unencrypted and/or be in a clear-text file on your computer.
 * Assuming your guest account was created for myemail@myprovider.com, the path to the directory will always have a specific form and you can use an environment variable as a shortcut:
-```
+```bash
 export eicdataurl='https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/myemail@myprovider.com/EIC_Data'
 ```
 or
-```
+```bash
 setenv eicdataurl 'https://bnlbox.sdcc.bnl.gov/remote.php/dav/files/myemail@myprovider.com/EIC_Data'
 ```
 This way, you can (with a suitably configured .netrc) use something like:
-```
+```bash
 curl -O -n ${eicdataurl}/copy_bnl_box.rb
 ```
 

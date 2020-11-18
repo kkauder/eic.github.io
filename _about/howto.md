@@ -63,7 +63,7 @@ that this particular page needs to be rendered into HTML for inclusion in the si
 it won't be included in the site. In summary, most of the files used to build the site
 are expected to be in the Markdown (MD) format, and **each MD file is to be equipped with the
 "front matter" section**, which could look like the excerpt below.
-```
+```yaml
 ---
 title: My Cool Software
 name: my_cool_software
@@ -164,13 +164,59 @@ Headers of sections within a page are currently formatted in Markdown as "header
 with four hash characters like in **"#### My section header"**. Take a look at the header (Formatting)
 of this section to get an idea of how it's rendered.
 
-We use blockquotes to put emphasis on quoted test. The standard way of doing it in Markdown is to
-prepend the lines that need this formatting with the ">" character. For example:
+Blockquotes are used to put emphasis on quoted text. The standard way of doing it in Markdown is to
+prepend the lines that need this formatting with the '>' character. For example:
 ```
 >Blockquote!
 ```
 ...will produce
 >Blockquote!
+
+Language-aware code highlighting capability has been integrated and
+can be easily used via the fenced code blocks i.e. blocks delimited by
+triple backticks, with an optional shortcut for the programming language name.
+For example,
+
+
+
+    ```bash
+    export foo="foo"
+    echo $foo
+    ls -l .
+    ```
+
+will be rendered as:
+```bash
+export foo="foo"
+echo $foo
+ls -l .
+```
+
+and
+
+    ```python
+    def my_function():
+      print("Hello from a function")
+    ```
+
+will show as:
+
+```python
+def my_function():
+  print("Hello from a function")
+```
+
+
+For C++, the opening line should be triple backticks followed by "c++"
+similar to examples above and the code will be rendered accordingly such as:
+
+```c++
+class MyClass {       // The class
+  public:             // Access specifier
+    int myNum;        // Attribute (int variable)
+    string myString;  // Attribute (string variable)
+};
+```
 
 <hr/>
 #### Development and Deployment
@@ -222,7 +268,7 @@ displayed site (at the next page load). The optimal workflow is to make changes 
 entirely locally before uploading the final changes to GitHub.
 
 Examples of Jekyll commands
-```
+```bash
 # Start a new Jekyll project
 ## NB. this is a little tricky e.g. you would need to pick a correct
 ## Gemfile and perhaps use --force
