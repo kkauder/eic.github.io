@@ -8,3 +8,7 @@
   title: 'EICUG SWG News Banner'
   type: logo
   
+- name: beagle_design
+  path: '/assets/images/site/DpmjetHybrid_MonteCarlo_generator_design.png'
+  title: 'BeAGLE generator concept'
+  type: diagram
