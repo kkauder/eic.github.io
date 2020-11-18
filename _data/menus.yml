@@ -46,10 +46,13 @@
       div: yes
     -
       name: pythia6
-      full: PYTHIA6 
+      full: PYTHIA6
     -
       name: pepsi
       full: PEPSI
+    -
+      name: beagle
+      full: BeAGLE
     -
       name: other
       label: yes
@@ -207,5 +210,3 @@
 #       name: youtube
 #       full: YouTube Channel of the EICUG
 #       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
-
-      
