@@ -1,5 +1,5 @@
 ---
-title: GitHub Guidelines
+title: GitHub
 description: GitHub
 name: github
 permalink: /github/
@@ -8,12 +8,35 @@ layout: default
 
 {% include layouts/title.md %}
 
-##### GitHub Organization
+* [Learning Git](#learning)
+* [GitHub Organization](#organization)
+* [GitHub Guidelines](#guidelines)
 
-{% include navigation/findlink.md name='github' tag='The EIC GitHub Organization' %} is available for the whole EICUG. For membership, please send your GitHub username to [eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account)
+--- 
 
+##### Learning Git {#learning}
 
-##### GitHub Guidelines
+Test {% include navigation/findlink.md name='git' tag='Git' %} is a
+distributed version-control system for tracking changes in source
+code. It has been designed to handle everything from small to very
+large projects with speed and efficiency and is widely used in science
+and industry. Git is open source and avavailable for free.
+
+For a tutorial on using Git in research, we recommend the Software
+Carpentry lesson on {% include navigation/findlink.md
+name='git-lesson' tag='Version Control with Git' %}. 
+
+For further details on Git, we refer to the {% include
+navigation/findlink.md name='git-book' tag='Pro Git book' %} that is
+available for free on the Git website.
+
+--- 
+
+##### GitHub Organization {#organization}
+
+The {% include navigation/findlink.md name='github' tag='EIC GitHub Organization' %} is available for the whole EICUG. For membership, please send your GitHub username to [eicug-computing-infrastructure-support@eicug.org](mailto:eicug-computing-infrastructure-support@eicug.org?subject=GitHub%20Account)
+
+##### GitHub Guidelines {#guidelines}
 
 We encourage you to share your software and documentation on {% include navigation/findlink.md name='github' tag='https://github.com/eic' %}. Please follow our guidelines in doing so: 
 

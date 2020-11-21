@@ -36,14 +36,24 @@
 
 - name: hsf
   url: 'http://hepsoftwarefoundation.org/'
-
+  
+- name: git
+  url: 'https://git-scm.com'
+  
+- name: git-book
+  url: 'https://git-scm.com/book/en/v2'
+  
+- name: git-lesson
+  url: 'https://swcarpentry.github.io/git-novice/'
+  
 - name: github
   url: 'https://github.com/eic/'
-
+  
 - name: github_pages
-  url: 'https://pages.github.com/'
 
+  url: 'https://pages.github.com/'
 - name: github_adding_topics
+
   url: 'https://help.github.com/en/enterprise/2.15/user/articles/classifying-your-repository-with-topics#adding-topics-to-your-repository'
 
 - name: github_site
