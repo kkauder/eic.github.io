@@ -68,20 +68,19 @@
       full: Infrastructure
       div: yes
     -
-      name: lxr
-      full: LXR Code Browser
-
+      name: github
+      full: GitHub for the EICUG
     -
       name: doxygen
       full: Doxygen
       link: https://eic.github.io/doxygen/
     -
-      name: github_link
-      full: EICUG organization on GitHub
-      link: https://github.com/eic
-    -
-      name: github
-      full: EICUG GitHub Guidelines
+      name: lxr
+      full: LXR Code Browser
+#    -
+#      name: github_link
+#      full: GitHub Organization
+#      link: https://github.com/eic
 
 ###
 - name: resources

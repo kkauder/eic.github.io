@@ -1,5 +1,5 @@
 ---
-title: GitHub
+title: GitHub Organization
 description: GitHub
 name: github
 permalink: /github/
