@@ -28,9 +28,9 @@ Contacts:
 #### Program Overview
 
 BeAGLE uses the [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) framework in order to handle the target (Glauber, FLUKA etc.) for ep and eA collisions
-but employs[PYTHIA](https://eic.github.io/software/pythia6.html) to handle the elementary interaction as a replacement for PHOJET. The nuclear PDF is included by linking the PYTHIA PDF library to LHAPDF which enables us access to EPS09 nuclear PDF routines. We have included the energy loss module PyQM, written by Accardi and Dupre and based on the quenching weights of Salgado & Wiedemann. This module, when turned on, applies energy loss to the partons after they have been simulated by Pythia, but before they have been hadronized.
+but employs [PYTHIA](https://eic.github.io/software/pythia6.html) to handle the elementary interaction as a replacement for PHOJET. The nuclear PDF is included by linking the PYTHIA PDF library to LHAPDF which enables us access to EPS09 nuclear PDF routines. We have included the energy loss module PyQM, written by Accardi and Dupre and based on the quenching weights of Salgado & Wiedemann. This module, when turned on, applies energy loss to the partons after they have been simulated by Pythia, but before they have been hadronized.
 
-The original DPMJet models DTUNUC, PHOJET, QNEUTRIN are NOT available in BeAGLE. If you are interested in these models for pp/pA, real photoproduction, or quasi-elastic neutrino scattering, use [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) directly. The history and motivation of the use of DPMJetHybrid rather than DPMJet for eRHIC can be found [here](https://wiki.bnl.gov/eic/index.php/DpmjetHybrid#Opening_issue].
+The original DPMJet models DTUNUC, PHOJET, QNEUTRIN are NOT available in BeAGLE. If you are interested in these models for pp/pA, real photoproduction, or quasi-elastic neutrino scattering, use [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) directly. The history and motivation of the use of DPMJetHybrid rather than DPMJet for eRHIC can be found [here](https://wiki.bnl.gov/eic/index.php/DpmjetHybrid#Opening_issue).
 
 A graphical demonstration of the program structure can be illustrated as follows:
 <center>
@@ -63,7 +63,7 @@ At the moment, there are many simplifying assumptions for the multinucleon mode,
 **UNDER CONSTRUCTION. Existing documentation focuses on the RCF version, more general ones coming soon**
 
 #### BeAGLE Control Card
-Note: This input file (originally from DPMJET) is very particular about the spacing of a lot of the numbers so make sure that you leave the starting space the same when you change numbers. In particualr, the input format is: A10, 6E10.0, A8
+Note: This input file (originally from DPMJET) is very particular about the spacing of a lot of the numbers so make sure that you leave the starting space the same when you change numbers. In particular, the input format is: A10, 6E10.0, A8
 
 Frequently changed cards:
 ```
@@ -152,8 +152,8 @@ For the output file, we propose the following text format & structure:
 | pzlep:                                                                                                                                    | D | lab pz of the lepton beam \(sign\(pz\)\*p for non\-zero crossing angle\)                                                                                                          |
 | pztarg:                                                                                                                                   | D | lab pz/A of the ion beam \(sign\(pz\)\*p/A for non\-zero crossing angle\)                                                                                                         |
 | pznucl:                                                                                                                                   | D | lab pz of the struck nucleon \(sign\(pz\)\*p for non\-zero crossing angle\)                                                                                                       |
-| crang:                                                                                                                                    | D | crossing\-angle \(mr\)\. crang = \(1000\*\) atan\(px/pz\) for the beam momentum with nonzero px\. Note: we assume one of the beams has px=py=0 and the other py=0\.               |
-| crori:                                                                                                                                    | I | crossing angle orientation. **REST is garbled on the wiki** |
+| crang:                                                                                                                                    | D | crossing\-angle \(mr\)\. ** NOT IMPLEMENTED YET ** crang = \(1000\*\) atan\(px/pz\) for the beam momentum with nonzero px\. Note: we assume one of the beams has px=py=0 and the other py=0\.               |
+| crori:                                                                                                                                    | I | crossing angle orientation. ** NOT IMPLEMENTED YET ** +/-1 lepton beam defines +/- z direction. +/-2 ion beam defines +/- z direction. 0 no crossing angle.|
 | subprocess:                                                                                                                               | I | pythia subprocess \(MSTI\(1\)\), for details see PYTHIA                                                                                                                           |
 | nucleon:                                                                                                                                  | I | hadron beam type \(MSTI\(12\)\)                                                                                                                                                   |
 | targetparton:                                                                                                                             | I | parton hit in the target \(MSTI\(16\)\)                                                                                                                                           |
