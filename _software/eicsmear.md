@@ -47,7 +47,7 @@ Most of these are currently hosted at https://gitlab.com/eic/mceg.
 Please see the associated documentation for further information on
 individual generators.
 Creation will typically be of the form
-```
+```bash
 pythiaeRHIC < STEER_FILE > out.log
 ```
 A few small example files are included for testing.
@@ -90,7 +90,7 @@ library.
 ###### Procedure ######
 
 Create a directory in which to build eic-smear and navigate to that
-```
+```bash
 cd eic-smear
 mkdir build
 cd build
@@ -99,14 +99,14 @@ cd build
 Configure using cmake. Optionally, you can specify a location where to
 install include files and libraries:
 We'll assume that the installation path is in $EICDIRECTORY
-```
+```bash
 setenv EICDIRECTORY=</path/to/install>
 cmake ../ -DCMAKE_INSTALL_PREFIX=$EICDIRECTORY
 ```
 
 Build and install (the -j flag specifies how many parallel compilation
 threads to use)
-```
+```bash
 make -j 2
 make install
 ```
@@ -114,7 +114,7 @@ make install
 ###### Notes: ######
 
 * If you see instances of things like
-```
+```bash
 Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
    Missing FileEntry for eicsmear/smear/Smear.h
    requested to autoload type erhic::VirtualParticle
@@ -122,7 +122,7 @@ Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
 please setenv or export the environment variable ROOT_INCLUDE_PATH to point to the include directory in your installation.
 
 * If building at BNL, you can get ROOT6 in the following manner
-```
+```bash
 source /afs/rhic.bnl.gov/eic/restructured/etc/eic_cshrc.csh
 setenv EIC_LEVEL pro
 #verify
@@ -131,7 +131,7 @@ which root
 
 * If you want to build PYTHIA6-dependent components, pass the location
 of libPythia6 to cmake:
-```
+```bash
 cmake ../ -DCMAKE_INSTALL_PREFIX=</path/to/install> -DPYTHIA6_LIBDIR=/path/to/pythia6/lib
 ```
 This will generate additional classes that allow creation of the
@@ -140,7 +140,7 @@ More detailed documentation of this feature to follow.
 
 * For some reason, tab completion inside ROOT currently only works after
 explicitly loading the library
-```
+```c++
 root [] gSystem->Load("libeicsmear");
 ```
 even if that same command is in your rootlogon.C. 
@@ -148,12 +148,12 @@ even if that same command is in your rootlogon.C.
 ##### Tests and Examples #####
 
 if you prepare building using the cmake option
-```
+```bash
 -DBUILD_TESTS=ON
 ```
 a variety of tests are generated from the tests directory:
 
-```
+```bash
 ./tests/test_simple/test_simple_buildtree
 ```
 will read a (provided) e+D BeAGLE file.
@@ -167,7 +167,7 @@ and plots to see and test the acceptance dependence of smearing.
 ##### A canonic example #####
 
 When tests are built, a particularly useful example is 
-```
+```bash
 ./tests/qaplots
 ```
 This starts from (provided) examples of text MC output, builds the
@@ -225,7 +225,7 @@ follows:
 
 ###### Generate EicTree ######
 
-```
+```c++
 root [] gSystem->Load("libeicsmear");
 root [] BuildTree ("tests/ep_hiQ2.20x250.small.txt",".",-1);
 Processed 10000 events containing 346937 particles in 6.20576 seconds (0.000620576 sec/event)
@@ -238,7 +238,7 @@ filename. Currently accepted are pythia, pepsi, lepto, rapgap, djangoh, beagle,m
 
 
 ##### Smear the tree
-```
+```c++
 root [] gSystem->Load("libeicsmear")
 root [] .L smearHandBook.cxx // Assuming you copied this here
 root [] SmearTree(BuildHandBookDetector(), "ep_hiQ2.20x250.small.root", "smeared.root",-1)
@@ -255,7 +255,7 @@ other files, please make sure to include the generator name in the filename.
 ###### Analyze the Tree ######
 
 (Suppressing the root prompts for easier copy/paste):
-```
+```c++
 root -l 
 gSystem->Load("libeicsmear");
 TFile mcf ("ep_hiQ2.20x250.small.root"); // truth
@@ -290,7 +290,7 @@ EEprime->Draw("colz");
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
 
-```
+```c++
 // ... omitted some includes and helpers
 Smear::Detector BuildMyDetector() {
 	
@@ -304,7 +304,7 @@ Smear::Detector BuildMyDetector() {
   * in eta = -3.5 --  -2.5,
   * with sigma_p/p = 0.1 % p+ 2.0 %,
   * accepting all charged particles.
-```
+```c++
   // Tracking
   // eta = -3.5 --  -2.5
   // sigma_p/p ~ 0.1% p+2.0%
@@ -320,7 +320,7 @@ Smear::Detector BuildMyDetector() {
   electrons that represents the combined information from multiple
   detectors, e.g.:
 
-```
+```c++
   TrackBack1P.Accept.SetCharge(Smear::kCharged);
   TrackBack1P.Accept.SetGenre(Smear::kHadronic);
   det.AddDevice(TrackBack1P);
@@ -337,7 +337,7 @@ etc.
 
 * Finally, after adding all desired devices return the complete
 detector.
-```
+```c++
   return det;
 }
 ```
@@ -350,7 +350,7 @@ principle, kPt and kPz is also supported but currently not working.
 * If you want to have an unsmeared value in the smeared tree, use a
 perfect device, e.g:
 
-```
+```c++
 Smear::Device TrackTheta(Smear::kTheta, "0");
 ```
 
@@ -358,7 +358,7 @@ Smear::Device TrackTheta(Smear::kTheta, "0");
 to 0, meaning eic-smear treats them as measured with a zero value. It
 is in most cases up to the user to catch this behavior with lines of
 the form
-```
+```c++
 if ( fabs (  inParticleS->GetTheta())> 1e-8 ) { \\ physical, treat as measured }
 ```
 This unfortunate behavior will be corrected in future releases, but
