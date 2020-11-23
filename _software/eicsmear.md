@@ -7,7 +7,7 @@ layout: default
 
 {% include layouts/title.md %}
 
-#### About ####
+##### About #####
 
 Currently hosted at
 https://gitlab.com/eic/eic-smear
@@ -22,7 +22,7 @@ Contacts
 * Kolja Kauder <kkauder@bnl.gov>
 * Maxim Potekhin <potekhin@bnl.gov>
 
-#### Overview ####
+##### Overview #####
 
 eic-smear is a Monte Carlo analysis package originally developed by the BNL EIC task force.
 
@@ -79,15 +79,15 @@ Both portions of the code are included in the eic-smear shared
 library.
 
 
-#### Building ####
+##### Building #####
 
-##### Prerequisites #####
+###### Prerequisites ######
 
 * CMake version >3.1 is required.
 * Compiler with C++11 support
 * ROOT is required. ROOT6 strongly preferred, although ROOT5 may work
 
-##### Procedure #####
+###### Procedure ######
 
 Create a directory in which to build eic-smear and navigate to that
 ```
@@ -111,7 +111,7 @@ make -j 2
 make install
 ```
 
-##### Notes: #####
+###### Notes: ######
 
 * If you see instances of things like
 ```
@@ -145,7 +145,7 @@ root [] gSystem->Load("libeicsmear");
 ```
 even if that same command is in your rootlogon.C. 
 
-#### Tests and Examples ####
+##### Tests and Examples #####
 
 if you prepare building using the cmake option
 ```
@@ -164,7 +164,7 @@ will read a (provided) e+D BeAGLE file.
 is a customizable particle gun that creates a few simplee histograms
 and plots to see and test the acceptance dependence of smearing.
 
-#### A canonic example ####
+##### A canonic example #####
 
 When tests are built, a particularly useful example is 
 ```
@@ -218,12 +218,12 @@ random number details) the provided small reference plots in
 ```
 
 
-#### Deconstructed example ####
+##### Deconstructed example #####
 
 All steps can be performed interactively and individually in ROOT as
 follows:
 
-##### Generate EicTree #####
+###### Generate EicTree ######
 
 ```
 root [] gSystem->Load("libeicsmear");
@@ -237,7 +237,7 @@ other files, please make sure to include the generator name in the
 filename. Currently accepted are pythia, pepsi, lepto, rapgap, djangoh, beagle,milou, sartre, simple.
 
 
-#### Smear the tree
+##### Smear the tree
 ```
 root [] gSystem->Load("libeicsmear")
 root [] .L smearHandBook.cxx // Assuming you copied this here
@@ -252,7 +252,7 @@ the number of events to smear (-1 for all);
 * IMPORTANT: The file type is by default assumed to be pythia6. For
 other files, please make sure to include the generator name in the filename.
 
-##### Analyze the Tree #####
+###### Analyze the Tree ######
 
 (Suppressing the root prompts for easier copy/paste):
 ```
@@ -285,7 +285,7 @@ for(long iEvent=0; iEvent<mc->GetEntries(); iEvent++){
 EEprime->Draw("colz");
 ```
 
-#### Anatomy of a Smearer ####
+##### Anatomy of a Smearer #####
 
 A "detector" is constructed as follows. For details,
 please also see examples included in the scripts/directory.
@@ -345,7 +345,7 @@ detector.
 * Formulas are based on ROOT::TFormula and accept kP, kPhi, kTheta, kE. In
 principle, kPt and kPz is also supported but currently not working.
 
-##### IMPORTANT NOTES: #####
+###### IMPORTANT NOTES: ######
 
 * If you want to have an unsmeared value in the smeared tree, use a
 perfect device, e.g:
@@ -382,7 +382,7 @@ regarding calculation of smeared kinematic variables.
   issue a warning. When you make changes to a detector, keep this in
   mind and proceed with caution.
 
-#### Doxygen ####
+##### Doxygen #####
 
 A recent version of the detailed class documentation is temporarily
 hosted at www4.rcf.bnl.gov/~eickolja/.
@@ -396,5 +396,4 @@ created local file
 doxygen/html/index.html
 ```
 You can obtain doxygen at www.doxygen.nl.
-
 
