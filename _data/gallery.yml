@@ -9,6 +9,6 @@
   type: logo
   
 - name: beagle_design
-  path: '/assets/images/site/DpmjetHybrid_MonteCarlo_generator_design.png'
+  path: '/assets/images/software/DpmjetHybrid_MonteCarlo_generator_design.png'
   title: 'BeAGLE generator concept'
   type: diagram

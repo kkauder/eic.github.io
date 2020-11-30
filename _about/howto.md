@@ -106,9 +106,27 @@ in the Front Matter section the links will still be correct.
 ##### Images
 Users and developers have complete freedom in how they incorporate images into pages on this site.
 In many cases handling images will be facilitated by adding an image to the following registry:
-<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/gallery.yml" target=_blank>_data/gallery.yml</a>
-and then using a simple macro to refer to the image by its mneumonic name and automatically generate
-the correct link, as illustrated in the following example:
+<a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/gallery.yml" target=_blank>_data/gallery.yml</a>.
+Note that items in *gallery.yml* contains references to paths of images. While any image can reside in any folder it
+is recommended to keep the image files under *asset/images* in one of the following four folders:
+* site
+* software
+* support
+* tutorials
+
+The *site* folder is used for keeping elements of the site look and feel, the *software* one is used
+to keep various software-related diagrams, and the rest are self-explanatory. Once an image is added to
+to the appropriate folder and *gallery.yml* one cab use a simple macro to refer to it by its mneumonic
+name and automatically add it to pages on this site, as illustrated in the following example. The PNG
+file containing the "news banner" image is added to the *site* folder under *assets/images* and this
+lines are added to *gallery.yaml*:
+```yaml
+- name: news_banner
+  path: '/assets/images/site/EICUG-SWG-News-Banner.png'
+  title: 'EICUG SWG News Banner'
+  type: logo
+```
+Then, this line of code included in the page
 {% raw %}
 {% include images/image.md name='news_banner' width='400' %}
 {% endraw %}
@@ -116,11 +134,11 @@ the correct link, as illustrated in the following example:
 
 {% include images/image.md name='news_banner' width='400' %}
 
-This will help to ensure consistency of image links throughout the site and remove
+If you are adding a software-related diagram, it should go into the "software" folder and
+the *gallery.yml* should reference it accordingly.
+This helps to ensure consistency of image links throughout the site and remove
 the need to include cumbersome HTML in the page code. It also makes it possible to move
 the content across folders if necessary and only make changes to the path in one place.
-Additionally, a macro generating a gallery of images based on selection criteria is
-under development.
 
 ##### Documents
 Similar to the logic presented above, it is preferable to create references to documents (both internal to the site

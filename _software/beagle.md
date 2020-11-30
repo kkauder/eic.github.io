@@ -27,20 +27,31 @@ Contacts:
 
 #### Program Overview
 
-BeAGLE uses the [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) framework in order to handle the target (Glauber, FLUKA etc.) for ep and eA collisions
-but employs [PYTHIA](https://eic.github.io/software/pythia6.html) to handle the elementary interaction as a replacement for PHOJET. The nuclear PDF is included by linking the PYTHIA PDF library to LHAPDF which enables us access to EPS09 nuclear PDF routines. We have included the energy loss module PyQM, written by Accardi and Dupre and based on the quenching weights of Salgado & Wiedemann. This module, when turned on, applies energy loss to the partons after they have been simulated by Pythia, but before they have been hadronized.
+BeAGLE uses the [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) framework in order to handle the target
+(Glauber, FLUKA etc.) for ep and eA collisions but employs [PYTHIA](https://eic.github.io/software/pythia6.html)
+to handle the elementary interaction as a replacement for PHOJET. The nuclear PDF is included by linking the
+PYTHIA PDF library to LHAPDF which enables us access to EPS09 nuclear PDF routines. We have included the
+energy loss module PyQM, written by Accardi and Dupre and based on the quenching weights of
+Salgado & Wiedemann. This module, when turned on, applies energy loss to the partons after they have
+been simulated by Pythia, but before they have been hadronized.
 
-The original DPMJet models DTUNUC, PHOJET, QNEUTRIN are NOT available in BeAGLE. If you are interested in these models for pp/pA, real photoproduction, or quasi-elastic neutrino scattering, use [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) directly. The history and motivation of the use of DPMJetHybrid rather than DPMJet for eRHIC can be found [here](https://wiki.bnl.gov/eic/index.php/DpmjetHybrid#Opening_issue).
+The original DPMJet models DTUNUC, PHOJET, QNEUTRIN are NOT available in BeAGLE.
+If you are interested in these models for pp/pA, real photoproduction, or quasi-elastic neutrino scattering,
+use [DPMJet](https://wiki.bnl.gov/eic/index.php/DPMJet) directly. The history and motivation of the use of
+DPMJetHybrid rather than DPMJet for eRHIC can be
+found [here](https://wiki.bnl.gov/eic/index.php/DpmjetHybrid#Opening_issue).
 
 A graphical demonstration of the program structure can be illustrated as follows:
 <center>
-{% include images/image.md name='beagle_design' width='600' %}
+{% include images/image.md name='beagle_design' width='732' %}
 </center>
 
 #### Basic Model
 The program can be run in, essentially, two modes.
 
-Setting ```genShd=1``` (generator Shadowing=1) is similar to DPMJetHybrid. The entire nuclear shadowing effect (where R=σ(A)/Aσ(p)<1) is interpreted as a change in the parton distribution of unspecified origin, but the DIS interaction is assumed to be point-like. One and only one nucleon participates in the interaction.
+Setting ```genShd=1``` (generator Shadowing=1) is similar to DPMJetHybrid. The entire nuclear shadowing
+effect (where R=σ(A)/Aσ(p)<1) is interpreted as a change in the parton distribution of unspecified origin,
+but the DIS interaction is assumed to be point-like. One and only one nucleon participates in the interaction.
 
 Note: This approach is in stark contrast to the original DPMJET approach which used GMVD (Generalized Vector Meson Dominance) and allowed multiple collisions.
 
@@ -107,7 +118,7 @@ STOP
 ```
 
 The format of the PY-INPUT file is similar to the Pythia input file, which is not really documented elsewhere, but is fairly self-explanatory due to the comments.
-```
+```yaml
 line 1:    output file name for the textfile
 line 2:    xmin and xmax
 line 3:    ignored unless radcor is being used
@@ -125,7 +136,7 @@ OPTIONAL LINE: FSEED ####### - Fixes seed for random # generator for debugging. 
 Other lines make changes to PYTHIA control parameters.
 
 The usage and explanations for the parameters in the input file and what kind of parameters do we need to give for PYTHIA can be found in the following file:
-```
+```bash
 /afs/rhic/eic/PACKAGES/BeAGLE/Documents/Documentation
 ```
 To find the final state particles, just use the following selection rules:
