@@ -319,7 +319,7 @@ Executables require LHAPDF5 installed and links executables against it.
 #### Radiative Corrections ####
 
 The code implemented in PYTHIA to calculate radiative corrections is called RADGEN.
-The writeup on it can be found [here](http://arXiv.org/pdf/hep-ph/9906408].
+The writeup on it can be found [here](http://arXiv.org/pdf/hep-ph/9906408).
 The following steps have been done to implement it in PYTHIA:
 * change the subroutine pygaga.f so it calls RADGEN after you have thrown y and Q2
 * get the true y and Q2 from RADGEN and the radiated photon
