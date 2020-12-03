@@ -16,8 +16,7 @@ layout: default
 Based on PYTHIA 6.4.28 with radiative corrections and output
 modifications to support [eic-smear](eicsmear.html).
 
-Currently hosted at
-https://gitlab.com/eic/mceg/PYTHIA-RAD-CORR
+Currently hosted on [GitLab](https://gitlab.com/eic/mceg/PYTHIA-RAD-CORR)
 
 Contacts
 * Kolja Kauder <kkauder@bnl.gov>
