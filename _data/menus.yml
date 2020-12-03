@@ -118,6 +118,9 @@
     -
       name: overview
       full: Overview
+    -
+      name: eoi
+      full: Expression of Interest
 ###
 - name: organization
   full: Organization
