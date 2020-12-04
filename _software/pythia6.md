@@ -222,7 +222,7 @@ The output file is in a text format which has the following structure:
 * 9th to X-1 line: track-wise info of 1st event
 * Xth line <tt>============================================</tt>
 
-**For each subsequent event, lines 7 through X repeat analogously   .**
+**For each subsequent event, lines 7 through X repeat analogously.**
 
 ##### How to analyze events
 
@@ -245,7 +245,7 @@ This means you miss:
 #### Installation
 
 It is recommended to take advantage of the pre-installed versions on the lab farms or
-the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](http://127.0.0.1:4000/software/escalate_singularity_1.html) containers.
+the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](escalate_singularity_1.html) containers.
 
 However, the package can also be built using cmake and make.
 

@@ -48,6 +48,9 @@
       name: pythia6
       full: PYTHIA6
     -
+      name: djangoh
+      full: DJANGOH
+    -
       name: pepsi
       full: PEPSI
     -
