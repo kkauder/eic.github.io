@@ -48,17 +48,20 @@
       name: pythia6
       full: PYTHIA6
     -
-      name: milou
-      full: MILOU
+      name: beagle
+      full: BeAGLE
     -
       name: djangoh
       full: DJANGOH
     -
+      name: milou
+      full: MILOU
+    -
+      name: rapgap
+      full: RAPGAP
+    -
       name: pepsi
       full: PEPSI
-    -
-      name: beagle
-      full: BeAGLE
     -
       name: other
       label: yes
