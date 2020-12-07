@@ -16,8 +16,7 @@ layout: default
 Based on PYTHIA 6.4.28 with radiative corrections and output
 modifications to support [eic-smear](eicsmear.html).
 
-Currently hosted at
-https://gitlab.com/eic/mceg/PYTHIA-RAD-CORR
+Currently hosted on [GitLab](https://gitlab.com/eic/mceg/PYTHIA-RAD-CORR)
 
 Contacts
 * Kolja Kauder <kkauder@bnl.gov>
@@ -223,7 +222,7 @@ The output file is in a text format which has the following structure:
 * 9th to X-1 line: track-wise info of 1st event
 * Xth line <tt>============================================</tt>
 
-**For each subsequent event, lines 7 through X repeat analogously   .**
+**For each subsequent event, lines 7 through X repeat analogously.**
 
 ##### How to analyze events
 
@@ -246,7 +245,7 @@ This means you miss:
 #### Installation
 
 It is recommended to take advantage of the pre-installed versions on the lab farms or
-the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](http://127.0.0.1:4000/software/escalate_singularity_1.html) containers.
+the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](escalate_singularity_1.html) containers.
 
 However, the package can also be built using cmake and make.
 
@@ -319,7 +318,7 @@ Executables require LHAPDF5 installed and links executables against it.
 #### Radiative Corrections ####
 
 The code implemented in PYTHIA to calculate radiative corrections is called RADGEN.
-The writeup on it can be found [here](http://arXiv.org/pdf/hep-ph/9906408].
+The writeup on it can be found [here](http://arXiv.org/pdf/hep-ph/9906408).
 The following steps have been done to implement it in PYTHIA:
 * change the subroutine pygaga.f so it calls RADGEN after you have thrown y and Q2
 * get the true y and Q2 from RADGEN and the radiated photon
