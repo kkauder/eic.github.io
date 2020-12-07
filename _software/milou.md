@@ -72,8 +72,8 @@ The ascii output, `asc_15x50_dvcs.out`, has the following structure:
 
 * 1st line: "generator name" (i.e. MILOU32); "name of the person generating the sample"; "Name of the Istitution".
 Currently hard-coded to ```"MILOU32     S. Fazio        BNL"```
-* 2st line: MILOU EVENT FILE
-* 3nd line: "============================================"
+* 2nd line: MILOU EVENT FILE
+* 3rd line: "============================================"
 * 4th line: Information on event wise variables stored in the file
 
 | I:                                                                                                            | 0 \(line index\)                                                                                                    |
