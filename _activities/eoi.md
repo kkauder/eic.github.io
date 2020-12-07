@@ -15,7 +15,7 @@ The SWG has participated in the call for [Expressions of Interest](https://www.b
 
 Based on the community input from our [first meeting](https://indico.bnl.gov/event/9170/) and a call to the SWG mailing list, we submitted a [Software EoI](https://indico.bnl.gov/event/8552/contributions/43221/). We intend to carry the EoI forward as a living document that will evolve towards a work plan for the SWG, setting priorities for the next years and goals for the next decade. 
 
-Any member of the EICUG is encouraged to contribute to the [living document]() (ADD LINK). A snapshot of the living document is listed below. 
+Any member of the EICUG is encouraged to contribute to the [living document](https://docs.google.com/document/d/1nqs2rTH4K8oM9KTpkWfyxOQReRXWnTNfmyuQu-VHbSo/edit?usp=sharing). A snapshot of the living document is listed below. 
 
 ---
 
