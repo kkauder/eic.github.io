@@ -63,6 +63,10 @@
       name: pepsi
       full: PEPSI
     -
+      name: estarlight
+      full: eSTARlight
+      link: https://github.com/eic/estarlight#estarlight
+    -
       name: other
       label: yes
       full: Other Software
