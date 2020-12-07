@@ -67,6 +67,10 @@
       full: eSTARlight
       link: https://github.com/eic/estarlight#estarlight
     -
+      name: sartre
+      full: Sartre
+      link: https://sartre.hepforge.org
+    -
       name: other
       label: yes
       full: Other Software
