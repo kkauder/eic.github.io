@@ -48,11 +48,28 @@
       name: pythia6
       full: PYTHIA6
     -
+      name: beagle
+      full: BeAGLE
+    -
+      name: djangoh
+      full: DJANGOH
+    -
+      name: milou
+      full: MILOU
+    -
+      name: rapgap
+      full: RAPGAP
+    -
       name: pepsi
       full: PEPSI
     -
-      name: beagle
-      full: BeAGLE
+      name: estarlight
+      full: eSTARlight
+      link: https://github.com/eic/estarlight#estarlight
+    -
+      name: sartre
+      full: Sartre
+      link: https://sartre.hepforge.org
     -
       name: other
       label: yes

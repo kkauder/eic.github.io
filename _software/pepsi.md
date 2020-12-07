@@ -144,7 +144,7 @@ Some guidelines regarding Monte Carlo normalization can be found [here](https://
 #### Installation
 
 It is recommended to take advantage of the pre-installed versions on the lab farms or
-the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](http://127.0.0.1:4000/software/escalate_singularity_1.html) containers.
+the available stand-alone [singularity](eicsmear_generators_singularity.html) or [escalate](escalate_singularity_1.html) containers.
 
 However, the package can also be built using "make".
 The Makefile should be customized to your environment before using,

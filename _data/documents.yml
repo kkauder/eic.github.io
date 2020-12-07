@@ -49,3 +49,35 @@
   category: software
   format: direct_link
   
+- name: Djangoh_m.pdf
+  url: 'https://github.com/eic/documents/blob/master/software/general/Djangoh_m.pdf'
+  title: Djangoh Manual
+  author: 'H. Spiesberger'
+  venue: 
+  resource: github
+  type: 'manual'
+  category: software
+  format: direct_link
+
+- name: Djangoh_Updateh-4.6.10.pdf
+  url: 'https://github.com/eic/documents/blob/master/software/general/Djangoh_Updateh-4.6.10.pdf'
+  title: Djangoh Manual Updates 4.6.8 - 4.6.10
+  author: 'H. Spiesberger'
+  venue: 
+  resource: github
+  type: 'manual'
+  category: software
+  format: direct_link
+
+- name: Lepto-6.5.1.pdf
+  url: 'https://github.com/eic/documents/blob/master/software/general/Lepto-6.5.1.pdf'
+  title: Djangoh Manual Updates 4.6.8 - 4.6.10
+  author: 'G. Ingelman, A.Edin, J. Rathsman'
+  venue: 
+  resource: github
+  type: 'manual'
+  category: software
+  format: direct_link
+
+
+
