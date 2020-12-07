@@ -132,7 +132,11 @@ The ascii output, `rapgap.txt`, has the following structure:
 Create a ROOT tree using the [eic-smear](eicsmear.html#tree-generation) package.
 
 #### Additional Information
-A number of completed RAPGAP data files for various e+p energies are stored on RCF
+
+*  We recommend against using version 3.303. The changes made to support LHAPDF6
+ seem to make using LHAPDF5 impossible
+
+* A number of completed RAPGAP data files for various e+p energies are stored on RCF
 and can be [made available](../resources/storage.html) upon request.
 
 <br />
