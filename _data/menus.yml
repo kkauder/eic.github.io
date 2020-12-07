@@ -48,6 +48,9 @@
       name: pythia6
       full: PYTHIA6
     -
+      name: milou
+      full: MILOU
+    -
       name: djangoh
       full: DJANGOH
     -
