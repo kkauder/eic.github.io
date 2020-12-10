@@ -19,14 +19,14 @@ For the EIC, DJANGOH was upgraded to use nuclear PDFs as available in [LHAPDF](h
 From version 4.6.10 on, DJANGOH simulates also longitudinal polarised deep inelastic lepton-proton scattering for both NC and CC events including both QED and QCD radiative effects.
 
 
-#### Manuals
+##### Manuals
 Detailed documentation on DJANGOH is available from the following sources:
-* {% include documents/doc.md name='Djangoh_m.pdf' tag='Manual for DJANGOH 4.6.8' %}
-* {% include documents/doc.md name='Djangoh_Updateh-4.6.10.pdf' tag='How are nuclear PDFs and polarised effects included in Djangoh' %}
-* {% include documents/doc.md name='Lepto-6.5.1.pdf' tag='LEPTO Manual 6.5.1' %}
+* {% include documents/doc.md name='Djangoh_m.pdf' tag='Manual for DJANGOH 4.6.8' -%}
+* {% include documents/doc.md name='Djangoh_Updateh-4.6.10.pdf' tag='How are nuclear PDFs and polarised effects included in Djangoh' -%}
+* {% include documents/doc.md name='Lepto-6.5.1.pdf' tag='LEPTO Manual 6.5.1' -%}
 
 
-#### Output file structure
+##### Output file structure
 
 The output file is in a text format which has the following structure:
 * 1st line: <tt>DJANGOH EVENT FILE</tt>
@@ -84,7 +84,7 @@ The output file is in a text format which has the following structure:
 
 **For each subsequent event, lines 7 through X repeat analogously.**
 
-#### Unpolarised Example Input
+##### Unpolarised Example Input
 
 Here is an example input file with settings for unpolarised inelastic neutral-current interactions with radiative corrections turned on.The manual explains the meaning of each input parameter and the associated values.
 
@@ -191,7 +191,7 @@ For charged current running, the ```-OPT-NC``` and ```-OPT-CC``` settings should
              1 1 0 1
 ```
 
-#### Polarised Example Input
+##### Polarised Example Input
 
 Here is an example input file with settings for polarized inelastic neutral-current interactions with radiative corrections turned on.
 ATTENTION: <br>
