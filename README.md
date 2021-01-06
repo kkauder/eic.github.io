@@ -24,3 +24,7 @@ Deployment: https://eic.github.io/
 # In the works
 
 Nested/paginated menu structure
+
+# Misc
+
+Switched to SSH to access the repo 01/06/2021
