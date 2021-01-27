@@ -32,6 +32,7 @@ Any member of the EICUG is encouraged to contribute to the [living document](htt
        * [Explore User-Centered Design](#usercentereddesign)
        * [Discoverable Software](#discoverablesoftware)
        * [Data Model](#datamodel)
+* [**Future Technologies**](#futuretechnologies)
 
 ### Scope of the Software EoI {#scope}
 The Software Working Group (SWG) of the EIC User Group (EICUG) has coordinated an Expression of Interest (EoI) for Software. The scope of the EOI includes all aspects of software from physics and detector simulations to online and offline analysis. It does not include computing infrastructure. 
@@ -142,7 +143,7 @@ Generally, tools for validation and reference implementations will be made avail
 
 **Participating institutions (alphabetical order)** ANL, BNL, EIC-India, INFN, JLab, OhioU, SBU. 
 
-### Future Technologies 
+### Future Technologies {#futuretechnologies}
 
 Software development is one of the most rapidly changing fields. Anticipating EIC running in the next decade, we should be open and do research on opportunities to productively apply new technologies and methods. In addition to working on [Common Projects](##commonprojects), we will explore emerging technologies and evaluate their relevance for the EIC. An examples of technologies is listed here: 
 
