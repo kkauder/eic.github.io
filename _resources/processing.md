@@ -7,6 +7,11 @@ layout: default
 
 {% include layouts/title.md %}
 
-#### Processing
+##### About this page
 
-This page is under development and will contain information about data processing for the EIC community.​
+This page is under development, content is being added as it becomes available.
+
+##### BNL SDCC Batch System (Condor)
+
+TBD
+
