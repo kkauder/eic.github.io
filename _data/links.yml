@@ -1,3 +1,4 @@
+# Misc meetings
 - name: eic_software_meeting_20190710
   url: 'https://indico.bnl.gov/event/6336/'
 
@@ -10,12 +11,14 @@
 - name: 'detector_matrix'
   url: 'https://physdiv.jlab.org/DetectorMatrix/'
 
+# Cloud resources
 - name: HEPData
   url: 'https://www.hepdata.net/'
 
 - name: Inspire
   url: 'https://inspirehep.net/'
 
+# Org links
 - name: npps
   url: 'https://npps.bnl.gov/'
 
@@ -62,6 +65,7 @@
 - name: jupyterhub.jlab.org
   url: 'https://jupyterhub.jlab.org'
 
+# Jekyll and related toold
 - name: Jekyll
   url: 'http://jekyllrb.com/'
 
@@ -70,9 +74,6 @@
 
 - name: rubygems_downloads
   url: 'https://rubygems.org/pages/download'
-
-- name: globus
-  url: 'https://globus.org'
 
 - name: Liquid
   url: 'https://shopify.github.io/liquid/'
@@ -94,3 +95,14 @@
 
 - name: lxr
   url: 'https://eic-code-browser.sdcc.bnl.gov/lxr/source'
+
+- name: globus
+  url: 'https://globus.org'
+
+# MC
+- name: estarlight
+  url: 'https://github.com/eic/estarlight#estarlight'
+
+- name: sartre
+  url: 'https://sartre.hepforge.org'
+

@@ -1,13 +1,11 @@
 ---
-title: Escalate with Singularity
+title: Running ESCalate on HPC clusters
 name: escalate_singularity_1
 category: escalate
 layout: default
 ---
 
 {% include layouts/title.md %}
-
-## Running ESCalate on HPC clusters
 
 - [Singularity images on CVMFS](#singularity-images-on-cvmfs)
 - [Building a local singularity container](#building-a-local-singularity-container)
@@ -22,7 +20,7 @@ layout: default
 
 <br>
 
-### Singularity images on CVMFS
+#### Singularity images on CVMFS
 
 To run the ESCalate docker container on HPC clusters, we use singularity. This does not require super-user privileges.
 
@@ -41,7 +39,7 @@ on the cvmfs filesystem (at `/cvmfs/eic.opensciencegrid.org`).
 
 <br>
 
-### Building a local singularity container
+#### Building a local singularity container
 
 Since the docker container is quite large, you will want to build the singularity image in a directory where you have plenty of space (e.g. `/volatile` at Jefferson Lab). You do *not* want to save this image to your home directory!
 
@@ -72,7 +70,7 @@ strip --remove-section=.note.ABI-tag electronioncollider/escalate:latest/usr/lib
 
 <br>
 
-### Running interactive shells inside the singularity container
+#### Running interactive shells inside the singularity container
 
 You can open a shell in the container with
 ```bash
@@ -99,7 +97,7 @@ You can exit the shell again with `exit` or Ctrl-D.
 
 <br>
 
-### Running scripts inside the singularity container
+#### Running scripts inside the singularity container
 
 Instead of interactively logging in and running commands, we can also create a script and run that from the host system command line. If we have an executable script `script.sh` with content
 ```bash
@@ -118,7 +116,7 @@ Note: You may encounter a warning from `tini`, the master process inside the con
 
 <br>
 
-### Running programs inside the singularity container
+#### Running programs inside the singularity container
 
 Now, if we can run scripts directly wtih `singularity run`, then why not run `dire` directly, you ask? Indeed, we can also run
 ```bash
@@ -140,7 +138,7 @@ $ESC dire --nevents 50 --setting "WeakSingleBoson:ffbar2gmZ = on"
 
 <br>
 
-### Scripts with multiple commands inside the singularity container
+#### Scripts with multiple commands inside the singularity container
 
 To be able to run batch jobs, we want to submit job scripts. For example, we can create a script with the following content (anywhere you want):
 ```bash
@@ -157,7 +155,7 @@ This will use the container to run the `dire` command specified and write the ou
 
 <br>
 
-### Scheduling batch jobs with the singularity container
+#### Scheduling batch jobs with the singularity container
 
 We can extend the previous script to turn it into a SLURM submission script, `job.sh`:
 ```bash
@@ -179,7 +177,7 @@ and submit this with `sbatch`.
 
 <br>
 
-### Advanced ways of running
+#### Advanced ways of running
 
 One could create a python `fast.py` for a fast simulation (using eic-smear) like this:
 ```python

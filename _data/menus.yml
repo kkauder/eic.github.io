@@ -19,57 +19,63 @@
       name: escalate_1
       full: ESCalate
     -
-      name: fun4all_tutorial_1
-      full: Fun4All
+      name: escalate_singularity_1
+      full: ESCalate on HPC Clusters (Singularity)
     -
       name: eicsmear_1
       full: EIC-smear
-    -
-      name: singularity
-      label: yes
-      full: Singularity Applications
       div: yes
-    -
-      name: escalate_singularity_1
-      full: Escalate
+#    -
+#      name: singularity
+#      label: yes
+#      full: Singularity Applications
+#      div: yes
     -
       name: eicsmear_generators_singularity
-      full: EIC-smear and Generators
+      full: EIC-smear and Generators (Singularity)
+    -
+      name: fun4all_tutorial_1
+      full: Fun4All
+      div: yes
     -
       name: fun4all_singularity
       full: Fun4All in Singularity
       link: https://github.com/eic/Singularity/blob/master/README.md
+######################### Simulations
     -
-      name: generators
+      name: simulations
       label: yes
-      full: Monte Carlo Event Generators
+      full: Simulations
       div: yes
     -
-      name: pythia6
-      full: PYTHIA6
-    -
-      name: beagle
-      full: BeAGLE
-    -
-      name: djangoh
-      full: DJANGOH
-    -
-      name: milou
-      full: MILOU
-    -
-      name: rapgap
-      full: RAPGAP
-    -
-      name: pepsi
-      full: PEPSI
-    -
-      name: estarlight
-      full: eSTARlight
-      link: https://github.com/eic/estarlight#estarlight
-    -
-      name: sartre
-      full: Sartre
-      link: https://sartre.hepforge.org
+      name: mcgen
+      full: Monte Carlo Event Generators
+#    -
+#      name: pythia6
+#      full: PYTHIA6
+#    -
+#      name: beagle
+#      full: BeAGLE
+#    -
+#      name: djangoh
+#      full: DJANGOH
+#    -
+#      name: milou
+#      full: MILOU
+#    -
+#      name: rapgap
+#      full: RAPGAP
+#    -
+#      name: pepsi
+#      full: PEPSI
+#    -
+#      name: estarlight
+#      full: eSTARlight
+#      link: https://github.com/eic/estarlight#estarlight
+#    -
+#      name: sartre
+#      full: Sartre
+#      link: https://sartre.hepforge.org
     -
       name: other
       label: yes
