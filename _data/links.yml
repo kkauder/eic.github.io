@@ -27,12 +27,6 @@
 
 - name: round_table
   url: 'https://www.jlab.org/software-and-computing-round-table'
-  
-- name: petrel
-  url: 'https://petrel.alcf.anl.gov/'
-
-- name: bnlbox_cli
-  url: 'https://racfjira.atlassian.net/wiki/spaces/BBD/pages/604307461/How+To+Access+BNL+Box+From+The+Command+Line'
 
 - name: eic_software_drupal
   url: 'http://www.eicug.org/web/content/eic-software'
@@ -40,6 +34,17 @@
 - name: hsf
   url: 'http://hepsoftwarefoundation.org/'
   
+# Cloud storage
+- name: petrel
+  url: 'https://petrel.alcf.anl.gov/'
+
+- name: bnlbox_cli
+  url: 'https://racfjira.atlassian.net/wiki/spaces/BBD/pages/604307461/How+To+Access+BNL+Box+From+The+Command+Line'
+
+- name: minio_download
+  url: 'https://dl.min.io/client/mc/release/linux-amd64/'
+
+# Git land
 - name: git
   url: 'https://git-scm.com'
   
@@ -65,7 +70,7 @@
 - name: jupyterhub.jlab.org
   url: 'https://jupyterhub.jlab.org'
 
-# Jekyll and related toold
+# Jekyll, Bootstrap and related tools
 - name: Jekyll
   url: 'http://jekyllrb.com/'
 
@@ -80,7 +85,9 @@
   
 - name: Bootstrap
   url: 'http://getbootstrap.com/'
-  
+
+# Misc tools
+
 - name: rivet
   url: 'https://rivet.hepforge.org/'
 
@@ -105,4 +112,7 @@
 
 - name: sartre
   url: 'https://sartre.hepforge.org'
+
+- name: pepsi_paper
+  url: 'https://wiki.bnl.gov/eic/upload/PEPSI.paper.pdf'
 

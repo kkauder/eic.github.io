@@ -12,8 +12,9 @@ layout: default
   {:toc}
 
 PEPSI (Polarized Electron Proton Scattering Interactions) is a Monte Carlo generator for polarized deep inelastic scattering (pDIS). It is based on the LEPTO 6.5 Monte Carlo for unpolarized DIS.
+
 See L. Mankiewicz, A. Schäfer and M. Veltri, Comp. Phys. Comm. 71, 305-318 (1992),
-[PEPSI.paper.pdf](https://wiki.bnl.gov/eic/upload/PEPSI.paper.pdf).
+{% include navigation/findlink.md name='pepsi_paper' tag='PEPSI.paper.pdf' %}
 
 #### Parton distribution functions
 
@@ -40,7 +41,7 @@ Pepsi is linked with the pdflib such that all PDFs included in there can be used
 
 #### Running PEPSI
 In the standard setup in the singularity cvmfs environment or at BNL, the code can be found in
-```
+```bash
 $EICDIRECTORY/PACKAGES/pepsi
 ```
 
@@ -51,7 +52,7 @@ Charge Current events can only be generated in the unpolarized mode.
 The <tt>LST(8)</tt> can only be different from 0 or 1 in the unpolarized mode.
 
 Note that the executables expect the `pdf/` directory in the directory of execution. Easiest way to achieve this is a softlink (adapt to your location)
-```
+```bash
 ln -s $EICDIRECTORY/PACKAGES/PEPSI/pdf
 ```
 
@@ -62,7 +63,7 @@ Choose or create a steering file. Some that are provided in `$EICDIRECTORY/PACKA
 * `input.data_noradcor.eic.unpol`: for the unpolarized cross-section
 
 You can then run:
-```
+```bash
 ./pepsieRHICnoRAD < STEER-FILES/input.EW_noradcor.eic.posi.test > XXX.log
 ```
 where the output redirect to `XXX.log` is optional.

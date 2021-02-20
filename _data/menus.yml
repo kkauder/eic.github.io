@@ -110,29 +110,26 @@
   full: Resources
 # note that submenus do not include a few of the *.md stubs found in the folder
   submenus:
-    -
-      name: storage
+    - name: storage
       label: yes
       full: Storage
-    -
-      name: storage
+
+    - name: storage
       full: NextCloud
-    -
-      name: petrel
+
+    - name: petrel
       full: Petrel/Globus
-    -
-      name: data
-      label: yes
-      full: Data
-      div: yes
 
-    -
-      name: catalog
-      full: Data Catalog
+#    - name: data
+#      label: yes
+#      full: Data
+#      div: yes
 
-    -
-      name: processing
-      full: Data Processing
+#    - name: catalog
+#      full: Data Catalog
+
+#    - name: processing
+#      full: Data Processing
 
 ###
 - name: activities

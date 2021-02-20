@@ -82,22 +82,23 @@ They can be easily inserted in pages in a consistent manner by their mneumonic n
 a macro as decribed below. This simplifies handling user-unfriendly links and ensures they
 remain the same across the site and makes
 it easy to point to a different resource when necessary. For example, this piece of code
-{% raw %}
-{% include navigation/findlink.md name='Jekyll' %}
-{% endraw %}
-will result in the link: {% include navigation/findlink.md name='Jekyll' %}. If you would like the displayed
-link name to be different, the optional "tag" argument for the macro will do that.
-Example:
-{% raw %}
-{% include navigation/findlink.md name='github_site' tag='repository' %}
-{% endraw %}
-will result in the following link: {% include navigation/findlink.md name='github_site' tag='repository' %}.
-Links will automatically open in a new tab.
+> {% raw %}
+> {% include navigation/findlink.md name='Jekyll' %}
+> {% endraw %}
 
-There is a similar macro for use with links to **internal** pages on the site. Example:
-{% raw %}
-{% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %}
-{% endraw %}
+will result in the link: {% include navigation/findlink.md name='Jekyll' %}. If you would like the displayed
+link name to be different, the optional "tag" argument for the macro will do that. Example:
+> {% raw %}
+> {% include navigation/findlink.md name='github_site' tag='repository' %}
+> {% endraw %}
+
+will result in the following link: {% include navigation/findlink.md name='github_site' tag='repository' %}.
+Links will automatically open in a new tab. There is a similar macro for use with links to **internal**
+pages on the site. Example:
+> {% raw %}
+> {% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %}
+> {% endraw %}
+
 will result in: {% include navigation/pagelink.md folder=site.about name='howto' tag='"How-to" page' %} (this happens
 to point to the page you are reading now).
 Primary advantage of this macro is that it allows renaming the source file - while keeping the same "name" attribute
@@ -127,9 +128,10 @@ lines are added to *gallery.yaml*:
   type: logo
 ```
 Then, this line of code included in the page
-{% raw %}
-{% include images/image.md name='news_banner' width='400' %}
-{% endraw %}
+> {% raw %}
+> {% include images/image.md name='news_banner' width='400' %}
+> {% endraw %}
+
 ...will produce
 
 {% include images/image.md name='news_banner' width='400' %}
