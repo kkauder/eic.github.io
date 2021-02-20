@@ -115,7 +115,7 @@
       full: Storage
 
     - name: storage
-      full: NextCloud
+      full: NextCloud/S3
 
     - name: petrel
       full: Petrel/Globus
