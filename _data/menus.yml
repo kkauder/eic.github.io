@@ -110,6 +110,9 @@
   full: Resources
 # note that submenus do not include a few of the *.md stubs found in the folder
   submenus:
+    - name: overview
+      full: Overview
+
     - name: storage
       label: yes
       full: Storage
