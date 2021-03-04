@@ -10,7 +10,9 @@ blockquote{
 }
 
 th {
-  text-align: center;
+    text-align: center;
+    color: #fff;
+    background-color: #888;
 }
 
 td {

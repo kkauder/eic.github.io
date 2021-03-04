@@ -6,6 +6,7 @@ layout: default
 
 tables:
   cpu:
+    width: 90%
     headers:
       - BNL
       - JLab
@@ -30,10 +31,63 @@ tables:
 
       "A further 4MCH/yr dedicated to EIC will be added when demand requires it."
       ]
-
+  wms:
+    width: 90%
+    headers:
+      - BNL
+      - JLab
+    rows:
+      - [
+      "OSG Submit host osgsub01.sdcc.bnl.gov",
+      "OSG submit host"
+      ]
+      - [
+      "OSG/EIC jobs landing at BNL are purely opportunistic.",
+      "OSG infrastructure to land EIC jobs on the JLab cluster. Counts against quota."
+      ]
+  
+  data:
+    width: 90%
+    headers:
+      - BNL
+      - JLab
+    rows:
+      - [
+      "<b>/eic/data</b> 6TB NFS mounted (GPFS general user use), 72% full",
+      "EIC is allocated 5TB of volatile and 5TB of cache neither of which are close to the limit.
+      The total pool at JLab is 5 PB.
+      Volatile and Cache are auto managed with a deletion policy so allocation can be changed."
+      ]
+      - [
+      "<b>/gpfs02/eic/DATA</b> 400TB NFS mounted (GPFS data use), 53% full",
+      ""
+      ]
+      - [
+      "Xrootd/StashCache under preparation",
+      "Xrootd/StashCache available"
+      ]
+      - [
+      "1PB pool (S3 or Xrootd)",
+      ""
+      ]
+  
 ---
 {% include layouts/title.md %}
 
+{{ page.tablewidth }}
+
 BNL and JLab provide computing resources for the worldwide EIC community:
 
-{% include layouts/big_table.md width="80%" headers=page.tables.cpu.headers rows=page.tables.cpu.rows %}
+* TOC
+{:toc}
+
+##### CPU
+{% include layouts/big_table.md table=page.tables.cpu %}
+
+<br/>
+##### Workload Management
+{% include layouts/big_table.md table=page.tables.wms %}
+<br/>
+
+##### Data Storage
+{% include layouts/big_table.md table=page.tables.data %}
