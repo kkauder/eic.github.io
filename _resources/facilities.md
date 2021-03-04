@@ -12,8 +12,8 @@ tables:
     rows:
       - [
       "Dedicated EIC resources: 7 machines with 64 core,
-      6 * 64 batch slots = 384 slots and one for interactive use (VMs).
-      Each node have dual CPU AMD EPYC 7351.",
+      6*64 batch slots = 384 slots and one for interactive use (VMs).
+      Each node has dual CPU AMD EPYC 7351.",
 
       "JLab operates a common cluster. 25k job slots. Delivering ~ 76M core hours per year normalized to dual CPU AMD EPYC 7351."
       ]
