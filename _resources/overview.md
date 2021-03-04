@@ -13,7 +13,7 @@ BNL and JLab provide computing resources for the worldwide EIC community:
 You can use your existing BNL or JLab account or register as new user at the host labs: 
 
 * [Request a BNL computing account](https://docs.google.com/document/d/1Y2JleLOx1NiPoPI69yW97Onl_Dly4WzfInRGjskM274/edit?usp=sharing)
-* [Request a JLab computing account](https://misportal.jlab.org/jlabAccess/) 
+* [Request a JLab computing account](https://misportal.jlab.org/jlabAccess/) (register as "User-remote" and state "EIC" as your sponsor)
 
 #### CPUs
 
