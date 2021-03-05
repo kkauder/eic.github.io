@@ -79,5 +79,15 @@
   category: software
   format: direct_link
 
+- name: SWG-Survey-202102.pdf
+  url: 'https://github.com/eic/documents/blob/master/reports/general/SWG-Survey-202102.pdf'
+  title: State of Software Survey Report
+  author: 'W. Deconinck, M. Diefenthaler, R. Duckett, S. Joosten, K. Kauder'
+  venue: 
+  resource: github
+  type: 'report'
+  category: software
+  format: direct_link
+
 
 
