@@ -1,7 +1,7 @@
 ---
 title: Computing Resources available at BNL and JLab
 description: Computing Resources available at BNL and JLab
-name: facilities
+name: overview
 layout: default
 
 tables:
