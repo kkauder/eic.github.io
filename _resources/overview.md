@@ -7,9 +7,8 @@ layout: default
 tables:
   cpu:
     width: 90%
-    headers:
-      - BNL
-      - JLab
+    columns: [50%, 50%]
+    headers: [BNL, JLab]
     rows:
       - [
       "Dedicated EIC resources: 7 machines with 64 core,
@@ -33,9 +32,8 @@ tables:
       ]
   wms:
     width: 90%
-    headers:
-      - BNL
-      - JLab
+    columns: [50%, 50%]
+    headers: [BNL, JLab]
     rows:
       - [
       "OSG Submit host osgsub01.sdcc.bnl.gov",
@@ -48,9 +46,8 @@ tables:
   
   data:
     width: 90%
-    headers:
-      - BNL
-      - JLab
+    columns: [50%, 50%]
+    headers: [BNL, JLab]
     rows:
       - [
       "<b>/eic/data</b> 6TB NFS mounted (GPFS general user use), 72% full",
@@ -73,9 +70,8 @@ tables:
   
   aux:
     width: 90%
-    headers:
-      - BNL
-      - JLab
+    columns: [50%, 50%]
+    headers: [BNL, JLab]
     rows:
       - [
       "CernVM-FS Stratum 0 repository server",
@@ -92,8 +88,6 @@ tables:
   
 ---
 {% include layouts/title.md %}
-
-{{ page.tablewidth }}
 
 BNL and JLab provide computing resources for the worldwide EIC community:
 
