@@ -85,8 +85,4 @@ You can use your existing BNL or JLab account or register as new user at the hos
 
 The [EIC GitHub organization](https://eic.github.io/github/) is available for the whole EIC community.
 
-<<<<<<< HEAD
  --- 
-=======
-The [EIC GitHub organization](https://eic.github.io/github/) is available for the whole EIC community. 
->>>>>>> d005c948ce6b325006b68ef3f10c1199163e20ee
