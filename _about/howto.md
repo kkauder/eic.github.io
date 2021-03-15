@@ -2,6 +2,25 @@
 title: How-to
 name: howto
 layout: default
+
+tables:
+  table1:
+    width: 20%
+    columns: [30%, 70%]
+    headers: [col1, col2]
+    rows:
+      - [ a, b ]
+      - [ x, y ]
+  table2:
+    width: 20%
+    columns: [50%, 50%]
+    headers: [col1, col2]
+    rows:
+      - [ a,
+      "this is an example of a very wide column which can potentially span many text rows in the same cell" ]
+      - [ x,
+      "two lines
+      in YAML" ]
 ---
 {% include layouts/title.md %}
 
@@ -74,6 +93,82 @@ layout: default
 
 <hr/>
 #### Helper macros
+##### Tables
+**All tables on this site have added CSS styling to enhance appearance and readability.**
+
+To define  tables within pages one can use built-in Markdown table styling capabilities,
+for example this snippet of Markdown code
+
+```
+| Language                 | Lines of code                       | Description |
+|--------------------------|-------------------------------------|-------------|
+| C++                      | 101                                 | Module 1    |
+| Python                   | 37                                  | Module 2    |
+| Ruby                     | 53                                  | Parser      |
+{:.table-bordered}
+```
+
+...will be rendered as
+
+| Language                 | Lines of code                       | Description |
+|--------------------------|-------------------------------------|-------------|
+| C++                      | 101                                 | Module 1    |
+| Python                   | 37                                  | Module 2    |
+| Ruby                     | 53                                  | Parser      |
+{:.table-bordered}
+
+<br/>
+Main disadvantage of this method is difficulty in editing large table cells
+(i.e. cells with a large amount of content).
+There is also an option to embed HTML directly. Both Markdown and plain HTML
+options will work but have limitations for example multiple tables present
+on the same page may end up having diferent widths, and column within individual tables
+may also have inconsistent column widths. This detracts from the page readability.
+
+For greater control and ease of editing data there is also a macro called
+**big_table.md** deployed on this site
+which is illustrated in the following example. Assume the following content has been added
+to the *front matter* of a page:
+```yaml
+tables:
+  table1:
+    width: 20%
+    columns: [30%, 70%]
+    headers: [col1, col2]
+    rows:
+      - [ a, b ]
+      - [ x, y ]
+```
+...and the source of the page contains:
+> {% raw %}
+> {% include layouts/big_table.md table=page.tables.table1 %}
+> {% endraw %}
+
+This will result in the following content on the page:
+{% include layouts/big_table.md table=page.tables.table1 %}
+<br/>
+Note how the table and column widths are configured in the example above.
+More tables can be easily added by putting the content in blocks of the front matter
+and then referring to them using the macro, as needed.
+
+Individual cells can contain long strings and/or strings split over multiple lines as
+long as these are double-quote delimited in the front matter. Example:
+```yaml
+tables:
+  table2:
+    width: 20%
+    columns: [50%, 50%]
+    headers: [col1, col2]
+    rows:
+      - [ a,
+      "this is an example of a very wide column which can potentially span many text rows in the same cell" ]
+      "two lines
+      in YAML" ]
+```
+{% include layouts/big_table.md table=page.tables.table2 %}
+
+
+<br/>
 ##### Links
 Frequently used **external** links are located in the following registry:
 <a href="https://raw.githubusercontent.com/eic/eic.github.io/master/_data/links.yml" target=_blank>_data/links.yml</a>.
