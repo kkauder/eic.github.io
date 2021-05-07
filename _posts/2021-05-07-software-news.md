@@ -55,6 +55,9 @@ The EIC Software bundle contains EIC-SMEAR and various MC event generators. It i
 * [**TOPEG**](https://gitlab.in2p3.fr/dupre/nopeg), an event generator for nuclear DVCS, has been added. 
 
 ### Project eAST {#east}
+
+{% include images/image.md name='east_logo' width='400' %}
+
 The SWG is launching a community-wide effort on next-generation simulations. Project eAST (eA Simulation Toolkit) will be led by Makoto Asai of SLAC, Geant4 project leader and deep technical expert for more than 20 years, and will build on the work done in existing detector simulations for the EIC. To ease leveraging new,  rapidly evolving computing technologies, the SWG will implement a common integrated approach for fast and full detector simulations in Geant4 with a plug-and-play modular approach. An [overview of the project](https://docs.google.com/presentation/d/1i3_MG26J93OqOuZx8MJY_btmpGpuxPRCOfdJHAHFPwY/edit?usp=sharing) and a [proposal with comments by the community](https://docs.google.com/document/d/1-EduKk_hCUr2lnKZFyqCMyzQBaM4ABRTRfFeOrEtWo8/edit?usp=sharing) is available.
 
 ---
