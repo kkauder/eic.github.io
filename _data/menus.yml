@@ -113,6 +113,9 @@
     - name: overview
       full: Overview
 
+    - name: simulations
+      full: Simulations
+
     - name: storage
       label: yes
       full: Storage

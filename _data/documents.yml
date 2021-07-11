@@ -88,6 +88,24 @@
   type: 'report'
   category: software
   format: direct_link
+- name: Note-Simulations-BeamEffects.pdf
+  url: 'https://github.com/eic/documents/blob/master/reports/general/Note-Simulations-BeamEffects.pdf'
+  title: Accelerator and Beam Conditions Critical for Physics and Detector Simulations for the Electron-ion Collider
+  author: 'J. Adam, E.-C.Aschenauer, M. Diefenthaler, Y. Furletova, J. Huang, A. Jentsch, B. Page'
+  venue: 
+  resource: github
+  type: 'report'
+  category: software
+  format: direct_link
+- name: Note-Simulations-BeamEffects-Movie.mp4
+  url: 'https://github.com/eic/documents/blob/master/reports/general/Note-Simulations-BeamEffects-Movie.mp4'
+  title: Visualization of the electron and proton bunch movement during their interaction (18x275 GeV)
+  author: 'J. Adam, E.-C.Aschenauer'
+  venue: 
+  resource: github
+  type: 'report'
+  category: software
+  format: direct_link
 
 
 
