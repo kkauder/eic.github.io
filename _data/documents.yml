@@ -100,7 +100,7 @@
 - name: Note-Simulations-BeamEffects-Movie.mp4
   url: 'https://github.com/eic/documents/blob/master/reports/general/Note-Simulations-BeamEffects-Movie.mp4'
   title: Visualization of the electron and proton bunch movement during their interaction (18x275 GeV)
-  author: 'J. Adam, E.-C.Aschenauer'
+  author: 'J. Adam'
   venue: 
   resource: github
   type: 'report'
