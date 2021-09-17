@@ -33,7 +33,7 @@
 
 - name: hsf
   url: 'http://hepsoftwarefoundation.org/'
-  
+
 # Cloud storage
 - name: petrel
   url: 'https://petrel.alcf.anl.gov/'
@@ -47,16 +47,16 @@
 # Git land
 - name: git
   url: 'https://git-scm.com'
-  
+
 - name: git-book
   url: 'https://git-scm.com/book/en/v2'
-  
+
 - name: git-lesson
   url: 'https://swcarpentry.github.io/git-novice/'
-  
+
 - name: github
   url: 'https://github.com/eic/'
-  
+
 - name: github_pages
 
   url: 'https://pages.github.com/'
@@ -82,7 +82,7 @@
 
 - name: Liquid
   url: 'https://shopify.github.io/liquid/'
-  
+
 - name: Bootstrap
   url: 'http://getbootstrap.com/'
 
@@ -107,6 +107,9 @@
   url: 'https://globus.org'
 
 # MC
+- name: topeg
+  url: 'https://gitlab.in2p3.fr/dupre/nopeg#the-orsay-perugia-event-generator-topeg'
+
 - name: estarlight
   url: 'https://github.com/eic/estarlight#estarlight'
 
@@ -115,4 +118,3 @@
 
 - name: pepsi_paper
   url: 'https://wiki.bnl.gov/eic/upload/PEPSI.paper.pdf'
-
