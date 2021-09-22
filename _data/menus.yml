@@ -1,114 +1,93 @@
-###
+###########################################################################
+#                                                                         #
+# This is the menu definition file for the EIC Software website           #
+#                                                                         #
+###########################################################################
+#                                                                         #
+# Each section corresponds to a dropdown menu in the top # navigation bar #                                               #
+#                                                                         #
+###########################################################################
+
+### Software
+#
 - name: software
   full: Software
   submenus:
-    -
-      name: overview
+    - name: overview
       full: Overview
       exclude: yes
       submenus:
-        -
-          name: test
+        - name: test
           full: testing
           link: https://www.bnl.gov/eic/
-    -
-      name: tools_and_frameworks
+
+    - name: tools_and_frameworks
       label: yes
       full: Frameworks and Tools
-    -
-      name: escalate_1
+
+    - name: escalate_1
       full: ESCalate
-    -
-      name: escalate_singularity_1
+
+    - name: escalate_singularity_1
       full: ESCalate on HPC Clusters (Singularity)
-    -
-      name: eicsmear_1
+
+    - name: eicsmear_1
       full: EIC-smear
       div: yes
-#    -
-#      name: singularity
-#      label: yes
-#      full: Singularity Applications
-#      div: yes
-    -
-      name: eicsmear_generators_singularity
+
+    - name: eicsmear_generators_singularity
       full: EIC-smear and Generators (Singularity)
-    -
-      name: fun4all_tutorial_1
+
+    - name: fun4all_tutorial_1
       full: Fun4All
       div: yes
-    -
-      name: fun4all_singularity
+
+    - name: fun4all_singularity
       full: Fun4All in Singularity
       link: https://github.com/eic/Singularity/blob/master/README.md
-######################### Simulations
-    -
-      name: simulations
+
+### Simulations
+#
+    - name: simulations
       label: yes
       full: Simulations
       div: yes
-    -
-      name: mcgen
+    
+    - name: mcgen
       full: Monte Carlo Event Generators
-#    -
-#      name: pythia6
-#      full: PYTHIA6
-#    -
-#      name: beagle
-#      full: BeAGLE
-#    -
-#      name: djangoh
-#      full: DJANGOH
-#    -
-#      name: milou
-#      full: MILOU
-#    -
-#      name: rapgap
-#      full: RAPGAP
-#    -
-#      name: pepsi
-#      full: PEPSI
-#    -
-#      name: estarlight
-#      full: eSTARlight
-#      link: https://github.com/eic/estarlight#estarlight
-#    -
-#      name: sartre
-#      full: Sartre
-#      link: https://sartre.hepforge.org
-    -
-      name: other
+
+    - name: east
+      full: Project eAST
+
+    - name: other
       label: yes
       full: Other Software
       div: yes
-    -
-      name: beast_magnetic_field
+    
+    - name: beast_magnetic_field
       full: BeAST Magnetic Field
 
-    -
-      name: infrastructure
+    - name: infrastructure
       label: yes
       full: Infrastructure
       div: yes
-    -
-      name: github
+    - name: github
       full: GitHub for the EICUG
-    -
-      name: doxygen
+    
+    - name: doxygen
       full: Doxygen
       link: https://eic.github.io/doxygen/
-    -
-      name: lxr
+    
+    - name: lxr
       full: LXR Code Browser
-#    -
-#      name: github_link
-#      full: GitHub Organization
-#      link: https://github.com/eic
 
-###
+### Resources
+#
+# note that submenus do not include a few of the *.md stubs found in the folder
+# - these pages are kept for archiving purposes
 - name: resources
   full: Resources
-# note that submenus do not include a few of the *.md stubs found in the folder
+
   submenus:
     - name: overview
       full: Overview
@@ -126,119 +105,53 @@
     - name: petrel
       full: Petrel/Globus
 
-#    - name: data
-#      label: yes
-#      full: Data
-#      div: yes
-
-#    - name: catalog
-#      full: Data Catalog
-
-#    - name: processing
-#      full: Data Processing
-
-###
+### Activities
+#
 - name: activities
   full: Activities
   submenus:
-    -
-      name: overview
+    - name: overview
       full: Overview
-    -
-      name: eoi
+
+    - name: eoi
       full: Expression of Interest
-    -
-      name: ucd
+
+    - name: ucd
       full: User-Centered Design
       
-###
+### Organization
+#
 - name: organization
   full: Organization
   submenus:
-    -
-      name: swg
+    - name: swg
       full: Software Working Group
-    -
-      name: communication
+
+    - name: communication
       full: Communication
-    -
-      name: events
+
+    - name: events
       full: Meetings and Events
-    -
-      name: youtube
+
+    - name: youtube
       full: Our YouTube Channel
       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
-    -
-      name: join
+
+    - name: join
       full: Get Involved
       div: yes
-
+### About
+#
 - name: about
   full: About
   right: yes
   submenus:
-    -
-      name: contact
+    - name: contact
       full: Contact
-    -
-      name: site
+
+    - name: site
       full: Website Information
       exclude: yes
-    -
-      name: howto
+
+    - name: howto
       full: Website How-To
-
-### Attic
-#
-# - name: eic
-#   full: EIC
-#   exclude: yes
-#   submenus:
-#     -
-#       name: eic_website
-#       full: EIC Website
-#       link: https://www.bnl.gov/eic/
-#     -
-#       name: eicug
-#       full: EIC User Group
-#       link: http://www.eicug.org/web/
-#     -
-#       name: eicug_phonebook
-#       full: The User Group Database
-#       link: http://www.eicug.org/pnb/client/
-#     -
-#       name: eic_software
-#       full: The Software Working Group
-#       link: http://www.eicug.org/web/content/eic-software
-#       div: yes
-#     -
-#       name: bnl
-#       full: Brookhaven National Lab
-#       link: http://bnl.gov
-#       div: yes
-#     -
-#       name: jlab
-#       full: Jefferson Lab
-#       link: https://www.jlab.org
-#     -
-#       name: jlab
-#       full: Yellow Report
-#       link: http://www.eicug.org/web/content/yellow-report-initiative
-#       div: yes
-
-# - name: resources
-#   full: Information
-#   exclude: yes
-#   submenus:
-#     -
-#       name: doxygen
-#       full: Doxygen
-#       link: https://eic.github.io/doxygen/
-#     -
-#       name: github
-#       full: GitHub organization for the EIC(UG)
-#       link: https://github.com/eic
-#     -
-#       name: youtube
-#       full: YouTube Channel of the EICUG
-#       link: https://www.youtube.com/channel/UCXc9WfDKdlLXoZMGrotkf7w
