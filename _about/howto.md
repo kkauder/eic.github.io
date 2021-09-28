@@ -342,7 +342,7 @@ a development machine. This is relatively straighforward but may depend on the O
 
 Once the environment is in place, any modification can be validated immediately since
 the locally running development server provided by Jekyll will render the site
-on the local host. Basic knolwede of the {% include navigation/findlink.md name='Liquid' %}
+on the local host. Basic knowledge of the {% include navigation/findlink.md name='Liquid' %}
 template language and in particular the "filters" that are part of it is extremely helpful.
 
 ##### GitHub Pages
@@ -380,7 +380,7 @@ Instructions can be found on Jekyll [web site](https://jekyllrb.com/docs/install
 Once Jekyll has been started you can view the web site by connecting to `localhost:4000`.
 Changes made to files are immediately compiled and reflected on the
 displayed site (at the next page load). The optimal workflow is to make changes and debug
-entirely locally before uploading the final changes to GitHub.
+entirely locally before doing a 'git commit' and pushing to GitHub.
 
 Examples of Jekyll commands
 ```bash

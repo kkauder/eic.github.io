@@ -58,8 +58,8 @@
   url: 'https://github.com/eic/'
 
 - name: github_pages
-
   url: 'https://pages.github.com/'
+
 - name: github_adding_topics
 
   url: 'https://help.github.com/en/enterprise/2.15/user/articles/classifying-your-repository-with-topics#adding-topics-to-your-repository'
