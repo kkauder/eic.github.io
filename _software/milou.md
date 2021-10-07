@@ -43,6 +43,15 @@ A 32-bit installation of MILOU can be found in the EIC cmvfs region at
 $EICDIRECTORY/PACKAGES/milou
 ```
 
+Note: At JLab, the 32-bit fortran libraries are unavailable. The
+simplest solution is to use
+[singularity](eicsmear_generators_singularity.md):
+```sh
+module load singularity
+export EIC_LEVEL=dev
+source /cvmfs/eic.opensciencegrid.org/x8664_sl7/MCEG/releases/etc/eic_bash.sh
+```
+
 The generator options are set via a "steering card" dvcs.steer. The options are described in the manual[^1].
 
 Note that the executables expect the .dat files and the dvcs.steer file
