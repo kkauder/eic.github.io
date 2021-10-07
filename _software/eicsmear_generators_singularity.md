@@ -7,7 +7,17 @@ layout: default
 
 {% include layouts/title.md %}
 
-The simplest way to use eic-smear and a wide range of HERA generators is to take advantage of cvmfs and singularity to be placed directly into the  environment that's running natively at BNL. This combination is widely available at national labs, CERN, and many other facilities, as long as $CVMFS_REPOSITORIES contains "eic.opensciencegrid.org". But simple instructions for any system can be found below.
+The simplest way to use eic-smear and a wide range of HERA generators
+is to take advantage of cvmfs and singularity to be placed directly
+into the  environment that's running natively at BNL. This combination
+is widely available at national labs, CERN, and many other facilities,
+as long as $CVMFS_REPOSITORIES contains "eic.opensciencegrid.org". But
+simple instructions for any system can be found below.
+Sometimes it may be necessary to activate singularity:
+```sh
+%  module load singularity
+```
+
 
 In all cases, a single line
 ```
@@ -15,6 +25,7 @@ In all cases, a single line
 ```
 and one setup script
 ```
+% export EIC_LEVEL=dev
 % source /cvmfs/eic.opensciencegrid.org/x8664_sl7/MCEG/releases/etc/eic_bash.sh
 ```
 will place you in the same environment where the libraries are
