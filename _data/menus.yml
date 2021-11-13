@@ -70,7 +70,7 @@
     - name: infrastructure
       label: yes
       full: Infrastructure
-      div: yes
+    
     - name: github
       full: GitHub for the EICUG
     
@@ -89,11 +89,16 @@
   full: Resources
 
   submenus:
+
+    - name: general
+      label: yes
+      full: General
+    
     - name: overview
-      full: Overview
+      full: Computing Resources
 
     - name: simulations
-      full: Simulations
+      full: Accelerator and Beam Conditions
 
     - name: storage
       label: yes

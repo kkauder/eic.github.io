@@ -5,10 +5,8 @@ name: simulations
 layout: default
 ---
 
-{% include layouts/title.md %}
-
 #### Accelerator and Beam Conditions Critical for EIC Simulations
-
+<hr/>
 A note summarizes how measurements at the Electron-Ion Collider will
 be influenced by accelerator and beam effects, including the:
 
