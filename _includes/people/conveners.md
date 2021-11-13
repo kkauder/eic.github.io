@@ -1,4 +1,5 @@
-<table width="100%">
+<table width="75%" border="1">
+
 {% for who in site.data.people %}
 {% if who.roles contains "convener" %}
 <tr>
