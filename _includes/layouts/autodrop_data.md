@@ -8,9 +8,9 @@
 
 {% assign the_menu = site.data.menus | where: "name", include.what | first %}
 
-<li class="nav-item dropdown px-4">
+<li class="nav-item dropdown px-2">
 {% if icon.size > 0 %}
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}&nbsp;&nbsp;<img src="{{ icon | relative_url }}" height="16" width="16"></a>
+<a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}&nbsp;&nbsp;<img src="{{ icon | relative_url }}" height="16" width="16"></a>
 {% else %}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">{{ the_menu.full }}</a>
 {% endif %}
@@ -38,12 +38,7 @@
 
 {% endif %}
 
-
-
-
-
 {% endfor %}
 
 </div>
 </li>
-
